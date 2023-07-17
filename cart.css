@@ -1,0 +1,122 @@
+
+.step_wrapper{
+    display: flex;
+    justify-content: center;
+}
+.step_wrapper p{
+    text-align: center;
+   
+}
+.step_1 section{
+    width: 50px;
+    height: 50px;
+    background-color: #FCC8D1;
+    border-radius: 100%;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    margin: 50px 50px 0px 50px;
+}
+.step_2 section{
+    width: 50px;
+    height: 50px;
+    background-color: #AAE3E2;
+    border-radius: 100%;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    margin: 50px 50px 0px 50px;
+}
+.step_3 section{
+    width: 50px;
+    height: 50px;
+    background-color: #FFC898;
+    border-radius: 100%;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    margin: 50px 50px 0px 50px;
+}
+/* 整個購物車div */
+.cart_bigcontainer{
+    height: 600px;
+    margin-bottom: 300px;
+    position: relative;
+}
+/* 購物車上半部 */
+.cart_wrapper{
+    position: absolute;
+    top: 50%;  
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+.cart_top{
+    width: 800px;
+    height: 60px;
+    margin: 50px 0px 0px 0px;
+    background-color: #FFC898;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border: 1px solid black;
+    
+}
+.cart_top h1{
+    text-align: center;
+    margin-top: 10px;
+}
+/* 購物車中間 */
+.cart_center{
+    width: 800px;
+    border: 1px solid black;
+    
+}
+.cart_center .cart_center_head{
+    display: flex;
+    width: 800px;
+    margin: 10px 0px;
+}
+.product_list{
+    display: flex;
+    /* justify-content: space-around; */
+    align-items: center;
+    height: 150px;
+}
+.product_list img{
+    width: 150px;
+    height: 150px;
+}
+.product_list section{
+    margin-left: 50px;
+}
+/* 購物車下半部 */
+.cart_bottom{
+    width: 800px;
+    height: 50px;
+    background-color: #AAE3E2;
+    border: 1px solid black;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.cart_bottom section{
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 0px;
+    width: 120px;
+    letter-spacing: 2px;
+    
+}
+.cart_bottom button{
+   background-color: #FCC8D1;
+   width: 100px;
+   height: 30px;
+   border-radius: 10px;
+   letter-spacing: 3px;
+   cursor: pointer;
+   margin: 10px 10px;
+   
+   
+}

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="share.css">
+    <script src="https://kit.fontawesome.com/d0903bd1ce.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="nav_top">
+            <div class="icon_ig">
+                <a href="https://www.instagram.com/miginligoo/" target="_blank"><i class="fa-brands fa-instagram fa-xl" style="color: #050505;"></i></a>
+            </div>
+            <div class="header_logo_migoo">
+                <a href="home.html"><img src="migoopic/migoo.svg" alt=""></a>
+            </div>
+            <div class="icon_wrap">
+                <div class="search">
+                    <label for=""></label>
+                    <input type="text" placeholder="搜尋商品...">
+                    <i class="fa-solid fa-magnifying-glass fa-lg" style="color: #000000;"></i>
+                </div>          
+                <a href="cart.html" target="_blank"><i class="fa-solid fa-cart-shopping fa-lg" style="color: #000000;"></i></a>
+                <a href="#" target="_blank"><i class="fa-solid fa-user fa-lg" style="color: #000000;"></i></a>
+            </div>
+        </div>
+        
+        <div class="nav_bottom">
+            <div class="nav_list">
+                 <div class="dropdown_reaction">
+                      <a href="feed.css"> 貓咪用品<i class="fa-sharp fa-solid fa-chevron-down fa-xs" style="color: #000000;"></i></a>
+                      <section class="dropdown" >               
+                              <a  href="feed.css">罐罐飼料</a>
+                              <a  href="#">餐食飲具</a>
+                              <a  href="#">睡睡貓窩</a>
+                              <a  href="#">娛樂玩具</a>
+                              <a  href="#">喵咪保健</a>             
+                      </section>
+                 </div>
+                 <a class="color_bottom" href="">貓咪知識</a>
+                 <a class="color_bottom" href="shop.html">門市資訊</a>
+                 <a class="color_bottom" href="faq.html">常見問題</a>
+           </div>
+           
+       </div>
+    </header>
+
+    <!-- 麵包屑 -->
+    <div class="breadcrumbs">
+        <a href="home.html">首頁</a>
+        <i class="fa-sharp fa-solid fa-chevron-right fa-xs" style="color: #000000;"></i>
+        <a href="cart.html">購物車</a>
+    </div>
+
+    <!-- 步驟 -->
+    <div class="step_wrapper">
+        <div class="step_1">
+            <section>1</section>
+            <p>購物車</p>
+        </div>
+        <div class="step_2">
+            <section>2</section>
+            <p>填寫資料</p>
+        </div>
+        <div class="step_3">
+            <section>3</section>
+            <p>訂單確認</p>
+        </div>
+    </div>
+
+    
+    <div class="cart_bigcontainer">
+        <div class="cart_wrapper">
+            <!-- 購物車上半部 -->
+            <div class="cart_top">
+                <h1>購物車明細</h1>
+            </div>
+            <!-- 購物車中間 -->
+            <div class="cart_center">
+                <div class="cart_center_head">
+                    <section style="margin-left: 230px;">商品資訊</section>
+                    <section style="margin-left: 90px;">規格</section>
+                    <section style="margin-left: 70px;">數量</section>
+                    <section style="margin-left: 70px;">小計</section>
+                </div>
+                
+                <div class="product_list">
+                    <img src="products/box.png" alt="">
+                    <section>白色開放式貓砂盆</section>
+                    <section>白色款</section>
+                    <select style="margin-left: 40px;" class="form-select" aria-label="">
+                        <option selected>選擇數量</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="3">4</option>
+                        <option value="3">5</option>
+                    </select>
+                    <section>$990</section>
+                    <button style="margin-left: 100px;">刪除</button>
+                </div> 
+                <div class="product_list">
+                    <img src="products/crocodile.png" alt="">
+                    <section>鱷魚瓦楞紙貓抓板</section>
+                    <section>鱷魚款</section>
+                    <select style="margin-left: 40px;"class="form-select" aria-label="">
+                        <option selected>選擇數量</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="3">4</option>
+                        <option value="3">5</option>
+                    </select>
+                    <section>$390</section>
+                    <button style="margin-left: 100px;">刪除</button>
+                </div>
+                <div class="product_list">
+                    <img src="products/burger.png" alt="">
+                    <section>漢堡藏食發聲玩具</section>
+                    <section>漢堡款</section>
+                    <select style="margin-left: 40px;"class="form-select" aria-label="">
+                        <option selected>選擇數量</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="3">4</option>
+                        <option value="3">5</option>
+                    </select>
+                    <section>$399</section>
+                    <button style="margin-left: 100px;">刪除</button>
+                </div>
+            </div>
+            <!-- 購物車下半部 -->
+            <div class="cart_bottom">
+                <section>合計: $1,779</section>
+                <button>結帳</button>
+            </div>      
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer_wrap">
+            <img src="migoopic/migoo.svg" alt="">
+            <div class="info_wrap">
+                <div class="info_address">
+                    地址:桃園市中壢區復興路46號9樓<br>
+                    電話: 03 -425 1108
+                </div>
+                <div class="info_tibame" style="font-size: smaller;">
+                    本網站為緯育TibaMe前端工程師班第86期學員專題作品<br>
+                    本平台僅供學習展示之用
+                </div>
+            </div>
+            <div class="link">
+                <a href="#">貓咪知識</a>
+                <hr>
+                <a href="shop.html">門市資訊</a>
+                <hr>
+                <a href="faq.html">常見問題</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

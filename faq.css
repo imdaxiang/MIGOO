@@ -1,0 +1,125 @@
+
+.faq_title h1{
+    text-align: center;
+    background-color: #FFFBF5;
+    margin: 0;
+    padding: 50px 0px;
+    letter-spacing: 5px;
+    color: #333;
+}
+.bigfaq_container{
+    background-color: #FFFBF5;
+    height: 500px;
+    border-bottom: 1px solid black;
+    position: relative;
+    
+}
+.faq_wrapper{
+    display: flex;
+    justify-content: center;
+    background-color: #FFFBF5;
+    
+
+}
+.faq_wrapper .alotsbtn{
+    display: flex;
+    flex-direction: column;
+    margin: 0px 50px;
+}
+.faq_wrapper .alotsbtn button{
+    padding: 5px 20px;
+    margin: 10px 0px;
+    background-color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.faq_wrapper .alotsbtn .colored{
+    background-color: #FFC898;
+}
+.faq_container{
+    width: 600px;
+    
+    border: 3px solid #FFC898;
+    background-color: white;
+    border-radius: 20px;
+}
+.faq_order{
+    display: flex;
+    justify-content: space-around;
+    color: #333;
+}
+.faq_order section{
+    letter-spacing: 2px;
+}
+.faq_order .question{
+    font-weight: bold;
+    margin: 20px;
+    width: 500px;
+}
+.faq_order .answer{
+    width: 500px; 
+    margin: 20px;
+}
+.faq_order .plus{
+    color: #FFC898;
+    font-size: 36px;
+    margin: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    
+}
+/* 會動的問號貓 */
+.questioncat img{
+    width: 150px;
+    height: 80px;
+    z-index: 1;
+    position: absolute;
+    top: 740px;
+}
+/* 還有其他問題嗎? */
+.other_title{
+    height: 150px;
+    background-color: #FFFBF5;
+    
+}
+.other_title h1{
+    text-align: center;
+    background-color: #FFFBF5;
+    margin: 0;
+    padding: 50px 0px 0px 0px;
+    letter-spacing: 5px;
+    color: #333;
+}
+.other_title p{
+    text-align: center;
+    background-color: #FFFBF5;
+    letter-spacing: 5px;
+    margin: 0;
+    color: #333;
+}
+.other_container{
+    background-color: #FFFBF5;
+    height: 400px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    margin: 0 auto;
+    background-color: #FFFBF5;
+}
+form input{
+    margin: 10px 0px;
+}
+form textarea{
+    margin: 10px 0px 30px 0px;
+}
+.other_container section{
+    background-color: #FFC898;
+    border-radius: 10px;
+    margin: 0 auto;
+    width: 100px;
+    text-align: center;
+    padding: 5px 20px;
+    
+}

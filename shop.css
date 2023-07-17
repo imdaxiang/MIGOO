@@ -1,0 +1,43 @@
+.zhongli_wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.zhongli{
+    margin: 50px 0px;
+    display: flex;
+}
+.zhongli .zhongli_info{
+    padding: 30px 100px;
+}
+.zhongli img{
+    width: 400px;
+    height: 300px;
+    border-radius: 20px;
+    border: 1px solid black;    
+}
+.daan_wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.daan{
+    margin: 50px 0px;
+    display: flex;
+}
+.daan .daan_info{
+    padding: 30px 100px;
+}
+.daan img{
+    width: 400px;
+    height: 300px;
+    border-radius: 20px;
+    border: 1px solid black;    
+}
+.pagetop{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
+    z-index: 1;
+}
