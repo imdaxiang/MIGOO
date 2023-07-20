@@ -15,7 +15,7 @@
                 <a href="https://www.instagram.com/miginligoo/" target="_blank"><i class="fa-brands fa-instagram fa-xl" style="color: #050505;"></i></a>
             </div>
             <div class="header_logo_migoo">
-                <a href="#"><img src="migoopic/migoo.svg" alt=""></a>
+                <a href="index.html"><img src="migoopic/migoo.svg" alt=""></a>
             </div>
             <div class="icon_wrap">
                 <div class="search">
@@ -23,26 +23,26 @@
                     <input type="text" placeholder="搜尋商品...">
                     <i class="fa-solid fa-magnifying-glass fa-lg" style="color: #000000;"></i>
                 </div>          
-                <a href="#" target="_blank"><i class="fa-solid fa-cart-shopping fa-lg" style="color: #000000;"></i></a>
-                <a href="#" target="_blank"><i class="fa-solid fa-user fa-lg" style="color: #000000;"></i></a>
+                <a href="cart.html" ><i class="fa-solid fa-cart-shopping fa-lg" style="color: #000000;"></i></a>
+                <a href="#"><i class="fa-solid fa-user fa-lg" style="color: #000000;"></i></a>
             </div>
         </div>
         
         <div class="nav_bottom">
             <div class="nav_list">
                  <div class="dropdown_reaction">
-                      <a href="feed.css"> 貓咪用品<i class="fa-sharp fa-solid fa-chevron-down fa-xs" style="color: #000000;"></i></a>
+                      <a href="feed.html"> 貓咪用品<i class="fa-sharp fa-solid fa-chevron-down fa-xs" style="color: #000000;"></i></a>
                       <section class="dropdown" >               
-                              <a  href="feed.css">罐罐飼料</a>
+                              <a  href="feed.html">罐罐飼料</a>
                               <a  href="#">餐食飲具</a>
                               <a  href="#">睡睡貓窩</a>
                               <a  href="#">娛樂玩具</a>
                               <a  href="#">喵咪保健</a>             
                       </section>
                  </div>
-                 <a class="color_bottom" href="">貓咪知識</a>
+                 <a class="color_bottom" href="blog.html">貓咪知識</a>
                  <a class="color_bottom" href="shop.html">門市資訊</a>
-                 <a class="color_bottom" href="">常見問題</a>
+                 <a class="color_bottom" href="faq01.html">常見問題</a>
            </div>
            
        </div>
@@ -50,9 +50,187 @@
 
 <!-- 麵包屑 -->
 <div class="breadcrumbs">
-    <a href="home.html">首頁</a>
+    <a href="index.html">首頁</a>
     <i class="fa-sharp fa-solid fa-chevron-right fa-xs" style="color: #000000;"></i>
     <a href="blog.html">貓咪知識</a>
 </div>
+
+<!-- 最新文章 -->
+<div class="new-article">
+    <h1>最新文章</h1>
+</div>
+
+<!-- 手風琴 -->
+<div class="panel-bigcontainer">
+    <div class="panel-container">
+        <div class="panel active" style="background-image: url(migoopic/panel01.jpg);">
+            <h3>擔心貓咪夏天中暑？3個妙招涼一夏！</h3>
+            <section>閱讀更多</section>
+        </div>
+        <div class="panel" style="background-image: url(migoopic/panel02.jpg);">
+            <h3>貓咪會分離焦慮！8個技巧助減壓</h3>
+            <section>閱讀更多</section>
+        </div>
+        <div class="panel" style="background-image: url(migoopic/panel03.jpg);">
+            <h3>想再養一隻貓？收編必看的四大重點！</h3>
+            <section>閱讀更多</section>
+        </div>
+        <div class="panel" style="background-image: url(migoopic/panel04.jpg);">
+            <h3>多貓不合怎麼辦？平常這樣做就能有效改善！</h3>
+            <section>閱讀更多</section>
+        </div>
+        <div class="panel" style="background-image: url(migoopic/panel05.jpg);">
+            <h3>貓咪對逗貓棒沒興趣？教你這樣玩</h3>
+            <section>閱讀更多</section>
+        </div>
+    </div>
+</div>
+
+<script>
+    const panels = document.querySelectorAll('.panel');
+
+    panels.forEach(panel =>{
+        panel.addEventListener('click', ()=>{
+            removeActiveClasses()
+            panel.classList.add('active')
+        })
+    })
+
+    function removeActiveClasses(){
+        panels.forEach(panel =>{
+            panel.classList.remove('active')
+        })
+    }
+</script>
+
+<!-- 三色分隔線 -->
+<div class="color-line">
+    <section class="green"></section>
+    <section class="pink"></section>
+    <section class="orange"></section>
+    <section class="green"></section>
+    <section class="pink"></section>
+</div>
+
+<!-- 往上的按鈕 -->
+<div class="pagetop">
+    <a href=""><img src="migoopic/pagetop.svg" alt=""></a>
+</div>
+
+<!-- 文章分類 -->
+<div class="category">
+    <section class="colored">熱門文章</section>
+    <section>喵喵生活</section>
+    <section>喵喵行為</section>
+</div>
+
+<!-- 第一排文章 -->
+<div class="article-container-1">
+    <div class="article-wrap">
+        <div class="img-wrap">
+            <img src="migoopic/panel03.jpg" alt="">
+        </div>
+        <section>
+            <i class="fa-solid fa-tag fa-sm" style="color: #ffc898;"></i>
+            <p>喵喵生活</p>
+        </section>
+        <h4>想再養一隻貓？收編必看的四大重點！</h4>
+        <article>如果你也跟我和許多貼心爸媽一樣心癢癢，想多養幾隻貓，我要跟你分享幾個在貼心...</article>
+        <p style="font-size: 12px; color: #ccc;">17.May.2023</p>
+    </div>
+
+    <div class="article-wrap">
+        <div class="img-wrap">
+            <img src="migoopic/panel06.jpg" alt="">
+        </div>
+        <section>
+            <i class="fa-solid fa-tag fa-sm" style="color: #ffc898;"></i>
+            <p>喵喵生活</p>
+        </section>
+        <h4>你的貓超級挑食不吃飯嗎？三個重要觀念改善厭食貓！</h4>
+        <article>熟睡時，貓咪可以長時間不進食，這點也跟人類一樣，很多人都能睡12小時不用起床吃飯...</article>
+        <p style="font-size: 12px; color: #ccc;">24.May.2023</p>
+    </div>
+
+    <div class="article-wrap">
+        <div class="img-wrap">
+            <img src="migoopic/panel05.jpg" alt="">
+        </div>
+        <section>
+            <i class="fa-solid fa-tag fa-sm" style="color: #ffc898;"></i>
+            <p>喵喵行為</p>
+        </section>
+        <h4>貓咪對逗貓棒沒興趣？教你這樣玩</h4>
+        <article>雖然說每隻貓咪的個性不盡相同， 但最能吸引貓咪目光的一定是會移動的獵物， 深埋在他們骨子裡的...</article>
+        <p style="font-size: 12px; color: #ccc;">14.Apr.2023</p>
+    </div>
+</div>
+
+<!-- 第二排文章 -->
+<div class="article-container-2">
+    <div class="article-wrap">
+        <div class="img-wrap">
+            <img src="migoopic/panel04.jpg" alt="">
+        </div>
+        <section>
+            <i class="fa-solid fa-tag fa-sm" style="color: #ffc898;"></i>
+            <p>喵喵行為</p>
+        </section>
+        <h4>多貓不合怎麼辦？平常這樣做就能有效改善！</h4>
+        <article>你家有幾隻貓？你的貓會打架嗎？
+
+            你有沒有注意過：貓只會對著人類喵叫，跟同伴相處卻很少發出聲音？...</article>
+        <p style="font-size: 12px; color: #ccc;">02.Jun.2023</p>
+    </div>
+
+    <div class="article-wrap">
+        <div class="img-wrap">
+            <img src="migoopic/panel02.jpg" alt="">
+        </div>
+        <section>
+            <i class="fa-solid fa-tag fa-sm" style="color: #ffc898;"></i>
+            <p>喵喵行為</p>
+        </section>
+        <h4>貓咪會分離焦慮！8個技巧助減壓</h4>
+        <article>突然要面對爸媽長時間不在家，可能會出現分離焦慮的症狀！在行為研究中，太早離乳、單貓家庭...</article>
+        <p style="font-size: 12px; color: #ccc;">29.May.2023</p>
+    </div>
+
+    <div class="article-wrap">
+        <div class="img-wrap">
+            <img src="migoopic/panel01.jpg" alt="">
+        </div>
+        <section>
+            <i class="fa-solid fa-tag fa-sm" style="color: #ffc898;"></i>
+            <p>喵喵生活</p>
+        </section>
+        <h4>擔心貓咪夏天中暑？3個妙招涼一夏！</h4>
+        <article>暑假到了，天氣真的好熱，很多人連在家打赤膊都會汗流浹背，看到貓咪身上毛絨絨...</article>
+        <p style="font-size: 12px; color: #ccc;">23.Apr.2023</p>
+    </div>
+</div>
+
+<footer>
+    <div class="footer_wrap">
+        <img src="migoopic/migoo.svg" alt="">
+        <div class="info_wrap">
+            <div class="info_address">
+                地址:桃園市中壢區復興路46號9樓<br>
+                電話: 03 -425 1108
+            </div>
+            <div class="info_tibame" style="font-size: smaller;">
+                本網站為緯育TibaMe前端工程師班第86期學員專題作品<br>
+                本平台僅供學習展示之用
+            </div>
+        </div>
+        <div class="link">
+            <a href="blog.html">貓咪知識</a>
+            <hr>
+            <a href="shop.html">門市資訊</a>
+            <hr>
+            <a href="faq01.html">常見問題</a>
+        </div>
+    </div>
+</footer>
 </body>
 </html>

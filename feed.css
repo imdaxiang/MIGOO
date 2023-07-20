@@ -1,14 +1,12 @@
-.container{
+
+.category_container{
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #FFFBF5;
-    
+    width: 100%;
 }
-.container .category_wrapper{
-    width: 200px;
-}
-.container .category_wrapper a{
+.category_container .category_wrapper a{
     text-decoration: none;
     color: black;
     width: 100px;
@@ -22,7 +20,7 @@
 .colored{
     background-color: #FFC898;
 }
-.container .category_wrapper img{
+.category_container .category_wrapper img{
     width: 25px;
     height: 25px;
     padding: 0px 5px;
@@ -74,6 +72,7 @@
     padding: 10px;
     background-color: white;
     position: absolute;
+    z-index: 1;
 }
 .show{
     display: none;
@@ -104,11 +103,25 @@
 }
 
 /* 商品區 */
+.verybigcontainer{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.otherbigcontainer{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .product_list01{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     margin: 100px 0px;
+    width: 1200px;
+    
 }
 .various_products{
     width: 200px;
@@ -131,6 +144,11 @@
 .various_products img{
     width: 150px;
     height: 130px;
+    transform:scale(1,1);
+    transition: all 1s ease-out;
+}
+.various_products img:hover{
+    transform:scale(1.2,1.2);
 }
 .various_products p{
     font-weight: bold;
@@ -150,9 +168,10 @@
 }
 .product_list02{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     margin: 100px 0px;
+    width: 1200px;
 }
 .product_list02 img{
     width: 100px;

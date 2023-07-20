@@ -4,20 +4,37 @@
 html,body{
     padding: 0;
     margin: 0;
+    
+}
+/* banner */
+.banner-container{
+    width: 100%;
+    overflow: hidden;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    
 }
 .banner{
-    width:100%;
-    height: 390px;
-    background-color: #FFFBF5;
-    background-image: url(migoopic/banner.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    animation: movebanner 10s infinite;
-   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
-.banner a{
+.banner img{
+    width: 25%;
+    height: 450px;
+    animation-name: movebanner;
+    animation-duration: 35s;
+    animation-iteration-count:infinite;
+}
+@keyframes movebanner{
+    0% {left: 100%;
+        transform: translateX(0%);}
+    
+    100% {left: 0;
+        transform: translateX(-100%);}
+}
+/* .banner a{
     text-decoration: none;
     font-size: 22px;
     font-weight: 600;
@@ -29,16 +46,18 @@ html,body{
     position: absolute;
     right: 30%;
     bottom: 10%;
-}
-/* @keyframes movebanner{
+} */
+@keyframes movebanner{
     0% {left: 100%;
         transform: translateX(0%);}
     
     100% {left: 0;
         transform: translateX(-100%);}
-} */
+}
+
+/* 優惠資訊 */
 .discount{
-    width: 1200px;
+    width: 100%;
     background-color: #FFFBF5;
     display: flex;
     justify-content: center;
@@ -64,7 +83,7 @@ html,body{
 }
 /* 商品分類 */
 .menu_title {
-    width: 1200px;
+    width: 100%;
 }
 .menu_title h1{
     background-color: #FFFBF5;
@@ -85,7 +104,8 @@ html,body{
 .menu img{
     width: 100px;
     height: 100px;
-    
+    transform:scale(1,1);
+    transition: all 1s ease-out;
 }
 .wrapper{
     display: flex;
@@ -93,6 +113,9 @@ html,body{
     align-items: center;
     margin: 15px;
     /* width: calc(20% - 30px); */
+}
+.wrapper:hover{
+    transform:scale(1.2,1.2);
 }
 .wrapper a{
     padding: 5px 10px;
@@ -107,10 +130,20 @@ html,body{
     text-align: center;
     letter-spacing: 5px;
     height: 50px; 
-    width: 1200px;
+    width: 100%;
 } 
 .new_products h1{
    margin: 0 auto;
+}
+.verybigcontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.otherbigcontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .home_products_01{
     height: 400px;
@@ -125,13 +158,18 @@ html,body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 50px 0px;
+    margin: 50px 20px;
     border-radius: 20px;
     box-shadow: 3px 3px #FFC898;
 }
 .various_products img{
     width: 150px;
     height: 130px;
+    transform:scale(1,1);
+    transition: all 1s ease-out;
+}
+.various_products img:hover{
+    transform:scale(1.2,1.2);
 }
 .various_products a{
     text-decoration: none;
@@ -158,34 +196,90 @@ html,body{
     height: 400px;
     display: flex;
     justify-content:space-around;
+    margin-bottom: 100px;
+}
+
+/* 跑馬燈 */
+.marquee{
+    width: 100%;
+    overflow: hidden;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    margin-bottom: 0;
+}
+.marquee img{
+    animation-name: marquee;
+    animation-duration: 150s;
+    animation-iteration-count:infinite;
+}
+@keyframes marquee{
+    0% {left: 100%;
+        transform: translateX(0%);}
+    
+    100% {left: 0;
+        transform: translateX(-100%);}
 }
 /* feedback */
 .feedback_wrap{
     width: 100%;
-    height: 300px;
+    height: 350px;
     background-image: url(migoopic/feedback.svg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    border-top: 1px solid black;
     border-bottom: 1px solid black;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 .feedback_wrap section{
-    /* color: #FFC898; */
+    color: #FFC898;
     text-align: center;
     letter-spacing: 5px;
     font-size: 36px;
     font-weight: bold;
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    padding: 30px 0px;;
+  
 }
 .feedback_wrap img{
     width: 300px;
     height: 200px;
 }
+.feedbackimg{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* 介紹詞 */
+.introduce{
+    border: 1px solid transparent;
+    margin: 0;
+    height: 550px;
+    text-align: center;
+    background-image: linear-gradient(to bottom, #FFFBF5, #F7E6C4);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.introduce h2{
+    margin-top: 100px;
+    letter-spacing: 2px;
+}
+.introduce p{
+    line-height: 200%;
+}
+.introduce h4{
+    border-bottom: 5px solid #FCC8D1;
+    border-radius: 5px;
+    display: inline-block;
+}
+.introduce img{
+    width: 800px;
+    height: 300px;
+    display: block;
+}
+.colorarea{
+    width: 100%;
+    height: 50px;
+    background-color: #FFFBF5;
+  }

@@ -99,7 +99,7 @@
 }
 .other_container{
     background-color: #FFFBF5;
-    height: 400px;
+    height: 500px;
 }
 form{
     display: flex;
@@ -110,9 +110,20 @@ form{
 }
 form input{
     margin: 10px 0px;
+    height: 10px;
+    width: 200px;
+}
+form select{
+    height: 30px;
+    margin: 10px 0px;
+    border-radius: 10px;
+    border: 1px solid black;
 }
 form textarea{
     margin: 10px 0px 30px 0px;
+    height: 100px;
+    border-radius: 10px;
+    border: 1px solid black;
 }
 .other_container section{
     background-color: #FFC898;
@@ -121,5 +132,6 @@ form textarea{
     width: 100px;
     text-align: center;
     padding: 5px 20px;
+    cursor: pointer;
     
 }
