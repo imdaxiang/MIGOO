@@ -29,21 +29,22 @@
         </div>
         
         <div class="nav_bottom">
-            <div class="nav_list">
-                 <div class="dropdown_reaction">
-                      <a href="feed.css"> 貓咪用品<i class="fa-sharp fa-solid fa-chevron-down fa-xs" style="color: #000000;"></i></a>
-                      <section class="dropdown" >               
-                              <a  href="feed.css">罐罐飼料</a>
-                              <a  href="#">餐食飲具</a>
-                              <a  href="#">睡睡貓窩</a>
-                              <a  href="#">娛樂玩具</a>
-                              <a  href="#">喵咪保健</a>             
-                      </section>
-                 </div>
-                 <a class="color_bottom" href="">貓咪知識</a>
-                 <a class="color_bottom" href="shop.html">門市資訊</a>
-                 <a class="color_bottom" href="">常見問題</a>
-           </div>
+            <ul>
+                <li class="dropdown_reaction"><a href="feed.html">
+                    貓咪用品<i class="fa-sharp fa-solid fa-chevron-down fa-xs" style="color: #000000;"></i>
+                    <div class="dropdown">
+                        <section style="border-top-left-radius: 10px; border-top-right-radius: 10px;"><a href="feed.html">罐罐飼料</a></section>
+                        <section><a>餐食飲具</a></section>
+                        <section><a>睡睡貓窩</a></section>
+                        <section><a>娛樂玩具</a></section>
+                        <section style="border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;"><a>喵咪保健</a></section>
+                    </div>
+                </a></li>
+                <li><a href="blog.html">貓咪知識</a></li>
+                <li><a href="shop.html">門市資訊</a></li>
+                <li><a href="faq01.html">常見問題</a></li>
+            </ul>
+    </div>
            
        </div>
     </header>
@@ -83,8 +84,9 @@
         </div>
     </footer>
 
-    <!-- 登入註冊 -->
-    <dialog id="infoModal">
+<!-- 登入與註冊 -->
+<dialog  id="infoModal">
+    <div class="bigcontainer">
         <div class="container">
             <div class="form-box">
                 <div class="register-box hidden" >
@@ -119,43 +121,45 @@
                 
             </div>
         </div>
-    </dialog>
+    </div>    
+</dialog>
     
-    <!-- 註冊與登入的畫面 -->
-    <script>
-        let login=document.getElementById('login');
-        let register=document.getElementById('register');
-        let form_box=document.getElementsByClassName('form-box')[0];
-        let register_box=document.getElementsByClassName('register-box')[0];
-        let login_box=document.getElementsByClassName('login-box')[0];
+<script>
+    let login=document.getElementById('login');
+    let register=document.getElementById('register');
+    let form_box=document.getElementsByClassName('form-box')[0];
+    let register_box=document.getElementsByClassName('register-box')[0];
+    let login_box=document.getElementsByClassName('login-box')[0];
 
-        register.addEventListener('click',()=>{
-            form_box.style.transform='translateX(80%)';
-            login_box.classList.add('hidden');
-            register_box.classList.remove('hidden');
-        })
-        login.addEventListener('click',()=>{
-            form_box.style.transform='translateX(0%)';
-            register_box.classList.add('hidden');
-            login_box.classList.remove('hidden');
-        })
-    </script>
+    register.addEventListener('click',()=>{
+        form_box.style.transform='translateX(80%)';
+        login_box.classList.add('hidden');
+        register_box.classList.remove('hidden');
+    })
+    login.addEventListener('click',()=>{
+        form_box.style.transform='translateX(0%)';
+        register_box.classList.add('hidden');
+        login_box.classList.remove('hidden');
+    })
+</script>
+
+<script>
+    let btn=document.querySelector("#user");
+    let infoModal=document.querySelector("#infoModal");
+    btn.addEventListener("click", function(){
+        infoModal.showModal();
+    })
+    close1.addEventListener("click", function(){
+        infoModal.close();
+    })
+    close2.addEventListener("click", function(){
+        infoModal.close();
+    })
+</script>
+   
     
 
-    <!-- 點擊user出現註冊與登入的畫面 -->
-    <script>
-        let btn=document.querySelector("#user");
-        let infoModal=document.querySelector("#infoModal");
-        btn.addEventListener("click", function(){
-            infoModal.showModal();
-        })
-        close1.addEventListener("click", function(){
-            infoModal.close();
-        })
-        close2.addEventListener("click", function(){
-            infoModal.close();
-        })
-    </script>
+    
 
 </body>
 </html>

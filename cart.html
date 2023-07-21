@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="migoopic/migoo_icon.ico" rel="shortcut icon"/>
+    <title>MIGOO</title>
     <link rel="stylesheet" href="cart.css">
     <link rel="stylesheet" href="share.css">
     <script src="https://kit.fontawesome.com/d0903bd1ce.js" crossorigin="anonymous"></script>
@@ -24,26 +25,27 @@
                     <i class="fa-solid fa-magnifying-glass fa-lg" style="color: #000000;"></i>
                 </div>          
                 <a href="cart.html"><i class="fa-solid fa-cart-shopping fa-lg" style="color: #000000;"></i></a>
-                <a href="#"><i class="fa-solid fa-user fa-lg" style="color: #000000;"></i></a>
+                <a href="#" id="user"><i class="fa-solid fa-user fa-lg" style="color: #000000;"></i></a>
             </div>
         </div>
         
         <div class="nav_bottom">
-            <div class="nav_list">
-                 <div class="dropdown_reaction">
-                      <a href="feed.html"> 貓咪用品<i class="fa-sharp fa-solid fa-chevron-down fa-xs" style="color: #000000;"></i></a>
-                      <section class="dropdown" >               
-                              <a  href="feed.html">罐罐飼料</a>
-                              <a  href="#">餐食飲具</a>
-                              <a  href="#">睡睡貓窩</a>
-                              <a  href="#">娛樂玩具</a>
-                              <a  href="#">喵咪保健</a>             
-                      </section>
-                 </div>
-                 <a class="color_bottom" href="blog.html">貓咪知識</a>
-                 <a class="color_bottom" href="shop.html">門市資訊</a>
-                 <a class="color_bottom" href="faq01.html">常見問題</a>
-           </div>
+            <ul>
+                <li class="dropdown_reaction"><a href="feed.html">
+                    貓咪用品<i class="fa-sharp fa-solid fa-chevron-down fa-xs" style="color: #000000;"></i>
+                    <div class="dropdown">
+                        <section style="border-top-left-radius: 10px; border-top-right-radius: 10px;"><a href="feed.html">罐罐飼料</a></section>
+                        <section><a>餐食飲具</a></section>
+                        <section><a>睡睡貓窩</a></section>
+                        <section><a>娛樂玩具</a></section>
+                        <section style="border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;"><a>喵咪保健</a></section>
+                    </div>
+                </a></li>
+                <li><a href="blog.html">貓咪知識</a></li>
+                <li><a href="shop.html">門市資訊</a></li>
+                <li><a href="faq01.html">常見問題</a></li>
+            </ul>
+    </div>
            
        </div>
     </header>
@@ -140,6 +142,79 @@
             </div>      
         </div>
     </div>
+
+     <!-- 登入與註冊 -->
+<dialog  id="infoModal">
+    <div class="bigcontainer">
+        <div class="container">
+            <div class="form-box">
+                <div class="register-box hidden" >
+                    <button id="close1"><i class="fa-solid fa-xmark fa-2xl" style="color: #fff;"></i></button>
+                    <h1>REGISTER</h1>
+                    <input type="text" placeholder="帳號">
+                    <input type="password" placeholder="密碼">
+                    <input type="password" placeholder="確認密碼">
+                    <input type="email" placeholder="電子郵件">
+                    <section>註冊</section>
+                </div>
+                <div class="login-box ">
+                    <button id="close2"><i class="fa-solid fa-xmark fa-2xl" style="color: #fff;"></i></button>
+                    <h1>LOGIN</h1>
+                    <input type="text" placeholder="帳號">
+                    <input type="password" placeholder="密碼">
+                    <p>忘記密碼</p>
+                    <section>登入</section>
+                </div>
+            </div>
+
+            <div class="con-box left">
+                <img src="migoopic/migoo.svg" alt="">
+                <p>歡迎回來!</p>
+                <button id="login">去登入</button>
+                
+            </div>
+            <div class="con-box right">
+                <img src="migoopic/migoo.svg" alt="">
+                <p>還沒有帳號嗎?</p>
+                <button id="register">去註冊</button>
+                
+            </div>
+        </div>
+    </div>    
+</dialog>
+    
+<script>
+    let login=document.getElementById('login');
+    let register=document.getElementById('register');
+    let form_box=document.getElementsByClassName('form-box')[0];
+    let register_box=document.getElementsByClassName('register-box')[0];
+    let login_box=document.getElementsByClassName('login-box')[0];
+
+    register.addEventListener('click',()=>{
+        form_box.style.transform='translateX(80%)';
+        login_box.classList.add('hidden');
+        register_box.classList.remove('hidden');
+    })
+    login.addEventListener('click',()=>{
+        form_box.style.transform='translateX(0%)';
+        register_box.classList.add('hidden');
+        login_box.classList.remove('hidden');
+    })
+</script>
+
+<script>
+    let btn=document.querySelector("#user");
+    let infoModal=document.querySelector("#infoModal");
+    btn.addEventListener("click", function(){
+        infoModal.showModal();
+    })
+    close1.addEventListener("click", function(){
+        infoModal.close();
+    })
+    close2.addEventListener("click", function(){
+        infoModal.close();
+    })
+</script>
     
     <footer>
         <div class="footer_wrap">
