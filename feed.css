@@ -11,14 +11,15 @@
     color: black;
     width: 100px;
     text-align: center;
-    border: 1px solid black;
+    border-bottom: 1px solid black;
     padding: 10px 20px;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     margin: 20px auto;
     display: block;
 }
-.colored{
-    background-color: #FFC898;
+.category_wrapper a:hover{
+    color: #FFC898;
+    font-weight: bold;
 }
 .category_container .category_wrapper img{
     width: 25px;
@@ -41,7 +42,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    background-color: white;
 }
 .txt_wrapper h1{
     color:#FFC898; 

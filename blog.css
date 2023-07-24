@@ -166,3 +166,13 @@ html,body{
     margin-top: 50px;
     margin-bottom: 100px;
 }
+
+/* 頁面順序 */
+.page{
+    display: flex;
+    justify-content: center;
+}
+.page section{
+    margin: 10px;
+    cursor: pointer;
+}

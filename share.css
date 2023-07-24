@@ -19,8 +19,8 @@ header{
     position: relative;
     height: 60px;
 }
-.icon_ig{
-    padding: 0px 10px;
+.icon_ig a{
+    padding: 0px 5px;
 }
 .header_logo_migoo img{
     width: 100px;
@@ -61,6 +61,9 @@ header{
 .nav_bottom a:hover{
   font-weight: bold;
 }
+.nav_bottom li:hover{
+  border-bottom: 3px solid #FFC898;
+}
 a{
   text-decoration: none;
   color: black;
@@ -94,7 +97,7 @@ ul{
   align-items: center;
 }
 ul li{
-  padding: 10px 20px;
+  padding: 10px 30px;
 }
 .dropdown_reaction:hover>.dropdown{
   display: block;
