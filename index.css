@@ -11,10 +11,10 @@ html,body{
     width: 100%;
     overflow: hidden;
     /* border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
-    border-bottom-right-radius: 50px; */
+    border-top-right-radius: 50px; */
+    
 }
-.banner{
+.banner a{
     display: flex;
     justify-content: center;
     align-items: center;

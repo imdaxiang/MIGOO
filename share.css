@@ -62,7 +62,7 @@ header{
   font-weight: bold;
 }
 .nav_bottom li:hover{
-  border-bottom: 5px solid #FFC898;
+  border-bottom: 3px solid #FFC898;
 }
 a{
   text-decoration: none;
