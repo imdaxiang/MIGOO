@@ -117,6 +117,10 @@ ul li{
   cursor: pointer;
   z-index: 1;
 }
+.pagetop img{
+  width: 60px;
+  height: 60px;
+}
 .breadcrumbs a{
     text-decoration: none;
     color:black;
