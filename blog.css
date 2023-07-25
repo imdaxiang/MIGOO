@@ -33,8 +33,6 @@ html,body{
     flex: 0.5;
     margin: 10px;
     position: relative;
-    /* -webkit-transition: all 700ms ease-in; */
-    /* border: 1px solid black; */
 }
 .panel h3{
     margin: 50px 10px 10px 10px;
@@ -48,9 +46,6 @@ html,body{
     margin: 10px 10px;
     opacity: 0;
 }
-/* .panel section:hover{
-    background-color: white;
-} */
 .panel.active{
     flex: 5;
 }
