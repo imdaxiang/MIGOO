@@ -1,4 +1,6 @@
-
+.qa{
+    cursor: pointer;
+}
 .faq_title h1{
     text-align: center;
     background-color: #FFFBF5;
