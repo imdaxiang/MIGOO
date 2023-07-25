@@ -147,7 +147,7 @@ html,body{
     align-items: center;
     margin: 50px 20px;
     border-radius: 20px;
-    box-shadow: 3px 3px #FFC898;
+    box-shadow: 5px 5px #FFC898;
 }
 .various_products img{
     width: 150px;
@@ -178,6 +178,11 @@ html,body{
     cursor: pointer;
     width: 100px;
     padding: 5px 0px;
+    transform:scale(1,1);
+    transition: all 1s ease-out;
+}
+.various_products input:hover{
+    transform:scale(1.2,1.2);
 }
 .home_products_02{
     height: 400px;

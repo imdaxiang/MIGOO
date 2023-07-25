@@ -11,28 +11,43 @@
     <script src="https://kit.fontawesome.com/d0903bd1ce.js" crossorigin="anonymous"></script>
 
     <style>
-        .product_top{
+ .product_top{
     width: 100%;
     display: flex;
     justify-content: center;
 }
-.product_top img{
+.piccontainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.bigpic img{
     width: 230px;
     height: 230px;
-    border: 1px solid black;
     padding: 20px;
     margin: 50px 50px;
-    border-radius: 10px;
+    border-radius: 20px;
 
+}
+.smallpic{
+    display: flex;
+    align-items: center;
+}
+.smallpic img{
+    width: 50px;
+    margin: 10px;
+    border-radius: 10px;
+    cursor: pointer;
 }
 .product_top_txt{
     display: flex;
     flex-direction: column;
     margin: 50px 50px;
+    
 }
 .product_top_txt h4{
     letter-spacing: 1px;
-    margin: -10px 0px;
 }
 .product_top_txt p{
     color: #FCC8D1;
@@ -63,6 +78,7 @@
 .product_center {
     display: flex;
     justify-content: center;
+    margin-top: 50px;
 }
 .product_center section{
     margin: 0px 10px 0px 10px;
@@ -164,7 +180,16 @@ hr{
 
     <!-- 商品資訊上方 -->
     <div class="product_top">
-        <img src="products/coolpad.png" alt="">
+        <div class="piccontainer">
+            <div class="bigpic">
+                <img src="products/coolpad.png" alt="">
+            </div>
+            <div class="smallpic">
+                <img src="products/smallpic04.png" alt="">
+                <img src="products/smallpic05.png" alt="">
+                <img src="products/smallpic06.png" alt="">
+            </div>
+        </div>
         <div class="product_top_txt">
             <h4>寵物涼涼冰墊 (兩款)</h4>
             <p>NT$590</p>
