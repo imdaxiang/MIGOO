@@ -16,10 +16,12 @@
     /* border-radius: 10px; */
     margin: 20px auto;
     display: block;
+    font-weight: bold;
+    
 }
 .category_wrapper a:hover{
     color: #FFC898;
-    font-weight: bold;
+    
 }
 .category_container .category_wrapper img{
     width: 25px;
