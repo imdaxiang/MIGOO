@@ -18,51 +18,55 @@
     
 </head>
 <body>
+    <a href=""><p class="discount-info">天天都是貓砂日! 買4包即享免運唷!</p></a>
     <header>
-        <div class="nav_top">
-            <div class="icon_ig">
-                <a href=""><i class="fa-brands fa-square-facebook fa-xl" style="color: #252525;"></i></a>
-                <a href="https://www.instagram.com/miginligoo/" target="_blank"><i class="fa-brands fa-instagram fa-xl" style="color: #252525;"></i></a>
+        <div class="left-icon">
+            <i class="fa-solid fa-bars fa-lg" style="color: #252525;"></i>
+            <a href=""><i class="fa-brands fa-square-facebook fa-xl" style="color: #252525;"></i></a>
+            <a href="https://www.instagram.com/miginligoo/" target="_blank"><i class="fa-brands fa-instagram fa-xl" style="color: #252525;"></i></a>
+        </div>
+    
+        <div class="nav-center">
+            <div class="left-nav">
+                <div class="dropdown_reaction"><a href="feed.html">貓咪用品</a>
+                        
+                        <div class="dropdown">
+                            <a href="feed.html"><section>罐罐飼料</section></a>
+                            <a href="feed.html"><section>餐食飲具</section></a>
+                            <a href="feed.html"><section>睡睡貓窩</section></a>
+                            <a href="feed.html"><section>娛樂玩具</section></a>
+                            <a href="feed.html"><section>喵咪保健</section></a>
+                        </div>
+                    </div>
+                    <div><a href="blog.html">貓咪知識</a></div>    
             </div>
-            <div class="header_logo_migoo">
+    
+            <div class="logo">
                 <a href="index.html"><img src="migoopic/migoo.svg" alt=""></a>
             </div>
-            <div class="icon_wrap">
-                <div class="search">
-                    <label for=""></label>
-                    <input type="text" placeholder="搜尋商品...">
-                    <i class="fa-solid fa-magnifying-glass fa-lg" style="color: #252525;"></i>
-                </div>          
-                <a href="cart.html" ><i class="fa-solid fa-cart-shopping fa-lg" style="color: #252525;"></i></a>
-                <a href="#" id="user"><i class="fa-solid fa-user fa-xl" style="color: #252525;"></i></a>
+    
+            <div class="right-nav">
+                <div><a href="shop.html">門市資訊</a></div>
+                <div><a href="faq01.html">常見問題</a></div>
             </div>
         </div>
-        
-        <div class="nav_bottom">
-            <ul>
-                <li class="dropdown_reaction"><a href="feed.html">
-                    貓咪用品<i class="fa-sharp fa-solid fa-chevron-down fa-xs" style="color: #000000;"></i>
-                    <div class="dropdown">
-                        <section style="border-top-left-radius: 10px; border-top-right-radius: 10px;"><a href="feed.html">罐罐飼料</a></section>
-                        <section><a href="feed.html">餐食飲具</a></section>
-                        <section><a href="feed.html">睡睡貓窩</a></section>
-                        <section><a href="feed.html">娛樂玩具</a></section>
-                        <section style="border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;"><a href="feed.html">喵咪保健</a></section>
+    
+        <div class="right-icon">
+            <div class="search">
+                        <label for=""></label>
+                        <input class="input" type="text" placeholder="搜尋商品...">
+                        <i class="fa-solid fa-magnifying-glass fa-lg" style="color: #252525;"></i>
                     </div>
-                </a></li>
-                <li><a href="blog.html">貓咪知識</a></li>
-                <li><a href="shop.html">門市資訊</a></li>
-                <li><a href="faq01.html">常見問題</a></li>
-            </ul>
-    </div>
-           
-       </div>
-    </header>
+            <a href="cart.html" ><i class="fa-solid fa-cart-shopping fa-lg" style="color: #252525;"></i></a>
+            <button id="user"><i class="fa-solid fa-user fa-xl" style="color: #252525;"></i></button>
+        </div>
+     </header>
 
     <!-- banner -->
     <div class="banner-container">
         <div class="banner">
-            <a href="productinfo02.html"><img src="migoopic/banner01.png" alt="">
+            <a href="productinfo02.html">
+                <img src="migoopic/banner01.png" alt="">
                 <img src="migoopic/banner02.png" alt="">
                 <img src="migoopic/banner03.png" alt="">
                 <img src="migoopic/banner04.png" alt="">
@@ -122,41 +126,49 @@
     <div class="new_products">
         <h1>最新商品</h1>
     </div>
-
+    
     <div class="verybigcontainer">
         <div class="home_products_01">
-            <div class="various_products">
-                <a href="productinfo.html">
-                    <img src="products/chicken_can.png" alt="">
-                    <p>雞肉無穀主食罐</p>
-                    <section>NT$59</section>
-                </a>
-                <a href="cart.html"><input type="button" onclick="showalert()" value="加入購物車" /></a>
+            <div class="col-4 col-xl-2">
+                <div class="various_products">
+                    <a href="productinfo.html">
+                        <img src="products/chicken_can.png" alt="">
+                        <p>雞肉無穀主食罐</p>
+                        <section>NT$59</section>
+                    </a>
+                    <a href="cart.html"><input type="button" onclick="showalert()" value="加入購物車" /></a>
+                </div>
             </div>
-            <div class="various_products">
-                <a href="productinfo.html">
-                    <img style="width: 100px;height: 130px;" src="products/kitten_feed.png" alt="">
-                    <p>幼貓專用飼料 2.5kg</p>
-                    <section>NT$1,199</section>
-                </a>
-                <a href="cart.html"><input type="button" onclick="showalert()" value="加入購物車" /></a>
+            <div class="col-4 col-xl-2">
+                <div class="various_products">
+                    <a href="productinfo.html">
+                        <img style="width: 100px;height: 130px;" src="products/kitten_feed.png" alt="">
+                        <p>幼貓專用飼料</p>
+                        <section>NT$1,199</section>
+                    </a>
+                    <a href="cart.html"><input type="button" onclick="showalert()" value="加入購物車" /></a>
+                </div>
             </div>
-            <div class="various_products">
-                <a href="productinfo.html">
-                    <img src="products/taurine.png" alt="">
-                    <p>牛磺酸保健用品</p>
-                    <section>NT$480</section>
-                </a>
-                <a href="cart.html"><input type="button" onclick="showalert()" value="加入購物車" /></a>
+            <div class="col-4 col-xl-2">
+                <div class="various_products">
+                    <a href="productinfo.html">
+                        <img src="products/taurine.png" alt="">
+                        <p>牛磺酸保健用品</p>
+                        <section>NT$480</section>
+                    </a>
+                    <a href="cart.html"><input type="button" onclick="showalert()" value="加入購物車" /></a>
+                </div>
             </div>
-            <div class="various_products recommend_product">
-                <a href="productinfo.html">
-                    <img src="products/climb.png" alt="">
-                    <p>白色絨毛貓咪爬架</p>
-                    <section>NT$1,299</section>
-                </a>
-                <input type="button" onclick="showalert()" value="加入購物車" />
-            </div>
+            <!-- <div class="col-4 col-xl-2">
+                <div class="various_products recommend_product">
+                    <a href="productinfo.html">
+                        <img src="products/climb.png" alt="">
+                        <p>白色絨毛貓咪爬架</p>
+                        <section>NT$1,299</section>
+                    </a>
+                    <input type="button" onclick="showalert()" value="加入購物車" />
+                </div>
+            </div> -->
             <!-- 推薦 -->
             <div class="recommend">
                 <section>推薦</section>
@@ -174,39 +186,47 @@
     
     <div class="otherbigcontainer">
         <div class="home_products_02">
-            <div class="various_products">
-                <a href="productinfo.html">
-                    <img src="products/cheese.png" alt="">
-                    <p>起司貓抓板</p>
-                    <section>NT$390</section>
-                </a>
-                <input type="button" onclick="showalert()" value="加入購物車" />
+            <div class="col-4 col-xl-2">
+                <div class="various_products">
+                    <a href="productinfo.html">
+                        <img src="products/cheese.png" alt="">
+                        <p>起司貓抓板</p>
+                        <section>NT$390</section>
+                    </a>
+                    <input type="button" onclick="showalert()" value="加入購物車" />
+                </div>
             </div>
-            <div class="various_products">
-                <a href="productinfo.html">
-                    <img  src="products/burger.png" alt="">
-                    <p>漢堡發聲玩具</p>
-                    <section>NT$399</section>
-                </a>
-                <input type="button" onclick="showalert()" value="加入購物車" />
+            <div class="col-4 col-xl-2">
+                <div class="various_products">
+                    <a href="productinfo.html">
+                        <img  src="products/burger.png" alt="">
+                        <p>漢堡發聲玩具</p>
+                        <section>NT$399</section>
+                    </a>
+                    <input type="button" onclick="showalert()" value="加入購物車" />
+                </div>
             </div>
-            <div class="various_products">
-                <a href="productinfo.html">
-                    <img src="products/box.png" alt="">
-                    <p>白色開放式貓砂盆</p>
-                    <section>NT$990</section>
-                </a>
-                <input type="button" onclick="showalert()" value="加入購物車" />
+            <div class="col-4 col-xl-2">
+                <div class="various_products">
+                    <a href="productinfo.html">
+                        <img src="products/box.png" alt="">
+                        <p>白色開放式貓砂盆</p>
+                        <section>NT$990</section>
+                    </a>
+                    <input type="button" onclick="showalert()" value="加入購物車" />
+                </div>
             </div>
-            
-            <div class="various_products">
-                <a href="productinfo.html">
-                    <img src="products/scissors.png" alt="">
-                    <p>寵物安全鎖扣指甲剪</p>
-                    <section>NT$390</section>
-                </a>
-                <input type="button" onclick="showalert()" value="加入購物車" />
-            </div>
+            <!-- <div class="col-4 col-xl-2">
+                <div class="various_products">
+                    <a href="productinfo.html">
+                        <img src="products/scissors.png" alt="">
+                        <p>寵物安全鎖扣指甲剪</p>
+                        <section>NT$390</section>
+                    </a>
+                    <input type="button" onclick="showalert()" value="加入購物車" />
+                </div>
+            </div> -->
+        
             <!-- 推薦 -->
             <div class="recommend">
                 <section>推薦</section>
@@ -247,7 +267,7 @@
             用心為大家帶來更多鮮食好物!</p>
         <h4>有貓咪陪伴的日子，都是好日子</h4>
 
-        <img src="migoopic/introduceimg.png" alt="">
+        <img src="migoopic/introduceimg.svg" alt="">
     </div>
     
     <div class="colorarea"></div>
