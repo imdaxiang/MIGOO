@@ -142,6 +142,20 @@ a{
 }
 
 /* footer */
+@media screen and (max-width: 767px){
+  
+  .footer_wrap{
+    display: flex;
+    flex-direction: column;
+  }
+  .footer_wrap .link{
+    display: flex;
+    padding: 10px;
+  }
+  .info_address, .info_tibame{
+    text-align: center;
+  }
+}
 footer{
     width: 100%;
     display: flex;
@@ -156,7 +170,7 @@ footer{
     border-top-right-radius: 50px;
     border-bottom: none;
     width:900px;
-    height: 200px;
+    /* height: 200px; */
     margin-top: 50px;
     display: flex;
     justify-content: center;
@@ -165,10 +179,10 @@ footer{
 .footer_wrap img{
     width: 180px;
     padding: 0px 50px;
-    margin: 0px 10px;
+    margin: 10px;
 }
 .info_address{
-    padding: 20px 5px;
+    padding: 30px 5px;
     font-weight: bolder;
 }
 .info_tibame{
@@ -183,6 +197,7 @@ footer{
     color: black;
     font-weight: bold;
     padding: 5px 0px;
+    margin: 10px;
 }
 
 /* 登入與註冊 */
