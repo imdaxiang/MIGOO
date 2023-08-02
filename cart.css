@@ -41,8 +41,9 @@
 /* 整個購物車div */
 .cart_bigcontainer{
     height: 600px;
-    margin-bottom: 300px;
+    margin-bottom: 100px;
     position: relative;
+    
 }
 /* 購物車上半部 */
 .cart_wrapper{
@@ -90,6 +91,9 @@
 .product_list section{
     margin-left: 50px;
 }
+.product_list .fa-solid{
+    margin-left: 50px;
+}
 /* 購物車下半部 */
 .cart_bottom{
     width: 800px;
@@ -120,4 +124,74 @@
    margin: 10px 10px;
    
    
+}
+
+/* 可能也會喜歡... */
+@media screen and (max-width: 767px){
+    .youlike-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .youlike-container .youlike01, .youlike02{
+        border-bottom: 1px solid black;
+    }
+    .youlike-container .youlike02, .youlike03{
+        border-left: 1px solid black;
+    }
+}
+.youlike-title{
+    width: 100%;
+    background-color: #FFFBF5;
+}
+.youlike-title h1{
+    text-align: center;
+    margin: 0;
+    padding: 20px 0px;
+    letter-spacing: 5px;
+    color: #FFC898;
+   
+}
+.youlike-container{
+    width: 100%;
+    background-color: #FFFBF5;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.youlike{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid black;
+    padding: 20px;
+}
+.youlike img{
+    width: 220px;
+    height: 200px;
+}
+.youlike .youlike-txt p{
+    font-size: 16px;
+    padding: 5px;
+    text-align: center;
+}
+.youlike .youlike-txt h4{
+    text-align: center;
+}
+.youlike .youlike-txt button{
+    background-color: #FCC8D1;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    width: 120px;
+    padding: 5px 0px;
+    font-size: 14px;
+    box-shadow: 3px 3px 0px #aaa;
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+    transition-property: all;
 }

@@ -14,45 +14,47 @@
 </head>
 <body>
     <header>
-        <div class="nav_top">
-            <div class="icon_ig">
-                <a href=""><i class="fa-brands fa-square-facebook fa-xl" style="color: #252525;"></i></a>
-                <a href="https://www.instagram.com/miginligoo/" target="_blank"><i class="fa-brands fa-instagram fa-xl" style="color: #252525;"></i></a>
+        <div class="left-icon">
+            <i class="fa-solid fa-bars fa-lg" style="color: #252525;"></i>
+            <a href=""><i class="fa-brands fa-square-facebook fa-xl" style="color: #252525;"></i></a>
+            <a href="https://www.instagram.com/miginligoo/" target="_blank"><i class="fa-brands fa-instagram fa-xl" style="color: #252525;"></i></a>
+        </div>
+    
+        <div class="nav-center">
+            <div class="left-nav">
+                <div class="dropdown_reaction"><a href="feed.html">貓咪用品</a>
+                        
+                        <div class="dropdown">
+                            <a href="feed.html"><section>罐罐飼料</section></a>
+                            <a href="feed.html"><section>餐食飲具</section></a>
+                            <a href="feed.html"><section>睡睡貓窩</section></a>
+                            <a href="feed.html"><section>娛樂玩具</section></a>
+                            <a href="feed.html"><section>喵咪保健</section></a>
+                        </div>
+                    </div>
+                    <div><a href="blog.html">貓咪知識</a></div>    
             </div>
-            <div class="header_logo_migoo">
+    
+            <div class="logo">
                 <a href="index.html"><img src="migoopic/migoo.svg" alt=""></a>
             </div>
-            <div class="icon_wrap">
-                <div class="search">
-                    <label for=""></label>
-                    <input type="text" placeholder="搜尋商品...">
-                    <i class="fa-solid fa-magnifying-glass fa-lg" style="color: #000000;"></i>
-                </div>          
-                <a href="cart.html"><i class="fa-solid fa-cart-shopping fa-lg" style="color: #000000;"></i></a>
-                <a id="user"href="#"><i class="fa-solid fa-user fa-lg" style="color: #000000;"></i></a>
+    
+            <div class="right-nav">
+                <div><a href="shop.html">門市資訊</a></div>
+                <div><a href="faq01.html">常見問題</a></div>
             </div>
         </div>
-        
-        <div class="nav_bottom">
-            <ul>
-                <li class="dropdown_reaction"><a href="feed.html">
-                    貓咪用品<i class="fa-sharp fa-solid fa-chevron-down fa-xs" style="color: #000000;"></i>
-                    <div class="dropdown">
-                        <section style="border-top-left-radius: 10px; border-top-right-radius: 10px;"><a href="feed.html">罐罐飼料</a></section>
-                        <section><a>餐食飲具</a></section>
-                        <section><a>睡睡貓窩</a></section>
-                        <section><a>娛樂玩具</a></section>
-                        <section style="border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;"><a>喵咪保健</a></section>
+    
+        <div class="right-icon">
+            <div class="search">
+                        <label for=""></label>
+                        <input class="input" type="text" placeholder="搜尋商品...">
+                        <i class="fa-solid fa-magnifying-glass fa-lg" style="color: #252525;"></i>
                     </div>
-                </a></li>
-                <li><a href="blog.html">貓咪知識</a></li>
-                <li><a href="shop.html">門市資訊</a></li>
-                <li><a href="faq01.html">常見問題</a></li>
-            </ul>
-    </div>
-           
-       </div>
-    </header>
+            <a href="cart.html" ><i class="fa-solid fa-cart-shopping fa-lg" style="color: #252525;"></i></a>
+            <button id="user"><i class="fa-solid fa-user fa-xl" style="color: #252525;"></i></button>
+        </div>
+     </header>
 
 <!-- 麵包屑 -->
     <div class="breadcrumbs">
@@ -61,28 +63,49 @@
         <a href="shop.html">門市資訊</a>
     </div>
 
+    <!-- 門市資訊標題 -->
+    <div class="shop-title">
+        <section style="margin: 20px;"></section>
+        <h1>門市資訊</h1>
+        <section style="margin: 15px;"></section>
+    </div>
+
+    <!-- 門市資訊 -->
     <div class="zhongli_wrap">
         <div class="zhongli">
             <div class="zhongli_info">
-                <h1>中壢門市</h1>
+                <img class="img" src="migoopic/zhongli.png" alt="">
+                <h2>中壢門市</h2>
                 <p>地址: 桃園市中壢區復興路46號9樓</p>
                 <p>營業時間: 週一至週日 12:00-21:00</p>
-                <p>電話: 03 -425 1108</p>
+                <div class="makealine">
+                    <p>電話: 03 -425 1108</p><a href="https://goo.gl/maps/K87ujZ5ka8GRzWtT6" target="_blank"><button type="button">Google Map<img src="migoopic/arrow2.png" alt=""></button></a>
+                </div>
+                
             </div>
-            <img src="migoopic/zhongli.png" alt="">
+            <div class="zhongli-map">
+                <img src="migoopic/zhongli-map.svg" alt="">
+            </div>
         </div>   
     </div>
-    <hr>
+   
     <div class="daan_wrap">
         <div class="daan">
-            <img src="migoopic/daan.png" alt="">
+            
             <div class="daan_info">
-                <h1>大安門市</h1>
-                <p>地址: 台北市大安區喵喵路16號1樓</p>
+                <img class="img" src="migoopic/daan.png" alt="">
+                <h2>大安門市</h2>
+                <p>地址: 台北市大安區中山路6號1樓</p>
                 <p>營業時間: 週一至週日 12:00-21:00</p>
-                <p>電話: 02 -123 4567</p>
+                <div class="makealine">
+                    <p>電話: 02 -123 4567</p><a href="https://goo.gl/maps/K87ujZ5ka8GRzWtT6" target="_blank"><button type="button">Google Map<img src="migoopic/arrow2.png" alt=""></button></a>
+                </div>
+                
             </div>
-        </div>
+            <div class="daan-map">
+                <img src="migoopic/daan-map.svg" alt="">
+            </div>
+        </div>   
     </div>
     
     <div class="pagetop">

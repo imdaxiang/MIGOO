@@ -14,45 +14,47 @@
 </head>
 <body>
     <header>
-        <div class="nav_top">
-            <div class="icon_ig">
-                <a href=""><i class="fa-brands fa-square-facebook fa-xl" style="color: #252525;"></i></a>
-                <a href="https://www.instagram.com/miginligoo/" target="_blank"><i class="fa-brands fa-instagram fa-xl" style="color: #252525;"></i></a>
+        <div class="left-icon">
+            <i class="fa-solid fa-bars fa-lg" style="color: #252525;"></i>
+            <a href=""><i class="fa-brands fa-square-facebook fa-xl" style="color: #252525;"></i></a>
+            <a href="https://www.instagram.com/miginligoo/" target="_blank"><i class="fa-brands fa-instagram fa-xl" style="color: #252525;"></i></a>
+        </div>
+    
+        <div class="nav-center">
+            <div class="left-nav">
+                <div class="dropdown_reaction"><a href="feed.html">貓咪用品</a>
+                        
+                        <div class="dropdown">
+                            <a href="feed.html"><section>罐罐飼料</section></a>
+                            <a href="feed.html"><section>餐食飲具</section></a>
+                            <a href="feed.html"><section>睡睡貓窩</section></a>
+                            <a href="feed.html"><section>娛樂玩具</section></a>
+                            <a href="feed.html"><section>喵咪保健</section></a>
+                        </div>
+                    </div>
+                    <div><a href="blog.html">貓咪知識</a></div>    
             </div>
-            <div class="header_logo_migoo">
+    
+            <div class="logo">
                 <a href="index.html"><img src="migoopic/migoo.svg" alt=""></a>
             </div>
-            <div class="icon_wrap">
-                <div class="search">
-                    <label for=""></label>
-                    <input type="text" placeholder="搜尋商品...">
-                    <i class="fa-solid fa-magnifying-glass fa-lg" style="color: #000000;"></i>
-                </div>          
-                <a href="cart.html"><i class="fa-solid fa-cart-shopping fa-lg" style="color: #000000;"></i></a>
-                <a href="#" id="user"><i class="fa-solid fa-user fa-lg" style="color: #000000;"></i></a>
+    
+            <div class="right-nav">
+                <div><a href="shop.html">門市資訊</a></div>
+                <div><a href="faq01.html">常見問題</a></div>
             </div>
         </div>
-        
-        <div class="nav_bottom">
-            <ul>
-                <li class="dropdown_reaction"><a href="feed.html">
-                    貓咪用品<i class="fa-sharp fa-solid fa-chevron-down fa-xs" style="color: #000000;"></i>
-                    <div class="dropdown">
-                        <section style="border-top-left-radius: 10px; border-top-right-radius: 10px;"><a href="feed.html">罐罐飼料</a></section>
-                        <section><a>餐食飲具</a></section>
-                        <section><a>睡睡貓窩</a></section>
-                        <section><a>娛樂玩具</a></section>
-                        <section style="border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;"><a>喵咪保健</a></section>
+    
+        <div class="right-icon">
+            <div class="search">
+                        <label for=""></label>
+                        <input class="input" type="text" placeholder="搜尋商品...">
+                        <i class="fa-solid fa-magnifying-glass fa-lg" style="color: #252525;"></i>
                     </div>
-                </a></li>
-                <li><a href="blog.html">貓咪知識</a></li>
-                <li><a href="shop.html">門市資訊</a></li>
-                <li><a href="faq01.html">常見問題</a></li>
-            </ul>
-    </div>
-           
-       </div>
-    </header>
+            <a href="cart.html" ><i class="fa-solid fa-cart-shopping fa-lg" style="color: #252525;"></i></a>
+            <button id="user"><i class="fa-solid fa-user fa-xl" style="color: #252525;"></i></button>
+        </div>
+     </header>
 
     <!-- 麵包屑 -->
     <div class="breadcrumbs">
@@ -106,7 +108,7 @@
                         <option value="3">5</option>
                     </select>
                     <section>$990</section>
-                    <button style="margin-left: 100px;">刪除</button>
+                    <i class="fa-solid fa-xmark fa-lg" style="color: #252525;"></i>
                 </div> 
                 <div class="product_list">
                     <img src="products/crocodile.png" alt="">
@@ -121,7 +123,7 @@
                         <option value="3">5</option>
                     </select>
                     <section>$390</section>
-                    <button style="margin-left: 100px;">刪除</button>
+                    <i class="fa-solid fa-xmark fa-lg" style="color: #252525;"></i>
                 </div>
                 <div class="product_list">
                     <img src="products/burger.png" alt="">
@@ -136,7 +138,7 @@
                         <option value="3">5</option>
                     </select>
                     <section>$399</section>
-                    <button style="margin-left: 100px;">刪除</button>
+                    <i class="fa-solid fa-xmark fa-lg" style="color: #252525;"></i>
                 </div>
             </div>
             <!-- 購物車下半部 -->
@@ -220,6 +222,38 @@
     })
 </script>
     
+    <!-- 可能也會喜歡... -->
+    <div class="youlike-title">
+        <h1>您可能也會喜歡......</h1>
+     </div>
+
+     <div class="youlike-container">
+        <div class="youlike youlike01" style="border-left: 1px solid black;">
+            <img src="products/cheese.png" alt="">
+            <div class="youlike-txt">
+                <h4>幼貓專用飼料</h4>
+                <p>NT$1,199</p>
+                <button>加入購物車</button>
+            </div>
+        </div>
+        <div class="youlike youlike02">
+            <img src="products/elizabeth.png" alt="">
+            <div class="youlike-txt">
+                <h4>幼貓專用飼料</h4>
+                <p>NT$1,199</p>
+                <button>加入購物車</button>
+            </div>
+        </div>
+        <div class="youlike youlike03">
+            <img src="products/climb.png" alt="">
+            <div class="youlike-txt">
+                <h4>幼貓專用飼料</h4>
+                <p>NT$1,199</p>
+                <button>加入購物車</button>
+            </div>
+        </div>
+     </div>
+
     <footer>
         <div class="footer_wrap">
             <img src="migoopic/migoo.svg" alt="">

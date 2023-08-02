@@ -1,40 +1,143 @@
+
+@media screen and (max-width: 767px){
+    .zhongli-map img, .daan-map img{
+        display: none;
+    }
+    .shop-title h1{
+        width: 300px;
+    }
+}
+.shop-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFBF5;
+}
+.shop-title h1{
+    display: flex;
+    justify-content: flex-start;
+    background-color: #FFFBF5;
+    text-align: center;
+    padding: 50px 0px;
+    letter-spacing: 5px;
+    color: #333;
+  
+}
+.shop-title section{
+    border-bottom: 1px solid black;
+    width: 200px;
+    background-color: #FFFBF5;
+    
+}
 .zhongli_wrap{
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
+    background-color: #FFFBF5;
 }
 .zhongli{
-    margin: 50px 0px;
+    background-color: white;
+    border: 1px solid black;
+    border-right: none;
+    border-top-left-radius: 80px;
+    margin: 100px 0px;
     display: flex;
+    width: 1200px;
+    height: 300px;
 }
 .zhongli .zhongli_info{
-    padding: 30px 100px;
+    /* padding: 30px 100px; */
+    margin-left: 150px;
+    
 }
-.zhongli img{
-    width: 400px;
-    height: 300px;
+.zhongli_info .img{
+    width: 350px;
+    height: 230px;
     border-radius: 20px;
     border: 1px solid black; 
-    box-shadow: 0 0 5px 5px #e4e4e4;   
+    box-shadow: 0 0 5px 5px #e4e4e4;
+    margin-top: -80px;   
 }
+.zhongli .zhongli_info h2{
+    margin-top: -50px;
+    margin-left: 20px;
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.1em
+}
+.zhongli .zhongli_info p{
+    margin-left: 20px;
+}
+.zhongli-map img{
+    width: 250px;
+    height: 280px;
+    margin-left: 250px;
+  
+}
+/* 大安 */
 .daan_wrap{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    background-color: #FFFBF5;
 }
 .daan{
-    margin: 50px 0px;
+    background-color: white;
+    border: 1px solid black;
+    border-left: none;
+    border-top-right-radius: 80px;
+    margin: 100px 0px;
     display: flex;
+    width: 1200px;
+    height: 300px;
 }
 .daan .daan_info{
-    padding: 30px 100px;
+    /* padding: 30px 100px; */
+    margin-left: 70px;
+    
 }
-.daan img{
-    width: 400px;
-    height: 300px;
+.daan_info .img{
+    width: 350px;
+    height: 230px;
     border-radius: 20px;
-    border: 1px solid black;
-    box-shadow: 0 0 5px 5px #e4e4e4;    
+    border: 1px solid black; 
+    box-shadow: 0 0 5px 5px #e4e4e4;
+    margin-top: -80px;   
+}
+.daan .daan_info h2{
+    margin-top: -50px;
+    margin-left: 20px;
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.1em
+}
+.daan .daan_info p{
+    margin-left: 20px;
+}
+.daan-map img{
+    width: 250px;
+    height: 280px;
+    margin-left: 250px;
+  
+}
+.makealine{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.makealine button{
+    height: 30px;
+    padding: 0px 10px;
+    background-color: #FFC898;
+    border-radius: 10px;
+    border: none;
+    letter-spacing: 3px;
+    cursor: pointer;
+}
+.makealine img{
+    margin-left: 3px;
+    transform: rotate(-45deg);
+    width: 10px;
+    height: 10px;
 }
 .pagetop{
     position: fixed;

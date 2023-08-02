@@ -6,6 +6,7 @@
     <link href="migoopic/migoo_icon.ico" rel="shortcut icon"/>
     <title>MIGOO</title>
     <script src="https://kit.fontawesome.com/d0903bd1ce.js" crossorigin="anonymous"></script>
+    <script src="jQuery/jquery-3.7.0.js"></script>
     <link rel="stylesheet" href="share.css">
     <link rel="stylesheet" href="faq.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,45 +15,47 @@
 </head>
 <body>
     <header>
-        <div class="nav_top">
-            <div class="icon_ig">
-                <a href=""><i class="fa-brands fa-square-facebook fa-xl" style="color: #252525;"></i></a>
-                <a href="https://www.instagram.com/miginligoo/" target="_blank"><i class="fa-brands fa-instagram fa-xl" style="color: #252525;"></i></a>
+        <div class="left-icon">
+            <i class="fa-solid fa-bars fa-lg" style="color: #252525;"></i>
+            <a href=""><i class="fa-brands fa-square-facebook fa-xl" style="color: #252525;"></i></a>
+            <a href="https://www.instagram.com/miginligoo/" target="_blank"><i class="fa-brands fa-instagram fa-xl" style="color: #252525;"></i></a>
+        </div>
+    
+        <div class="nav-center">
+            <div class="left-nav">
+                <div class="dropdown_reaction"><a href="feed.html">貓咪用品</a>
+                        
+                        <div class="dropdown">
+                            <a href="feed.html"><section>罐罐飼料</section></a>
+                            <a href="feed.html"><section>餐食飲具</section></a>
+                            <a href="feed.html"><section>睡睡貓窩</section></a>
+                            <a href="feed.html"><section>娛樂玩具</section></a>
+                            <a href="feed.html"><section>喵咪保健</section></a>
+                        </div>
+                    </div>
+                    <div><a href="blog.html">貓咪知識</a></div>    
             </div>
-            <div class="header_logo_migoo">
+    
+            <div class="logo">
                 <a href="index.html"><img src="migoopic/migoo.svg" alt=""></a>
             </div>
-            <div class="icon_wrap">
-                <div class="search">
-                    <label for=""></label>
-                    <input type="text" placeholder="搜尋商品...">
-                    <i class="fa-solid fa-magnifying-glass fa-lg" style="color: #000000;"></i>
-                </div>          
-                <a href="cart.html"><i class="fa-solid fa-cart-shopping fa-lg" style="color: #000000;"></i></a>
-                <a id="user" href="#"><i class="fa-solid fa-user fa-lg" style="color: #000000;"></i></a>
+    
+            <div class="right-nav">
+                <div><a href="shop.html">門市資訊</a></div>
+                <div><a href="faq01.html">常見問題</a></div>
             </div>
         </div>
-        
-        <div class="nav_bottom">
-            <ul>
-                <li class="dropdown_reaction"><a href="feed.html">
-                    貓咪用品<i class="fa-sharp fa-solid fa-chevron-down fa-xs" style="color: #000000;"></i>
-                    <div class="dropdown">
-                        <section style="border-top-left-radius: 10px; border-top-right-radius: 10px;"><a href="feed.html">罐罐飼料</a></section>
-                        <section><a>餐食飲具</a></section>
-                        <section><a>睡睡貓窩</a></section>
-                        <section><a>娛樂玩具</a></section>
-                        <section style="border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;"><a>喵咪保健</a></section>
+    
+        <div class="right-icon">
+            <div class="search">
+                        <label for=""></label>
+                        <input class="input" type="text" placeholder="搜尋商品...">
+                        <i class="fa-solid fa-magnifying-glass fa-lg" style="color: #252525;"></i>
                     </div>
-                </a></li>
-                <li><a href="blog.html">貓咪知識</a></li>
-                <li><a href="shop.html">門市資訊</a></li>
-                <li><a href="faq01.html">常見問題</a></li>
-            </ul>
-    </div>
-           
-       </div>
-    </header>
+            <a href="cart.html" ><i class="fa-solid fa-cart-shopping fa-lg" style="color: #252525;"></i></a>
+            <button id="user"><i class="fa-solid fa-user fa-xl" style="color: #252525;"></i></button>
+        </div>
+     </header>
 
     <!-- 麵包屑 -->
     <div class="breadcrumbs">
@@ -61,44 +64,59 @@
         <a href="faq01.html">常見問題</a>
     </div>
 
-    <!-- 常見問題 -->
-    <div class="faq_title">
-        <h1>常見問題</h1>
+    <!-- 常見問題標題 -->
+    <div class="faq-title">
+        <img src="migoopic/faq.svg" alt="">
+        <p>FAQ</p>
     </div>
+
+    <!-- 常見問題列表 -->
     <div class="bigfaq_container">
         <div class="faq_wrapper">
-            <div class="alotsbtn">
-                <a href="faq01.html"><button class="colored">訂單問題</button></a>
-                <a href="faq02.html"><button>付款問題</button></a>
-                <a href=""><button>配送問題</button></a>
-                <a href=""><button>退貨問題</button></a>
+            <div class="faq-small-wrap">
+                <div class="faqtype">
+                    <section></section>
+                    <h5>問題類型</h5>
+                    <section></section>
+                </div>
+                <div class="alotsbtn">
+                    <a href="faq01.html">訂單問題</a>
+                    <a href="faq02.html">付款問題</a>
+                    <a href="">配送問題</a>
+                    <a href="">退貨問題</a>
+                </div>
             </div>
+
+            <!-- 常見問題 -->
             <div class="faq_container">
                 <div class="faq_order">
                     <div class="qa" onclick="plus1()">
-                        <section class="question">Q:&nbsp;如何獲取訂單狀態？</section>
-                        <div class="answer" id="answer1" style="display: none;">A:&nbsp;您好，登入會員後查看訂單，”處理中”代表商品尚未寄出，<br>待出貨完成狀態會顯示”已確認”，並同時寄發email信件通知，<br>再請留意謝謝!</div>
+                        <div class="question"><section>Q</section>如何獲取訂單狀態？</div>
+                        
+                        <div class="answer" id="answer1" style="display: none;"><section>A</section>您好，登入會員後查看訂單，”處理中”代表商品尚未寄出，<br>待出貨完成狀態會顯示”已確認”，並同時寄發email信件通知，<br>再請留意謝謝!</div>
                     </div>
-                    <a class="plus" id="plus1"  href="javascript:;">+</a>
+                    <a class="plus" id="plus1"  href="javascript:;" onclick="plus1()">+</a>
                 </div>
                 <div class="faq_order">
                     <div class="qa" onclick="plus2()">
-                        <section class="question">Q:&nbsp;如何取消及修改訂單？</section>
-                        <div class="answer" id="answer2" style="display: none;">A:&nbsp;當訂單狀態為”處理中”，可直接與客服聯繫，會有專人協助處理<br>
+                        <div class="question"><section>Q</section>如何取消及修改訂單？</div>
+                        
+                        <div class="answer" id="answer2" style="display: none;"><section>A</section>當訂單狀態為”處理中”，可直接與客服聯繫，會有專人協助處理<br>
     
                             如是已付款的訂單，待客服取消後款項會於7-14個工作天內完成退刷，<br>再請您留意本期或下期帳單及相關email通知信件。謝謝您!</div>
                     </div>
-                    <a class="plus" id="plus2"  href="javascript:;">+</a>
+                    <a class="plus" id="plus2"  href="javascript:;"  onclick="plus2()">+</a>
                 </div>
                 <div class="faq_order">
                     <div class="qa" onclick="plus3()">
-                        <section class="question">Q:&nbsp;可以在已成立的訂單中修改 / 添加更多商品嗎？</section>
-                        <div class="answer" id="answer3" style="display: none;">A:&nbsp;若訂單已成立將無法再修改或添加更多商品。<br>
+                        <div class="question"><section>Q</section>可以在已成立的訂單中修改 / 添加更多商品嗎？</div>
+                        
+                        <div class="answer" id="answer3" style="display: none;"><section>A</section>若訂單已成立將無法再修改或添加更多商品。<br>
 
 
                             如有添加商品或是修改的需求，請您先取消該筆訂單，並於取消訂單後重新下單。</div>
                     </div>
-                    <a class="plus" id="plus3"  href="javascript:;">+</a>
+                    <a class="plus" id="plus3"  href="javascript:;" onclick="plus3()">+</a>
                 </div>
             </div>
         </div>
@@ -108,32 +126,69 @@
     <div class="pagetop">
         <a href=""><img src="migoopic/pagetop.svg" alt=""></a>
     </div>
+
     <!-- 會動的問號貓 -->
     <div class="questioncat">
         <img src="migoopic/catquestion.png" alt="">
+        <section></section>
     </div>
     
+
+
     <!-- 還有其他問題嗎? -->
     <div class="other_title">
-        <h1>還有其他問題嗎?</h1>
+        <img src="migoopic/otherq.svg" alt="">
         <p>歡迎聯絡我們!</p>
     </div>
-    <div class="other_container">
-        <form action="">
-            <input placeholder="姓名">
-            <input placeholder="電話" type="tel">
-            <input placeholder="電子郵件" type="email">
-            <select class="form-select" aria-label="">
-                <option selected>問題類別</option>
-                <option value="1">訂單問題</option>
-                <option value="2">付款問題</option>
-                <option value="3">配送問題</option>
-                <option value="4">退貨問題</option>
-             </select>
-            <textarea placeholder="內容" name="" id="" cols="" rows=""></textarea>
-        </form>
-        <section>送出</section>
+
+    <!-- 信件 -->
+    <div class="mail-container">
+        <div class="mail">
+            <div class="triangle"></div>
+            <form action="">
+                <label for="name"></label>
+                <input placeholder="姓名" id="name">
+                <label for="tel"></label>
+                <input placeholder="電話" type="tel" id="tel">
+                <label for="email"></label>
+                <input placeholder="電子郵件" type="email" id="email">
+                <select class="form-select" aria-label="">
+                    <option selected>問題類別</option>
+                    <option value="1">訂單問題</option>
+                    <option value="2">付款問題</option>
+                    <option value="3">配送問題</option>
+                    <option value="4">退貨問題</option>
+                 </select>
+                <textarea placeholder="內容" name="" id="text" cols="" rows=""></textarea>
+            </form>
+            <section>送出</section>
+            <div class="contactus">CONTACT US</div>
+        </div>
+        
     </div>
+    <script>
+        $('#name').focus(function(){
+            $(this).css('backgroundColor','#FFC898')
+        }).blur(function(){
+            $(this).css('backgroundColor','#fff')
+        })
+        $('#tel').focus(function(){
+            $(this).css('backgroundColor','#FFC898')
+        }).blur(function(){
+            $(this).css('backgroundColor','#fff')
+        })
+        $('#email').focus(function(){
+            $(this).css('backgroundColor','#FFC898')
+        }).blur(function(){
+            $(this).css('backgroundColor','#fff')
+        })
+        $('#text').focus(function(){
+            $(this).css('backgroundColor','#FFC898')
+        }).blur(function(){
+            $(this).css('backgroundColor','#fff')
+        })
+    </script>
+
     <!-- footer -->
     <footer>
         <div class="footer_wrap">
