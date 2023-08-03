@@ -3,15 +3,6 @@
     .zhongli-map img, .daan-map img{
         display: none;
     }
-    .zhongli{
-
-    }
-    .phone-center{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
 }
 
 .shop-title {
@@ -49,7 +40,7 @@
     border-top-left-radius: 80px;
     margin: 100px 0px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     width: 1200px;
     height: 300px;
 }
@@ -73,6 +64,7 @@
 .zhongli-map img{
     width: 250px;
     height: 280px;
+    margin: 0px 100px;
 }
 /* 大安 */
 .daan_wrap{
@@ -88,7 +80,7 @@
     border-top-right-radius: 80px;
     margin: 100px 0px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     width: 1200px;
     height: 300px;
 }
@@ -112,7 +104,7 @@
 .daan-map img{
     width: 250px;
     height: 280px;
-    /* margin-left: 230px; */
+    margin: 0px 100px;
   
 }
 .makealine{
