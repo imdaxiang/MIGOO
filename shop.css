@@ -32,8 +32,8 @@
     justify-content: flex-end;
     align-items: center;
     background-color: #FFFBF5;
-}
-.zhongli{
+  }
+  .zhongli{
     background-color: white;
     border: 1px solid black;
     border-right: none;
@@ -43,37 +43,71 @@
     justify-content: center;
     width: 1200px;
     height: 300px;
-}
-.zhongli_info .img{
+  }
+  .img_wrap{
+    position: relative;
+  }
+  .img_wrap img{
+    position: absolute;
     width: 350px;
     height: 230px;
     border-radius: 20px;
     border: 1px solid black; 
     box-shadow: 0 0 5px 5px #e4e4e4;
     margin-top: -80px;   
-}
-.zhongli .zhongli_info h2{
-    margin-top: -50px;
+  }
+  
+  .img_wrap .zhongli02{
+    display: none;
+  }
+  .img_wrap .zhongli03{
+    display: none;
+  }
+  .threedot{
+    display: flex;
+    position: absolute;
+    margin-left: 150px;
+    margin-top: 120px;
+    
+  }
+  .threedot section{
+    left: 50px;
+    width: 10px;
+    height: 10px;
+    margin: 5px;
+    border-radius: 100%;
+    background-color: #aaa;
+    opacity: 0.6;
+    cursor: pointer;
+    z-index: 2;
+  }
+  .zhongli_info{
+    width: 300px;
+    z-index: 1;
+    margin-top: 80px;
+  }
+  .zhongli .zhongli_info h2{
+    font-size: 28px;
     margin-left: 20px;
     color: white;
     text-shadow: black 0.1em 0.1em 0.1em
-}
-.zhongli .zhongli_info p{
+  }
+  .zhongli .zhongli_info p{
     margin-left: 20px;
-}
-.zhongli-map img{
+  }
+  .zhongli-map img{
     width: 250px;
     height: 280px;
     margin: 0px 100px;
-}
-/* 大安 */
-.daan_wrap{
+  }
+  /* 大安 */
+  .daan_wrap{
     display: flex;
     justify-content: flex-start;
     align-items: center;
     background-color: #FFFBF5;
-}
-.daan{
+  }
+  .daan{
     background-color: white;
     border: 1px solid black;
     border-left: none;
@@ -83,37 +117,41 @@
     justify-content: center;
     width: 1200px;
     height: 300px;
-}
-.daan_info .img{
-    width: 350px;
-    height: 230px;
-    border-radius: 20px;
-    border: 1px solid black; 
-    box-shadow: 0 0 5px 5px #e4e4e4;
-    margin-top: -80px;   
-}
-.daan .daan_info h2{
+  }
+  .daan_info{
+    width: 300px;
+    z-index: 1;
+    margin-top: 150px;
+  }
+  .daan .daan_info h2{
+    font-size: 28px;
     margin-top: -50px;
     margin-left: 20px;
     color: white;
     text-shadow: black 0.1em 0.1em 0.1em
-}
-.daan .daan_info p{
+  }
+  .daan .daan_info p{
     margin-left: 20px;
-}
-.daan-map img{
+  }
+  .daan-map img{
     width: 250px;
     height: 280px;
     margin: 0px 100px;
   
-}
-.makealine{
+  }
+  .img_wrap .daan02{
+    display: none;
+  }
+  .img_wrap .daan03{
+    display: none;
+  }
+  .makealine{
     display: flex;
     justify-content: space-between;
     align-items: center;
     
-}
-.makealine button{
+  }
+  .makealine button{
     height: 30px;
     padding: 0px 10px;
     background-color: #FFC898;
@@ -121,13 +159,15 @@
     border: none;
     letter-spacing: 3px;
     cursor: pointer;
-}
-.makealine img{
+  }
+  .makealine img{
     margin-left: 3px;
     transform: rotate(-45deg);
     width: 10px;
     height: 10px;
-}
+  }
+ 
+
 .pagetop{
     position: fixed;
     bottom: 0;

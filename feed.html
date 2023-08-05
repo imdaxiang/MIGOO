@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d0903bd1ce.js" crossorigin="anonymous"></script>
+    <script src="jQuery/jquery-3.7.0.js"></script>
 </head>
 <body>
     <header>
@@ -41,7 +42,7 @@
     
             <div class="right-nav">
                 <div><a href="shop.html">門市資訊</a></div>
-                <div><a href="faq01.html">常見問題</a></div>
+                <div><a href="faq.html">常見問題</a></div>
             </div>
         </div>
     
@@ -68,42 +69,34 @@
             <section></section>
             <h1>罐罐飼料 系列</h1>
             <p>SHOP NOW</p>
-            <img src="migoopic/arrow.png" alt="">
+            
         </div>
     </div>
 
-    <!-- 貓砂特價 -->
-<div class="catlitter-wrap">
-    <p>天天都是貓砂日<br>買4包及享免運唷!</p>
-    <img src="migoopic/catlitter.svg" alt="">
-    <div class="x">
-        <section><i class="fa-solid fa-x fa-sm" style="color: #000000;"></i></section>
-    </div>
     
-</div>
 
-   <!-- 商品排序每頁顯示 -->
-   <div class="sortnshow">
-            <div class="sort_wrapper">
-                <p>商品排序<i class="fa-sharp fa-solid fa-chevron-down fa-xs" style="color: #000000;"></i></p>
-                <div class="sort">
-                    <section>上架新到舊</section>
-                    <section>價格低到高</section>
-                    <section>價格高到低</section>
-                </div>
+    <!-- 商品排序每頁顯示 -->
+    <div class="sortnshow">
+        <div class="sort_wrapper">
+            <p>商品排序<i class="fa-sharp fa-solid fa-chevron-down fa-xs" style="color: #000000;"></i></p>
+            <div class="sort">
+                <section>上架新到舊</section>
+                <section>價格低到高</section>
+                <section>價格高到低</section>
             </div>
-            <div class="show_wrapper">
-                <p>每頁顯示8個<i class="fa-sharp fa-solid fa-chevron-down fa-xs" style="color: #000000;"></i></p>
-                <div class="show">
-                    <section>16個</section>
-                    <section>32個</section>
-                </div>
+        </div>
+        <div class="show_wrapper">
+            <p>每頁顯示8個<i class="fa-sharp fa-solid fa-chevron-down fa-xs" style="color: #000000;"></i></p>
+            <div class="show">
+                <section>16個</section>
+                <section>32個</section>
             </div>
+        </div>
     </div>
 
-    <!-- 商品區 -->
+    <!-- 商品選單 -->
     
-    <div class="firstbigcontainer">
+    <div class="allcontainer">
         <div class="listcontainer">
             <div class="list-txt">
                 <section></section>
@@ -111,90 +104,120 @@
                 <section></section>
             </div>
             <div class="list">
-                <a href=""><section>罐罐飼料</section></a>
-                <a href=""><section>餐食飲具</section></a>
-                <a href=""><section>睡睡貓窩</section></a>
-                <a href=""><section>娛樂玩具</section></a>
-                <a href=""><section>喵咪保健</section></a>
+                <a href="feed.html"><section>罐罐飼料</section></a>
+                <a href="feed.html"><section>餐食飲具</section></a>
+                <a href="feed.html"><section>睡睡貓窩</section></a>
+                <a href="feed.html"><section>娛樂玩具</section></a>
+                <a href="feed.html"><section>喵咪保健</section></a>
             </div>
         </div>
         
-        <div class="secbigcontainer">
-            <div class="verybigcontainer">
-                <div class="product_list01">
-                
-                    <div class="various_products col-xl-2">
+        <!-- 商品區 -->
+        <div class="productstainer">
+            <div class="products-row">
+                <div class="col-3 col-md-6">
+                    <div class="card">
                         <a href="productinfo.html">
-                            <img src="products/chicken_can.png" alt="">
-                            <p>雞肉無穀主食罐</p>
-                            <section>NT$59</section>
-                        </a>
-                        <input type="button" onclick="showalert()" value="加入購物車" />
-                    </div>
-                    <div class="various_products col-xl-2">
-                        <a href="productinfo.html">
-                            <img src="products/tunasalmon_can.png" alt="">
-                            <p>鮭魚+鮪魚鮮肉主食罐</p>
-                            <section>NT$59</section>
-                        </a>
-                        <input type="button" onclick="showalert()" value="加入購物車" />
-                    </div>
-                    <div class="various_products col-xl-2">
-                        <a href="productinfo.html">
-                            <img src="products/marckerel_can.png" alt="">
-                            <p>鯖魚鮮肉主食罐</p>
-                            <section>NT$59</section>
-                        </a>
-                        <input type="button" onclick="showalert()" value="加入購物車" />
-                    </div>
-                
-                    <div class="various_products col-xl-2">
-                        <a href="productinfo.html">
-                            <img src="products/chickenbeef_can.png" alt="">
-                            <p>雞肉+牛肉無穀主食罐</p>
+                            <div class="img-wrapper">
+                                <img src="products/chicken_can.png" alt="">
+                            </div>
+                            <h5>雞肉無穀主食罐</h5>
                             <section>NT$59</section>
                         </a>
                         <input type="button" onclick="showalert()" value="加入購物車" />
                     </div>
                 </div>
+                <div class="col-3 col-md-6">
+                    <div class="card">
+                        <a href="productinfo.html">
+                            <div class="img-wrapper">
+                                <img src="products/tunasalmon_can.png" alt="">
+                            </div>
+                            <h5>鮭魚+鮪魚鮮肉主食罐</h5>
+                            <section>NT$59</section>
+                        </a>
+                        <input type="button" onclick="showalert()" value="加入購物車" />
+                    </div>
+                </div>
+                <div class="col-3 col-md-6">
+                    <div class="card">
+                        <a href="productinfo.html">
+                            <div class="img-wrapper">
+                                <img src="products/marckerel_can.png" alt="">
+                            </div>
+                            <h5>鯖魚鮮肉主食罐</h5>
+                            <section>NT$59</section>
+                        </a>
+                        <input type="button" onclick="showalert()" value="加入購物車" />
+                    </div>
+                </div>
+            
+                <div class="col-3 col-md-6">
+                    <div class="card">
+                        <a href="productinfo.html">
+                            <div class="img-wrapper">
+                                <img src="products/chickenbeef_can.png" alt="">
+                            </div>
+                            <h5>雞肉+牛肉無穀主食罐</h5>
+                            <section>NT$59</section>
+                        </a>
+                        <input type="button" onclick="showalert()" value="加入購物車" />
+                    </div>
+                </div>
+                
             </div>
         
-            <div class="otherbigcontainer">
-                <div class="product_list02">
-                    <div class="various_products col-xl-2">
+            <div class="products-row">
+                <div class="col-3 col-md-6">
+                    <div class="card">
                         <a href="productinfo.html">
-                            <img src="products/adult_feed.png" alt="">
-                            <p>成貓 雞肉+鮭魚2.5kg</p>
+                            <div class="img-wrapper">
+                                <img src="products/adult_feed.png" alt="">
+                            </div>
+                            <h5>成貓 雞肉+鮭魚2.5kg</h5>
                             <section>NT$1,299</section>
                         </a>
                         <input type="button" onclick="showalert()" value="加入購物車" />
                     </div>
-                    <div class="various_products col-xl-2">
+                </div>
+                <div class="col-3 col-md-6">
+                    <div class="card">
                         <a href="productinfo.html">
-                            <img src="products/kitten_feed.png" alt="">
-                            <p>幼貓專用飼料 2.5kg</p>
+                            <div class="img-wrapper">
+                                <img src="products/kitten_feed.png" alt="">
+                            </div>
+                            <h5>幼貓專用飼料 2.5kg</h5>
                             <section>NT$1,199</section>
                         </a>
                         <input type="button" onclick="showalert()" value="加入購物車" />
                     </div>
-                    <div class="various_products col-xl-2">
-                        <a href="productinfo.html">
+                </div>
+                <div class="col-3 col-md-6">
+                   <div class="card">
+                    <a href="productinfo.html">
+                        <div class="img-wrapper">
                             <img src="products/weightcontrol_feed.png" alt="">
-                            <p>體重控制 雞肉豌豆 2.5kg</p>
-                            <section>NT$1,299</section>
-                        </a>
-                        <input type="button" onclick="showalert()" value="加入購物車" />
-                    </div>
-                    <div class="various_products col-xl-2">
+                        </div>
+                        <h5>體重控制 雞肉豌豆 2.5kg</h5>
+                        <section>NT$1,299</section>
+                    </a>
+                    <input type="button" onclick="showalert()" value="加入購物車" />
+                   </div>
+                </div>
+                <div class="col-3 col-md-6">
+                    <div class="card">
                         <a href="productinfo.html">
-                            <img src="products/kitten_feed.png" alt="">
-                            <p>幼貓專用飼料 2.5kg</p>
+                            <div class="img-wrapper">
+                                <img src="products/kitten_feed.png" alt="">
+                            </div>
+                            <h5>幼貓專用飼料 2.5kg</h5>
                             <section>NT$1,199</section>
                         </a>
                         <input type="button" onclick="showalert()" value="加入購物車" />
                     </div>
                 </div>
             </div>
+            
         </div>
         
     </div>
@@ -223,6 +246,21 @@
             </div>
         </div>
     </footer>
+
+    <!-- 貓砂特價 -->
+    <div class="catlitter-wrap">
+        <p>天天都是貓砂日<br>買4包及享免運!</p>
+        <img src="migoopic/catlitter.svg" alt="">
+        <div class="x">
+        <section><i class="fa-solid fa-x fa-sm" style="color: #000000;"></i></section>
+    </div>
+    
+
+    <script>
+        $('.x').click(function(){
+            $('.catlitter-wrap').hide()
+        })
+    </script>
 
     <script>
         function showalert(){

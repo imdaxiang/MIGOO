@@ -14,14 +14,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;700&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="grid.css"> -->
     <script src="https://kit.fontawesome.com/d0903bd1ce.js" crossorigin="anonymous"></script>
     
 </head>
 <body>
     <a href=""><p class="discount-info">天天都是貓砂日! 買4包即享免運唷!</p></a>
+    
     <header>
         <div class="left-icon">
-            <i class="fa-solid fa-bars fa-lg" style="color: #252525;"></i>
+            <i id="hamburger" class="fa-solid fa-bars fa-lg" style="color: #252525;"></i>
             <a href=""><i class="fa-brands fa-square-facebook fa-xl" style="color: #252525;"></i></a>
             <a href="https://www.instagram.com/miginligoo/" target="_blank"><i class="fa-brands fa-instagram fa-xl" style="color: #252525;"></i></a>
         </div>
@@ -62,6 +64,47 @@
         </div>
      </header>
 
+     <!-- 貓掌 -->
+    <div class="cat-nav">
+        <div class="content-container">
+            <i class="fa-solid fa-xmark fa-2xl" style="color: #fff;"></i>
+            <div class="nav-list">
+                <div class="sub-reaction"><section>貓咪用品<i class="fa-solid fa-chevron-up fa-rotate-180 fa-sm" style="color: #ffffff;"></i></section>
+            
+                    <div class="sub-menu">
+                        <a href="feed.html"><section>罐罐飼料</section></a>
+                        <a href="feed.html"><section>餐食飲具</section></a>
+                        <a href="feed.html"><section>睡睡貓窩</section></a>
+                        <a href="feed.html"><section>娛樂玩具</section></a>
+                        <a href="feed.html"><section>喵咪保健</section></a>
+                    </div>
+                </div>
+                
+                <a href=""><section>貓咪知識</section></a>
+                <a href=""><section>門市資訊</section></a>
+                <a href=""><section>常見問題</section></a>
+            </div>
+            <div class="social-icon">
+                <i class="fa-brands fa-square-facebook fa-2xl" style="color: #ffffff;"></i>
+                <i class="fa-brands fa-instagram fa-2xl" style="color: #ffffff;"></i>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $('#hamburger').click(function(){
+            $('.cat-nav').toggle();
+        })
+
+        $('.fa-xmark').click(function(){
+            $('.cat-nav').hide()
+        })
+
+        $('.sub-reaction').click(function(){
+            $('.sub-menu').toggle();
+        })
+    </script>
+
     <!-- banner -->
     <div class="banner-container">
         <div class="banner">
@@ -76,7 +119,8 @@
                 <img src="migoopic/banner04.png" alt="">
                 <img src="migoopic/banner01.png" alt="">
                 <img src="migoopic/banner02.png" alt="">
-                <img src="migoopic/banner03.png" alt=""></a>
+                <img src="migoopic/banner03.png" alt="">
+            </a>
         </div>
     </div>
     
@@ -130,40 +174,48 @@
     <!-- 最新商品 -->
     <div class="new_products_container">
         <div class="new_products_row">
-            <div class="col-12 col-sm-6">
+            <div class="col-3 col-md-6">
                 <div class="new_products_card">
                     <a href="productinfo.html">
-                        <img src="products/chicken_can.png" alt="">
+                        <div class="img-wrapper">
+                            <img src="products/chicken_can.png" alt="">
+                        </div>
                         <p>雞肉無穀主食罐</p>
                         <section>NT$59</section>
                     </a>
-                    <a href="cart.html"><input type="button" onclick="showalert()" value="加入購物車" /></a>
+                    <input type="button" onclick="showalert()" value="加入購物車" />
                 </div>
             </div>
-            <div class="col-12 col-sm-6">
+            <div class="col-3 col-md-6">
                 <div class="new_products_card">
                     <a href="productinfo.html">
-                        <img style="width: 100px;height: 130px;" src="products/kitten_feed.png" alt="">
+                        <div class="img-wrapper">
+                            <img style="width: 100px;height: 130px;" src="products/kitten_feed.png" alt="">
+                        </div>
                         <p>幼貓專用飼料</p>
                         <section>NT$1,199</section>
                     </a>
-                    <a href="cart.html"><input type="button" onclick="showalert()" value="加入購物車" /></a>
+                    <input type="button" onclick="showalert()" value="加入購物車" />
                 </div>
             </div>
-            <div class="col-12 col-sm-6">
+            <div class="col-3 col-md-6">
                 <div class="new_products_card">
                     <a href="productinfo.html">
-                        <img src="products/climb.png" alt="">
+                        <div class="img-wrapper">
+                            <img src="products/climb.png" alt="">
+                        </div>
                         <p>白色絨毛貓咪爬架</p>
                         <section>NT$1,299</section>
                     </a>
                     <input type="button" onclick="showalert()" value="加入購物車" />
                 </div>
             </div>
-            <div class="col-12 col-sm-6">
+            <div class="col-3 col-md-6">
                 <div class="new_products_card">
                     <a href="productinfo.html">
-                        <img src="products/crocodile.png" alt="">
+                        <div class="img-wrapper">
+                            <img src="products/crocodile.png" alt="">
+                        </div>
                         <p>鱷魚瓦楞紙貓抓板</p>
                         <section>NT$390</section>
                     </a>
@@ -173,40 +225,48 @@
         </div>
 
         <div class="new_products_row">
-            <div class="col-12 col-sm-6">
+            <div class="col-3 col-md-6">
                 <div class="new_products_card">
                     <a href="productinfo.html">
-                        <img src="products/cheese.png" alt="">
+                        <div class="img-wrapper">
+                            <img src="products/cheese.png" alt="">
+                        </div>
                         <p>起司貓抓板</p>
                         <section>NT$390</section>
                     </a>
                     <input type="button" onclick="showalert()" value="加入購物車" />
                 </div>
             </div>
-            <div class="col-12 col-sm-6">
+            <div class="col-3 col-md-6">
                 <div class="new_products_card">
                     <a href="productinfo.html">
-                        <img  src="products/burger.png" alt="">
+                       <div class="img-wrapper">
+                            <img  src="products/burger.png" alt="">
+                       </div>
                         <p>漢堡發聲玩具</p>
                         <section>NT$399</section>
                     </a>
                     <input type="button" onclick="showalert()" value="加入購物車" />
                 </div>
             </div>
-            <div class="col-12 col-sm-6">
+            <div class="col-3 col-md-6">
                 <div class="new_products_card">
                     <a href="productinfo.html">
-                        <img src="products/box.png" alt="">
+                        <div class="img-wrapper">
+                            <img src="products/box.png" alt="">
+                        </div>
                         <p>白色開放式貓砂盆</p>
                         <section>NT$990</section>
                     </a>
                     <input type="button" onclick="showalert()" value="加入購物車" />
                 </div>
             </div>
-            <div class="col-12 col-sm-6">
+            <div class="col-3 col-md-6">
                 <div class="new_products_card">
                             <a href="productinfo.html">
-                                <img src="products/elizabeth.png" alt="">
+                                <div class="img-wrapper">
+                                    <img src="products/elizabeth.png" alt="">
+                                </div>
                                 <p>伊麗莎白圈</p>
                                 <section>NT$299</section>
                             </a>
@@ -325,6 +385,8 @@
         infoModal.close();
     })
 </script>
+
+
     <!-- footer -->
     <footer>
         <div class="footer_wrap">

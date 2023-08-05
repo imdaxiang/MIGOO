@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="migoopic/migoo_icon.ico" rel="shortcut icon"/>
+    <title>MIGOO</title>
     <link rel="stylesheet" href="share.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,40 +12,59 @@
     <script src="https://kit.fontawesome.com/d0903bd1ce.js" crossorigin="anonymous"></script>
 
     <style>
+@media screen and (max-width: 768px){
+    .product_top{
+        flex-direction: column;
+    }
+    .piccontainer{
+        margin-top: 100px;
+    }
+    .product_top_txt input{
+        display: none;
+    }
+   
+}
+@media screen and (min-width: 767px){
+    .phone-addcart{
+        display: none;
+    }
+}
  .product_top{
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 .piccontainer{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 50px 50px;
 }
 .bigpic img{
     width: 230px;
     height: 230px;
     padding: 20px;
-    margin: 50px 50px;
+    margin: 20px 50px;
     border-radius: 20px;
-
 }
 .smallpic{
-    display: flex;
-    align-items: center;
+    width: 350px;
 }
-.smallpic img{
+.smallpic  img{
     width: 50px;
-    margin: 10px;
+    height: 50px;
     border: 1px solid black;
+    margin:  20px 10px;
     border-radius: 10px;
     cursor: pointer;
+    padding: 5px;
 }
 .product_top_txt{
     display: flex;
     flex-direction: column;
-    margin: 50px 50px;
+    /* margin: 50px 50px; */
     
 }
 .product_top_txt h4{
@@ -87,8 +107,10 @@
     background-color: transparent;
     cursor: pointer;
 }
-.product_center :first-child{
-    border-bottom: 5px solid #FFC898;
+.product_center a:hover{
+    border-bottom: 3px solid #FFC898;
+    color: #FFC898;
+    font-weight: bold;
 }
 hr{
     margin: 0;
@@ -105,6 +127,9 @@ hr{
     height: 600px;
     margin: 50px 0px;
 }
+.nutrition_txt_info{
+    padding: 0px 10px;
+}
 .nutrition_txt_info section{
     background-color: #FFC898;
     margin: 20px 10px 5px 0px;
@@ -120,55 +145,67 @@ hr{
 }
 .nutrition_txt_info p{
     padding: 0px 10px;
-    line-height: 160%;
+    
 }
 .nutrition_txt_info{
     margin: 20px 0px;
+}
+/* 手機的加入購物車按鈕 */
+.phone-addcart{
+    width: 100%;
+    background-color: #FCC8D1;
+    text-align: center;
+    padding: 10px 10px;
+    position: fixed;
+    bottom: 0;
+    cursor: pointer;
 }
     </style>
     
 </head>
 <body>
     <header>
-        <div class="nav_top">
-            <div class="icon_ig">
-                <a href=""><i class="fa-brands fa-square-facebook fa-xl" style="color: #252525;"></i></a>
-                <a href="https://www.instagram.com/miginligoo/" target="_blank"><i class="fa-brands fa-instagram fa-xl" style="color: #252525;"></i></a>
+        <div class="left-icon">
+            <i class="fa-solid fa-bars fa-lg" style="color: #252525;"></i>
+            <a href=""><i class="fa-brands fa-square-facebook fa-xl" style="color: #252525;"></i></a>
+            <a href="https://www.instagram.com/miginligoo/" target="_blank"><i class="fa-brands fa-instagram fa-xl" style="color: #252525;"></i></a>
+        </div>
+    
+        <div class="nav-center">
+            <div class="left-nav">
+                <div class="dropdown_reaction"><a href="feed.html">貓咪用品</a>
+                        
+                        <div class="dropdown">
+                            <a href="feed.html"><section>罐罐飼料</section></a>
+                            <a href="feed.html"><section>餐食飲具</section></a>
+                            <a href="feed.html"><section>睡睡貓窩</section></a>
+                            <a href="feed.html"><section>娛樂玩具</section></a>
+                            <a href="feed.html"><section>喵咪保健</section></a>
+                        </div>
+                    </div>
+                    <div><a href="blog.html">貓咪知識</a></div>    
             </div>
-            <div class="header_logo_migoo">
+    
+            <div class="logo">
                 <a href="index.html"><img src="migoopic/migoo.svg" alt=""></a>
             </div>
-            <div class="icon_wrap">
-                <div class="search">
-                    <label for=""></label>
-                    <input type="text" placeholder="搜尋商品...">
-                    <i class="fa-solid fa-magnifying-glass fa-lg" style="color: #000000;"></i>
-                </div>          
-                <a href="cart.html"><i class="fa-solid fa-cart-shopping fa-lg" style="color: #000000;"></i></a>
-                <a id="user"href="#"><i class="fa-solid fa-user fa-lg" style="color: #000000;"></i></a>
+    
+            <div class="right-nav">
+                <div><a href="shop.html">門市資訊</a></div>
+                <div><a href="faq.html">常見問題</a></div>
             </div>
         </div>
-        
-        <div class="nav_bottom">
-            <ul>
-                <li class="dropdown_reaction"><a href="feed.html">
-                    貓咪用品<i class="fa-sharp fa-solid fa-chevron-down fa-xs" style="color: #000000;"></i>
-                    <div class="dropdown">
-                        <section style="border-top-left-radius: 10px; border-top-right-radius: 10px;"><a href="feed.html">罐罐飼料</a></section>
-                        <section><a>餐食飲具</a></section>
-                        <section><a>睡睡貓窩</a></section>
-                        <section><a>娛樂玩具</a></section>
-                        <section style="border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;"><a>喵咪保健</a></section>
+    
+        <div class="right-icon">
+            <div class="search">
+                        <label for=""></label>
+                        <input class="input" type="text" placeholder="搜尋商品...">
+                        <i class="fa-solid fa-magnifying-glass fa-lg" style="color: #252525;"></i>
                     </div>
-                </a></li>
-                <li><a href="blog.html">貓咪知識</a></li>
-                <li><a href="shop.html">門市資訊</a></li>
-                <li><a href="faq01.html">常見問題</a></li>
-            </ul>
-    </div>
-           
-       </div>
-    </header>
+            <a href="cart.html" ><i class="fa-solid fa-cart-shopping fa-lg" style="color: #252525;"></i></a>
+            <button id="user"><i class="fa-solid fa-user fa-xl" style="color: #252525;"></i></button>
+        </div>
+     </header>
 
     <!-- 麵包屑 -->
     <div class="breadcrumbs">
@@ -176,21 +213,40 @@ hr{
         <i class="fa-sharp fa-solid fa-chevron-right fa-xs" style="color: #000000;"></i>
         <a href="feed.html">貓咪用品</a>
         <i class="fa-sharp fa-solid fa-chevron-right fa-xs" style="color: #000000;"></i>
-    <a href="product_toy.html">商品資訊</a>
+    <a href="productinfo02.html">商品資訊</a>
     </div>
 
     <!-- 商品資訊上方 -->
     <div class="product_top">
         <div class="piccontainer">
-            <div class="bigpic">
-                <img src="products/coolpad.png" alt="">
+            <div >
+                <img  id="large" src="products/coolpad.png" style="width:202px;height:185px;">
             </div>
             <div class="smallpic">
-                <img src="products/smallpic04.png" alt="">
-                <img src="products/smallpic05.png" alt="">
-                <img src="products/smallpic06.png" alt="">
+                <img class="small" src="products/coolpad.png" />
+                <img class="small" src="products/smallpic04.png" />
+                <img class="small" src="products/smallpic05.png" />
+                <img class="small" src="products/smallpic06.png" />
+                
             </div>
         </div>
+        
+        <script>
+            function showLarge(e){
+            document.getElementById("large").src = e.target.src;
+        
+        }
+        
+        function init(){
+            let smalls = document.getElementsByClassName("small");
+            for(let i=0; i<smalls.length; i++){
+                smalls[i].onclick = showLarge;
+            }
+        }
+        
+        window.addEventListener("load", init, false);
+
+        </script>
         <div class="product_top_txt">
             <h4>寵物涼涼冰墊 (兩款)</h4>
             <p>NT$590</p>
@@ -212,9 +268,8 @@ hr{
         </div>
     </div>
     <div class="product_center">
-        <section>商品特色</section>
-        <section>商品介紹</section>
-        <section>退換貨說明</section>
+        <a  href="productinfo02.html#characteristic"><section>商品特色</section></a>
+        <a  href="productinfo02.html#nutrition_txt_info"><section>退換貨說明</section></a>
     </div>
     <hr>
 
@@ -222,10 +277,13 @@ hr{
         <a href=""><img src="migoopic/pagetop.svg" alt=""></a>
     </div>
 
+    <!-- 手機的加入購物車按鈕 -->
+    <div class="phone-addcart" onclick="showalert()">加入購物車</div>
+
     <div class="product_bottom">
-            <img src="products/coolpad01.jpg" alt="">
+            <img id="characteristic" src="products/coolpad01.jpg" alt="">
             <img src="products/coolpad02.jpg" alt="">
-            <div class="nutrition_txt_info">
+            <div class="nutrition_txt_info" id="nutrition_txt_info">
                 <section>退換換貨</section><span>政策</span>
                 <p>若需退貨服務，請協助提供以下資訊並與客服聯繫以加快處理流程<br>
                     1.訂單編號<br>2.商品欲申請退貨原因<br>3.商品包裝完整未拆封使用之照片<br>

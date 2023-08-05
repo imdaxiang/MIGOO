@@ -9,11 +9,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d0903bd1ce.js" crossorigin="anonymous"></script>
+    <script src="jQuery/jquery-3.7.0.js"></script>
 </head>
 <body>
 <header>
     <div class="left-icon">
-        <i class="fa-solid fa-bars fa-lg" style="color: #252525;"></i>
+        <i id="hamburger" class="fa-solid fa-bars fa-lg" style="color: #252525;"></i>
         <a href=""><i class="fa-brands fa-square-facebook fa-xl" style="color: #252525;"></i></a>
         <a href="https://www.instagram.com/miginligoo/" target="_blank"><i class="fa-brands fa-instagram fa-xl" style="color: #252525;"></i></a>
     </div>
@@ -29,8 +30,8 @@
                         <a href="feed.html"><section>娛樂玩具</section></a>
                         <a href="feed.html"><section>喵咪保健</section></a>
                     </div>
-                </div>
-                <div><a href="blog.html">貓咪知識</a></div>    
+            </div>
+            <div><a href="blog.html">貓咪知識</a></div>    
         </div>
 
         <div class="logo">
@@ -39,7 +40,7 @@
 
         <div class="right-nav">
             <div><a href="shop.html">門市資訊</a></div>
-            <div><a href="faq01.html">常見問題</a></div>
+            <div><a href="faq.html">常見問題</a></div>
         </div>
     </div>
 
@@ -49,7 +50,7 @@
                     <input class="input" type="text" placeholder="搜尋商品...">
                     <i class="fa-solid fa-magnifying-glass fa-lg" style="color: #252525;"></i>
                 </div>
-        <a href="#" ><i class="fa-solid fa-cart-shopping fa-lg" style="color: #252525;"></i></a>
+        <a href="cart.html" ><i class="fa-solid fa-cart-shopping fa-lg" style="color: #252525;"></i></a>
         <button id="user"><i class="fa-solid fa-user fa-xl" style="color: #252525;"></i></button>
     </div>
  </header>  
@@ -66,28 +67,7 @@
     <a href=""><img src="migoopic/pagetop.svg" alt=""></a>
 </div>
 
-    <footer>
-        <div class="footer_wrap">
-            <img src="migoopic/migoo.svg" alt="">
-            <div class="info_wrap">
-                <div class="info_address">
-                    地址:桃園市中壢區復興路46號9樓<br>
-                    電話: 03 -425 1108
-                </div>
-                <div class="info_tibame" style="font-size: smaller;">
-                    本網站為緯育TibaMe前端工程師班第86期學員專題作品<br>
-                    本平台僅供學習展示之用
-                </div>
-            </div>
-            <div class="link">
-                <a href="#">貓咪知識</a>
-                <hr>
-                <a href="#">門市資訊</a>
-                <hr>
-                <a href="#">常見問題</a>
-            </div>
-        </div>
-    </footer>
+   
 
 <!-- 登入與註冊 -->
 <dialog  id="infoModal">
@@ -169,10 +149,20 @@
     <div class="content-container">
         <i class="fa-solid fa-xmark fa-2xl" style="color: #fff;"></i>
         <div class="nav-list">
-            <a href="" style="padding-top: 50px;"><section>貓咪用品<i class="fa-solid fa-chevron-up fa-rotate-180 fa-sm" style="color: #ffffff;"></i></section></a>
+            <div class="sub-reaction"><section>貓咪用品<i class="fa-solid fa-chevron-up fa-rotate-180 fa-sm" style="color: #ffffff;"></i></section>
+        
+                <div class="sub-menu">
+                    <a href="feed.html"><section>罐罐飼料</section></a>
+                    <a href="feed.html"><section>餐食飲具</section></a>
+                    <a href="feed.html"><section>睡睡貓窩</section></a>
+                    <a href="feed.html"><section>娛樂玩具</section></a>
+                    <a href="feed.html"><section>喵咪保健</section></a>
+                </div>
+            </div>
+            
             <a href=""><section>貓咪知識</section></a>
             <a href=""><section>門市資訊</section></a>
-        <a href=""><section>常見問題</section></a>
+            <a href=""><section>常見問題</section></a>
         </div>
         <div class="social-icon">
             <i class="fa-brands fa-square-facebook fa-2xl" style="color: #ffffff;"></i>
@@ -181,7 +171,41 @@
     </div>
 </div>
 
+<script>
+    $('#hamburger').click(function(){
+        $('.cat-nav').toggle();
+    })
 
+    $('.fa-xmark').click(function(){
+        $('.cat-nav').hide()
+    })
 
+    $('.sub-reaction').click(function(){
+        $('.sub-menu').toggle();
+    })
+</script>
+
+<footer>
+    <div class="footer_wrap">
+        <img src="migoopic/migoo.svg" alt="">
+        <div class="info_wrap">
+            <div class="info_address">
+                地址:桃園市中壢區復興路46號9樓<br>
+                電話: 03 -425 1108
+            </div>
+            <div class="info_tibame" style="font-size: smaller;">
+                本網站為緯育TibaMe前端工程師班第86期學員專題作品<br>
+                本平台僅供學習展示之用
+            </div>
+        </div>
+        <div class="link">
+            <a href="#">貓咪知識</a>
+            <hr>
+            <a href="#">門市資訊</a>
+            <hr>
+            <a href="#">常見問題</a>
+        </div>
+    </div>
+</footer>
 </body>
 </html>

@@ -72,15 +72,23 @@
     <!-- 門市資訊 -->
     <div class="zhongli_wrap">
         <div class="zhongli">
+            <div class="img_wrap">
+                <img class="zhongli01" src="migoopic/zhongli01.png" alt="">
+                <img class="zhongli02" src="migoopic/zhongli02.jpg" alt="">
+                <img class="zhongli03" src="migoopic/zhongli03.jpg" alt="">
+                <div class="threedot">
+                    <section class="dot01"></section>
+                    <section class="dot02"></section>
+                    <section class="dot03"></section>
+                </div>
+            </div>
             <div class="zhongli_info">
-                <img class="img" src="migoopic/zhongli01.png" alt="">
                 <h2>中壢門市</h2>
                 <p>地址: 桃園市中壢區復興路46號9樓</p>
                 <p>營業時間: 週一至週日 12:00-21:00</p>
                 <div class="makealine">
                     <p>電話: 03 -425 1108</p><a href="https://goo.gl/maps/K87ujZ5ka8GRzWtT6" target="_blank"><button type="button">Google Map<img src="migoopic/arrow2.png" alt=""></button></a>
                 </div>
-                
             </div>
             <div class="zhongli-map">
                 <img src="migoopic/zhongli-map.svg" alt="">
@@ -88,25 +96,51 @@
         </div>   
     </div>
    
+    <script>
+        $('.dot02').click(function(){
+            $('.zhongli02').show()
+            $('.zhongli02').not('.zhongli02').hide()
+        })
+       
+        
+        
+    </script>
+
     <div class="daan_wrap">
         <div class="daan">
             <div class="daan-map">
                 <img src="migoopic/daan-map.svg" alt="">
             </div>
+            <div class="img_wrap">
+                <img class="daan01" src="migoopic/daan01.png" alt="">
+                <img class="daan02" src="migoopic/daan02.jpg" alt="">
+                <img class="daan02" src="migoopic/daan03.jpg" alt="">
+                <div class="threedot">
+                    <section class="dot04"></section>
+                    <section class="dot05"></section>
+                    <section class="dot06"></section>
+                </div>
+            </div>
             <div class="daan_info">
-                <img class="img" src="migoopic/daan.png" alt="">
                 <h2>大安門市</h2>
                 <p>地址: 台北市大安區中山路6號1樓</p>
                 <p>營業時間: 週一至週日 12:00-21:00</p>
                 <div class="makealine">
                     <p>電話: 02 -123 4567</p><a href="https://goo.gl/maps/K87ujZ5ka8GRzWtT6" target="_blank"><button type="button">Google Map<img src="migoopic/arrow2.png" alt=""></button></a>
                 </div>
-
-                
             </div>
-            
         </div>   
     </div>
+
+    <script>
+        $('.dot05').click(function(){
+            $('.daan02').show()
+            $('.daan02').not('.daan02').hide()
+        })
+       
+        
+        
+    </script>
     
     <div class="pagetop">
         <a href=""><img src="migoopic/pagetop.svg" alt=""></a>

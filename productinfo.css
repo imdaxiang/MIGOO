@@ -1,47 +1,68 @@
+@media screen and (max-width: 768px){
+    .product_top{
+        flex-direction: column;
+    }
+    .piccontainer{
+        margin-top: 100px;
+    }
+    .product_top_txt input{
+        display: none;
+    }
+   
+}
+@media screen and (min-width: 767px){
+    .phone-addcart{
+        display: none;
+    }
+}
 .product_top{
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 .piccontainer{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 50px 50px;
 }
- .bigpic img{
+.bigpic img{
     width: 230px;
     height: 230px;
-    /* border: 1px solid black; */
     padding: 20px;
     margin: 20px 50px;
     border-radius: 20px;
 }
 .smallpic{
-    display: flex;
-    align-items: center;
+    width: 350px;
 }
-.smallpic img{
+.smallpic  img{
     width: 50px;
     height: 50px;
     border: 1px solid black;
-    margin: 10px;
+    margin:  20px 10px;
     border-radius: 10px;
     cursor: pointer;
+    padding: 5px;
 }
 .product_top_txt{
     display: flex;
     flex-direction: column;
-    margin: 50px 50px;
+    /* margin: 50px 50px; */
 }
 .product_top_txt h4{
     letter-spacing: 1px;
+}
+.product_top_txt h3{
+    color: #FCC8D1;
+    letter-spacing: 3px;
 }
 .product_top_txt p{
     color: #FCC8D1;
     font-weight: bold;
     letter-spacing: 3px;
-
 }
 .product_top_txt .product_top_txt_info{
     color: black;
@@ -63,19 +84,23 @@
     cursor: pointer;
 }
 
+/* 商品資訊中間分隔 */
 .product_center {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-top: 50px;
 }
 .product_center section{
     margin: 0px 10px 0px 10px;
-    padding: 5px 10px;
+    padding: 5px 30px;
     background-color: transparent;
     cursor: pointer;
 }
-.product_center :first-child{
-    border-bottom: 5px solid #FFC898;
+.product_center a:hover{
+    border-bottom: 3px solid #FFC898;
+    color: #FFC898;
+    font-weight: bold;
 }
 hr{
     margin: 0;
@@ -92,23 +117,37 @@ hr{
     height: 350px;
     margin: 50px 0px;
 }
+
+.nutrition_txt_info{
+    padding: 0px 20px;
+}
 .product_bottom .nutrition_txt section{
     background-color: #FFC898;
     margin: 20px 10px 5px 0px;
     display: inline-block;
     padding: 5px 10px;
-    font-size: 20px;
 }
 .product_bottom .nutrition_txt span{
     background-color: #AAE3E2;
     border-radius: 20px;
     padding: 5px 10px;
-    font-size: 20px;
 }
 .product_bottom .nutrition_txt p{
+    width: 370px;
     padding: 0px 10px;
     line-height: 160%;
 }
 .nutrition_txt_info{
     margin: 20px 0px;
+}
+
+/* 手機的加入購物車按鈕 */
+.phone-addcart{
+    width: 100%;
+    background-color: #FCC8D1;
+    text-align: center;
+    padding: 10px 10px;
+    position: fixed;
+    bottom: 0;
+    cursor: pointer;
 }

@@ -4,12 +4,12 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    width: 100%;
+    /* width: 100%; */
     height: 550px;
     opacity: 0.91;
 }
 .content{
-    height: 600px;
+    height: 550px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -27,20 +27,18 @@
 }
 .banner-container p{
     font-weight: bold;
-    font-size: 20px;
+    font-size: 24px;
     letter-spacing: 3px;
     cursor: pointer;
     margin-bottom: 20px;
 }
-.banner-container img{
-    cursor: pointer;
-}
+
 
 /* 貓砂特價 */
 .catlitter-wrap{
     float: right;
     background-color: #FFC898;
-    width: 480px;
+    width: 425px;
     height: 100px;
     border: 1px solid #000;
     border-right: none;
@@ -54,8 +52,9 @@
     z-index: 2;
   }
   .catlitter-wrap p{
-    margin-left: 20px;
+    margin-left: 15px;
     font-weight: bold;
+    font-size: 14px;
   }
   .catlitter-wrap img{
     width: 280px;
@@ -95,6 +94,7 @@
     display:inline-block;
     cursor: pointer;
     margin: 0px 10px;
+    z-index: 1;
 }
 .sort{
     display: none;
@@ -133,14 +133,13 @@
 }
 
 /* 商品區 */
-@media screen and (max-width: 767px){
-   
-}
-.firstbigcontainer{
-    display: block;
+
+.allcontainer{
     display: flex;
     justify-content: center;
     width: 100%;
+    margin: 50px 0px;
+    
 }
 .list-txt{
     display: flex;
@@ -177,64 +176,64 @@
 .list section:hover{
     border-bottom: 3px solid #FFC898;
 }
-.secbigcontainer{
+
+/* 商品區 */
+.col-3 {
+    width: 25%;
+}
+@media screen and (max-width: 768px){
+    .col-md-6 {
+        width: 50%;
+    }
+    .listcontainer{
+        display: none;
+    }
+}
+.productstainer{
+    /* max-width: 1200px; */
     display: flex;
     flex-direction: column;
-    
 }
-.verybigcontainer{
+.products-row{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    margin: 10px;
 }
-.otherbigcontainer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.product_list01{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-top: 70px;
-    
-}
-.various_products{
-    width: 200px;
-    height: 340px;
-    /* border: 1px solid black; */
+
+.card{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 20px;
     text-decoration: none;
     color:black;
-    /* box-shadow: 8px 8px #FFC898; */
-    margin: 20px;
+    
+    margin: 20px 10px;
 }
-.various_products a{
+.card a{
     text-decoration: none;
     color:black;
     text-align: center;
 }
-.various_products img{
-    width: 120px;
+.card .img-wrapper{
+    width: 180px;
+}
+.card img{
+    width: 60%;
     height: 100px;
     transform:scale(1,1);
     transition: all 1s ease-out;
 }
-.various_products img:hover{
+.card img:hover{
     transform:scale(1.2,1.2);
 }
-.various_products p{
-    font-weight: bold;
-}
-.various_products section{
+.card section{
     font-weight: 300;
     margin: 10px 0px;
 }
-.various_products input{
+.card input{
     background-color: #FCC8D1;
     border-radius: 10px;
     border-color: #FCC8D1;
@@ -245,18 +244,7 @@
     transform:scale(1,1);
     transition: all 1s ease-out;
 }
-.various_products input:hover{
+.card input:hover{
     transform:scale(1.2,1.2);
-}
-.product_list02{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    
-    
-}
-.product_list02 img{
-    width: 100px;
-    height: 130px;
 }
 
