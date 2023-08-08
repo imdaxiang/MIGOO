@@ -70,11 +70,11 @@
    
 
 <!-- 登入與註冊 -->
-<dialog  id="infoModal">
+<dialog id="infoModal">
     <div class="bigcontainer">
         <div class="container">
             <div class="form-box">
-                <div class="register-box hidden" >
+                <div class="register-box" >
                     <button id="close1"><i class="fa-solid fa-xmark fa-2xl" style="color: #fff;"></i></button>
                     <h1>REGISTER</h1>
                     <input type="text" placeholder="帳號">
@@ -83,7 +83,7 @@
                     <input type="email" placeholder="電子郵件">
                     <section>註冊</section>
                 </div>
-                <div class="login-box ">
+                <div class="login-box hidden">
                     <button id="close2"><i class="fa-solid fa-xmark fa-2xl" style="color: #fff;"></i></button>
                     <h1>LOGIN</h1>
                     <input type="text" placeholder="帳號">
@@ -160,9 +160,9 @@
                 </div>
             </div>
             
-            <a href=""><section>貓咪知識</section></a>
-            <a href=""><section>門市資訊</section></a>
-            <a href=""><section>常見問題</section></a>
+            <a href="blog.html"><section>貓咪知識</section></a>
+            <a href="shop.html"><section>門市資訊</section></a>
+            <a href="faq.html"><section>常見問題</section></a>
         </div>
         <div class="social-icon">
             <i class="fa-brands fa-square-facebook fa-2xl" style="color: #ffffff;"></i>
@@ -184,6 +184,42 @@
         $('.sub-menu').toggle();
     })
 </script>
+
+<!-- 手機登入註冊 -->
+<div class="phone-loginregi">
+    <div class="loginregi">
+        <section id="phone-login">登入</section>
+        <section id="phone-regi">註冊</section>
+    </div>
+    <div class="phone-container">
+        <button class="phone-cross"><i class="fa-solid fa-xmark fa-2xl" style="color: #fff;"></i></button>
+        <div class="phone-login-box">
+            <h1>LOGIN</h1>
+            <input type="text" placeholder="帳號">
+            <input type="password" placeholder="密碼">
+            <p>忘記密碼</p>
+            <section>登入</section>
+        </div>
+        <div class="phone-regi-box">
+            <h1>REGISTER</h1>
+            <input type="text" placeholder="帳號">
+            <input type="password" placeholder="密碼">
+            <input type="password" placeholder="確認密碼">
+            <input type="email" placeholder="電子郵件">
+            <section>註冊</section>
+        </div>
+    </div>
+</div>
+<script>
+    $('#user').click(function(){
+        $('.phone-loginregi').toggle();
+    })
+    $('.phone-cross').click(function(){
+        $('.phone-loginregi').hide();
+    })
+   
+</script>
+
 
 <footer>
     <div class="footer_wrap">

@@ -119,10 +119,16 @@
     </div>
     <!-- 商品資訊中間分隔 -->
     <div class="product_center">
-        <a  href="productinfo.html#characteristic"><section>商品特色</section></a>
-        <a  href="productinfo.html#nutrition_txt_info"><section>退換貨說明</section></a>
+        <a class="feature" href="productinfo.html#characteristic"><section>商品特色</section></a>
+        <a class="back" href="productinfo.html#nutrition_txt_info"><section>退換貨說明</section></a>
     </div>
     <hr>
+
+<script>
+    $('.product_center .back').hover(function(){
+        $(this).css('color','#FFC898')
+    })
+</script>
 
     <!-- 往上的按鈕 -->
     <div class="pagetop">

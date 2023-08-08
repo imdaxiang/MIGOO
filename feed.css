@@ -79,11 +79,24 @@
     background-color: #FFC898;
     height: 30px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     position: relative;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
+}
+.phone-list{
+    display: inline-block;
+    cursor: pointer;
+    margin: 0px 10px;
+}
+.listlist{
+    display: none;
+    border: 1px solid black;
+    padding: 10px 20px;
+    background-color: white;
+    position: absolute;
+    z-index: 1;
 }
 .sort_wrapper{
     display: inline-block;
@@ -111,6 +124,7 @@
     padding: 5px;
     background-color: white;
     position: absolute;
+    z-index: 1;
 }
 .sort section{
     padding: 10px 10px;
@@ -118,13 +132,18 @@
 .show section{
     padding: 10px 10px;
 }
+.listlist section:hover{
+    background-color: #FFC898;
+}
 .sort section:hover{
     background-color: #FFC898;
 }
 .show section:hover{
     background-color: #FFC898;
 }
-
+.phone-list:hover>.listlist{
+    display: block;
+}
 .show_wrapper:hover>.show{
     display: block;
 }
@@ -189,6 +208,16 @@
         display: none;
     }
 }
+@media screen and (min-width: 767px){
+    .phone-list{
+        display: none;
+    }
+    .sortnshow{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+}
 .productstainer{
     /* max-width: 1200px; */
     display: flex;
@@ -222,12 +251,15 @@
 }
 .card img{
     width: 60%;
-    height: 100px;
+    height: 120px;
     transform:scale(1,1);
     transition: all 1s ease-out;
 }
-.card img:hover{
+.card:hover img{
     transform:scale(1.2,1.2);
+}
+.card:hover input{
+    font-weight: bold;
 }
 .card section{
     font-weight: 300;
@@ -241,10 +273,5 @@
     cursor: pointer;
     width: 100px;
     padding: 5px 0px;
-    transform:scale(1,1);
-    transition: all 1s ease-out;
-}
-.card input:hover{
-    transform:scale(1.2,1.2);
 }
 

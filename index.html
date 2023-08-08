@@ -16,9 +16,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;700&display=swap" rel="stylesheet">
     <!-- <link rel="stylesheet" href="grid.css"> -->
     <script src="https://kit.fontawesome.com/d0903bd1ce.js" crossorigin="anonymous"></script>
+    <script src="jQuery/jquery-3.7.0.js"></script>
     
 </head>
 <body>
+    <!-- 蓋板廣告 -->
+    <div class="ad">
+        <div class="ad-center">
+            <i id="bye" class="fa-solid fa-x fa-xl" style="color: #ffffff;"></i>
+            <img src="migoopic/ad.png" alt="">
+        </div>
+            
+    </div>
+    <script>
+        $('#bye').click(function(){
+            $('.ad').hide()
+        })
+    </script>
     <a href=""><p class="discount-info">天天都是貓砂日! 買4包即享免運唷!</p></a>
     
     <header>
@@ -80,9 +94,9 @@
                     </div>
                 </div>
                 
-                <a href=""><section>貓咪知識</section></a>
-                <a href=""><section>門市資訊</section></a>
-                <a href=""><section>常見問題</section></a>
+                <a href="blog.html"><section>貓咪知識</section></a>
+                <a href="shop.html"><section>門市資訊</section></a>
+                <a href="faq.html"><section>常見問題</section></a>
             </div>
             <div class="social-icon">
                 <i class="fa-brands fa-square-facebook fa-2xl" style="color: #ffffff;"></i>
@@ -103,6 +117,12 @@
         $('.sub-reaction').click(function(){
             $('.sub-menu').toggle();
         })
+        $(function () {
+			$('cat-nav').slideUp(2000).click(function(){
+				$('#topMessage').slideDown(1000)
+			})
+		})	
+        
     </script>
 
     <!-- banner -->

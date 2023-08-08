@@ -97,11 +97,16 @@
     background-color: transparent;
     cursor: pointer;
 }
-.product_center a:hover{
+.product_center .feature{
     border-bottom: 3px solid #FFC898;
     color: #FFC898;
     font-weight: bold;
 }
+/* .product_center a:hover{
+    border-bottom: 3px solid #FFC898;
+    color: #FFC898;
+    font-weight: bold;
+} */
 hr{
     margin: 0;
 }
