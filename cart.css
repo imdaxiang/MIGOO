@@ -2,6 +2,7 @@
 .step_wrapper{
     display: flex;
     justify-content: center;
+    height: 150px;
 }
 .step_wrapper p{
     text-align: center;
@@ -18,6 +19,9 @@
     font-weight: bold;
     margin: 50px 50px 0px 50px;
 }
+.step_2{
+    opacity: 0.6;
+}
 .step_2 section{
     width: 50px;
     height: 50px;
@@ -25,16 +29,20 @@
     border-radius: 100%;
     text-align: center;
     line-height: 50px;
-    line-height: 50px;
+   
     font-size: 28px;
     font-weight: bold;
     margin: 50px 50px 0px 50px;
     
 }
+.step_3{
+    opacity: 0.6;
+}
 .step_3 section{
     width: 50px;
     height: 50px;
     background-color: #FFC898;
+    line-height: 50px;
     border-radius: 100%;
     text-align: center;
     font-size: 28px;
@@ -43,10 +51,11 @@
 }
 /* 整個購物車div */
 .cart_bigcontainer{
+    width:100%;
     height: 600px;
     margin-bottom: 100px;
     position: relative;
-    
+    margin: 50px auto;
 }
 /* 購物車上半部 */
 .cart_wrapper{
@@ -54,10 +63,11 @@
     top: 50%;  
     left: 50%;
     transform: translate(-50%, -50%);
-    
+    width: 70%;
 }
 .cart_top{
-    width: 800px;
+    /* max-width: 90%; */
+    min-width: 80%;
     height: 60px;
     margin: 50px 0px 0px 0px;
     background-color: #FFC898;
@@ -68,18 +78,23 @@
 }
 .cart_top h1{
     text-align: center;
+    letter-spacing: 5px;
     margin-top: 10px;
 }
 /* 購物車中間 */
 .cart_center{
-    width: 800px;
+    min-width: 80%;
     border: 1px solid black;
-    
+   
 }
 .cart_center .cart_center_head{
     display: flex;
-    width: 800px;
-    margin: 10px 0px;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px;
+}
+.cart_center .cart_center_head section{
+    margin: 10px 50px;
 }
 .product_list{
     display: flex;
@@ -95,11 +110,11 @@
     margin-left: 50px;
 }
 .product_list .fa-solid{
-    margin-left: 50px;
+    margin-left: 100px;
 }
 /* 購物車下半部 */
 .cart_bottom{
-    width: 800px;
+    min-width: 80%;
     height: 50px;
     background-color: #AAE3E2;
     border: 1px solid black;

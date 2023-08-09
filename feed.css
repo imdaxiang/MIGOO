@@ -98,6 +98,9 @@
     position: absolute;
     z-index: 1;
 }
+.listlist section{
+    padding: 10px;
+}
 .sort_wrapper{
     display: inline-block;
     cursor: pointer;
@@ -238,7 +241,6 @@
     align-items: center;
     text-decoration: none;
     color:black;
-    
     margin: 20px 10px;
 }
 .card a{

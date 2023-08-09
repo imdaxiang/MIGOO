@@ -7,25 +7,23 @@ html,body{
     margin: 0;
 }
 
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 1125px){
   .left-icon a, .left-nav a, .right-nav a ,.input {
     display: none;
   }
- 
+ .nav-center{
+  display: none;
+ }
   
 }
 
-@media screen and (min-width: 999px){
+@media screen and (min-width: 1124px){
   .left-icon #hamburger{
     display: none;
 
   }
 }
-@media screen and (max-width: 768px){
-  .right-icon .fa-solid{
-    cursor: pointer;
-  }
-}
+
 
 header{
   width: 100%;
@@ -44,9 +42,10 @@ header{
 }
 .left-icon #hamburger{
   cursor: pointer;
+  
 }
 .nav-center{
-  width: 700px;
+  /* width: 700px; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -355,22 +354,20 @@ input{
 .cat-nav{
   background-image: url(migoopic/cat-nav.png);
   background-repeat: no-repeat;
-  width: 500px;
-  height: 800px;
+  width: 700px;
+  height: 180vh;
   /* margin-left: -60px; */
   position: fixed;
-  top: -180px;
-  left: -60px;
-  /* bottom: -1200px; */
+  top: -200px;
+  left: -70px;
   z-index: 5;
   display: none;
-  /* transform: translateY(760px); */
   
 }
 
 .content-container{
-  margin-left: 80px;
-  margin-top: 200px;
+  margin-left: 150px;
+  margin-top: 250px;
 }
 
 .nav-list{
@@ -445,7 +442,7 @@ input{
 .phone-container {
   background-color: #FFC898;
   width: 300px;
-  height: 400px;
+  height: 450px;
   border-radius: 10px;
   flex-direction: column;
   justify-content: center;
@@ -494,4 +491,5 @@ input{
   letter-spacing: 2px;
   cursor: pointer;
   text-align: center;
+  margin-top: 10px;
 }
