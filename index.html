@@ -75,6 +75,7 @@
                     </div>
             <a href="cart.html" ><i class="fa-solid fa-cart-shopping fa-lg" style="color: #252525;"></i></a>
             <button id="user"><i class="fa-solid fa-user fa-xl" style="color: #252525;"></i></button>
+            <button id="phoneuser"><i class="fa-solid fa-user fa-xl" style="color: #252525;"></i></button>
         </div>
      </header>
 
@@ -108,6 +109,7 @@
     <script>
         $('#hamburger').click(function(){
             $('.cat-nav').toggle();
+            
         })
 
         $('.fa-xmark').click(function(){
@@ -117,13 +119,15 @@
         $('.sub-reaction').click(function(){
             $('.sub-menu').toggle();
         })
-        $(function () {
-			$('cat-nav').slideUp(2000).click(function(){
-				$('#topMessage').slideDown(1000)
-			})
-		})	
-        
     </script>
+    <!-- <script>
+        let catnav=document.getElementsByClassName('cat-nav');
+        let hamburger=document.getElementById('hamburger');
+
+        hamburger.addEventListener('click',()=>{
+            catnav.style.transform='translateY(-80%)';
+        })
+    </script> -->
 
     <!-- banner -->
     <div class="banner-container">
@@ -345,15 +349,19 @@
                     <input type="password" placeholder="密碼">
                     <input type="password" placeholder="確認密碼">
                     <input type="email" placeholder="電子郵件">
-                    <section>註冊</section>
+                    <a href="">已是會員?點此登入</a>
+                    <a href="index.html"><section>註冊</section></a>
                 </div>
                 <div class="login-box ">
                     <button id="close2"><i class="fa-solid fa-xmark fa-2xl" style="color: #fff;"></i></button>
                     <h1>LOGIN</h1>
                     <input type="text" placeholder="帳號">
                     <input type="password" placeholder="密碼">
-                    <p>忘記密碼</p>
-                    <section>登入</section>
+                    <div class="smallwrap">
+                        <a href="index.html">忘記密碼</a>
+                        <a href="index.html">註冊</a>
+                    </div>
+                    <a href="index.html"><section>登入</section></a>
                 </div>
             </div>
 
@@ -405,8 +413,63 @@
         infoModal.close();
     })
 </script>
+<!-- <script>
+    $('#register').click(function(){
+        $('.con-box.right').hide()
+        $('.con-box.left').show()
+    })
+    $('#login').click(function(){
+        $('.con-box.left').hide()
+        $('.con-box.right').show()
+    })
+</script> -->
 
-
+    <!-- 手機登入註冊 -->
+<dialog id="phone">
+    <div class="phone-loginregi-container" >
+        <div class="phone-loginregi">
+            <div class="loginregi">
+                <section id="phone-login">登入</section>
+                <section id="phone-regi">註冊</section>
+            </div>
+            <div class="phone-container">
+                <button class="phone-cross"><i class="fa-solid fa-xmark fa-2xl" style="color: #fff;"></i></button>
+                <div class="phone-login-box">
+                    <h1>LOGIN</h1>
+                    <input type="text" placeholder="帳號">
+                    <input type="password" placeholder="密碼">
+                    <p>忘記密碼</p>
+                    <section>登入</section>
+                </div>
+                <div class="phone-regi-box">
+                    <h1>REGISTER</h1>
+                    <input type="text" placeholder="帳號">
+                    <input type="password" placeholder="密碼">
+                    <input type="password" placeholder="確認密碼">
+                    <input type="email" placeholder="電子郵件">
+                    <section>註冊</section>
+                </div>
+            </div>
+        </div>
+    </div>
+</dialog>
+<script>
+    // 點user打開
+    let btnn=document.querySelector("#phoneuser");
+    let phone=document.querySelector("#phone");
+    btnn.addEventListener("click", function(){
+        phone.showModal();
+    })
+   $('.phone-cross').click(function(){
+    $('#phone').hide();
+   })
+    
+    // 點叉叉關閉
+    $('.phone-cross').click(function(){
+        $('.phone-loginregi').hide();
+    })
+  
+</script>
     <!-- footer -->
     <footer>
         <div class="footer_wrap">

@@ -204,8 +204,8 @@ footer{
 }
 
 /* 登入與註冊 */
-@media screen and (max-width: 768px){
-  .container{
+@media screen and (max-width: 1000px){
+  #user{
     display: none;
   }
 }
@@ -214,6 +214,7 @@ dialog{
   border: transparent;
   background-color: transparent;
   overflow: hidden;
+  
 }
 .bigcontainer{
   display: flex;
@@ -233,7 +234,7 @@ dialog::backdrop {
   border: 1px solid black;
   border-radius: 10px;
   width: 600px;
-  height: 415px;
+  height: 400px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
   position: relative;
   display: flex;
@@ -275,12 +276,16 @@ input{
   align-items: center;
   width: 100%;
 }
+.register-box a{
+  text-decoration: none;
+  font-size: 12px;
+}
 .form-box button{
   background-color: transparent;
   border: none;
   position: absolute;
-  right: 10%;
-  top: 10%;
+  right: 8%;
+  top: 8%;
   cursor: pointer;
 }
 .form-box h1{
@@ -289,9 +294,10 @@ input{
   color: white;
   letter-spacing: 5px;
 }
-.form-box p{
+.smallwrap a{
+  text-decoration: none;
   font-size: 12px;
-  margin-bottom: 20px;
+  margin: 10px;
 }
 .hidden{
   display: none;
@@ -305,6 +311,7 @@ input{
   letter-spacing: 2px;
   cursor: pointer;
   text-align: center;
+  margin-top: 30px;
 }
 .con-box{
   width: 50%;
@@ -315,10 +322,11 @@ input{
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  
 }
 .con-box.left{
   left: -3%;
- 
+  
 }
 .con-box.right{
   right: -3%;
@@ -345,8 +353,8 @@ input{
   background-color: #FFC898;
 }
 .con-box img{
-  width: 120px;
-  height: 60px;
+  width: 100px;
+  height: 40px;
 }
 
 
@@ -364,7 +372,6 @@ input{
   display: none;
   
 }
-
 .content-container{
   margin-left: 150px;
   margin-top: 250px;
@@ -408,11 +415,12 @@ input{
   
 }
 /* 手機登入註冊 */
-/* @media screen and (min-width: 999px){
-  .phone-loginregi{
+@media screen and (min-width: 999px){
+  #phoneuser{
     display: none;
   }
-} */
+}
+
 .phone-loginregi{
   display: flex;
   flex-direction: column;

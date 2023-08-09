@@ -57,6 +57,50 @@
         </div>
      </header>
 
+     <!-- 貓掌 -->
+    <div class="cat-nav">
+        <div class="content-container">
+            <i class="fa-solid fa-xmark fa-2xl" style="color: #fff;"></i>
+            <div class="nav-list">
+                <div class="sub-reaction"><section>貓咪用品<i class="fa-solid fa-chevron-up fa-rotate-180 fa-sm" style="color: #ffffff;"></i></section>
+            
+                    <div class="sub-menu">
+                        <a href="feed.html"><section>罐罐飼料</section></a>
+                        <a href="feed.html"><section>餐食飲具</section></a>
+                        <a href="feed.html"><section>睡睡貓窩</section></a>
+                        <a href="feed.html"><section>娛樂玩具</section></a>
+                        <a href="feed.html"><section>喵咪保健</section></a>
+                    </div>
+                </div>
+                
+                <a href="blog.html"><section>貓咪知識</section></a>
+                <a href="shop.html"><section>門市資訊</section></a>
+                <a href="faq.html"><section>常見問題</section></a>
+            </div>
+            <div class="social-icon">
+                <i class="fa-brands fa-square-facebook fa-2xl" style="color: #ffffff;"></i>
+                <i class="fa-brands fa-instagram fa-2xl" style="color: #ffffff;"></i>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $('#hamburger').click(function(){
+            $('.cat-nav').toggle();
+            
+        })
+
+        $('.fa-xmark').click(function(){
+            $('.cat-nav').hide()
+        })
+
+        $('.sub-reaction').click(function(){
+            $('.sub-menu').toggle();
+        })
+       	
+        
+    </script>
+
     <!-- 麵包屑 -->
     <div class="breadcrumbs">
         <a href="index.html">首頁</a>
@@ -132,7 +176,51 @@
             </div>
         </div>
     </div>
-    
+    <script>
+        var isShow = false;
+        function plus1() {
+            if(!isShow) {
+                isShow = true;
+               document.getElementById('answer1').style.display='';
+               document.getElementById('plus1').innerText = "+";
+           }
+           else {
+               isShow = false;
+               document.getElementById('answer1').style.display='none';
+               document.getElementById('plus1').innerText = "+";
+           }
+        }
+        </script>
+        <script>
+            var isShow = false;
+        function plus2() {
+            if(!isShow) {
+                isShow = true;
+               document.getElementById('answer2').style.display='';
+               document.getElementById('plus2').innerText = "+";
+           }
+           else {
+               isShow = false;
+               document.getElementById('answer2').style.display='none';
+               document.getElementById('plus2').innerText = "+";
+           }
+        }
+        </script>
+        <script>
+            var isShow = false;
+        function plus3() {
+            if(!isShow) {
+                isShow = true;
+               document.getElementById('answer3').style.display='';
+               document.getElementById('plus3').innerText = "+";
+           }
+           else {
+               isShow = false;
+               document.getElementById('answer3').style.display='none';
+               document.getElementById('plus3').innerText = "+";
+           }
+        }
+        </script>
     <!-- 往上的按鈕 -->
     <div class="pagetop">
         <a href=""><img src="migoopic/pagetop.svg" alt=""></a>
@@ -226,51 +314,7 @@
     </footer>
     
 
-<script>
-var isShow = false;
-function plus1() {
-    if(!isShow) {
-        isShow = true;
-       document.getElementById('answer1').style.display='';
-       document.getElementById('plus1').innerText = "+";
-   }
-   else {
-       isShow = false;
-       document.getElementById('answer1').style.display='none';
-       document.getElementById('plus1').innerText = "+";
-   }
-}
-</script>
-<script>
-    var isShow = false;
-function plus2() {
-    if(!isShow) {
-        isShow = true;
-       document.getElementById('answer2').style.display='';
-       document.getElementById('plus2').innerText = "+";
-   }
-   else {
-       isShow = false;
-       document.getElementById('answer2').style.display='none';
-       document.getElementById('plus2').innerText = "+";
-   }
-}
-</script>
-<script>
-    var isShow = false;
-function plus3() {
-    if(!isShow) {
-        isShow = true;
-       document.getElementById('answer3').style.display='';
-       document.getElementById('plus3').innerText = "+";
-   }
-   else {
-       isShow = false;
-       document.getElementById('answer3').style.display='none';
-       document.getElementById('plus3').innerText = "+";
-   }
-}
-</script>
+
 
 <!-- 登入與註冊 -->
 <dialog  id="infoModal">
