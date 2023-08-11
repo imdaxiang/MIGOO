@@ -132,56 +132,42 @@
                 <h1>購物車明細</h1>
             </div>
             <!-- 購物車中間 -->
-            <div class="cart_center">
-                <div class="cart_center_head">
-                    <section >商品資訊</section>
-                    <section >數量</section>
-                    <section >小計</section>
-                </div>
-                
-                <div class="product_list">
-                    <img src="products/box.png" alt="">
-                    <section>白色開放式貓砂盆</section>
-                    <select class="form-select" aria-label="">
+            <table>
+                <tr>
+                    <th colspan="2">商品資訊</th>
+                    <th>數量</th>
+                    <th>小計</th>
+                    <th>刪除</th>
+                </tr>
+                <tr>
+                    <td><img src="products/tunasalmon_can.png" alt=""></td>
+                    <td>鮭魚+鮪魚鮮肉主食罐</td>
+                    <td><select name="" id="">
                         <option selected>選擇數量</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
-                        <option value="3">4</option>
-                        <option value="3">5</option>
-                    </select>
-                    <section>$990</section>
-                    <i class="fa-solid fa-xmark fa-lg" style="color: #FFC898;"></i>
-                </div> 
-                <div class="product_list">
-                    <img src="products/crocodile.png" alt="">
-                    <section>鱷魚瓦楞紙貓抓板</section>
-                    <select class="form-select" aria-label="">
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select></td>
+                    <td>$59</td>
+                    <td id="cart-cross"><i class="fa-solid fa-x fa-lg" style="color: #000000;"></i></td>
+                </tr>
+                <tr>
+                    <td><img src="products/crocodile.png" alt=""></td>
+                    <td>鱷魚瓦楞紙貓抓板</td>
+                    <td><select name="" id="">
                         <option selected>選擇數量</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
-                        <option value="3">4</option>
-                        <option value="3">5</option>
-                    </select>
-                    <section>$390</section>
-                    <i class="fa-solid fa-xmark fa-lg" style="color: #FFC898;"></i>
-                </div>
-                <div class="product_list">
-                    <img src="products/burger.png" alt="">
-                    <section>漢堡藏食發聲玩具</section>
-                    <select style="margin-left: 40px;"class="form-select" aria-label="">
-                        <option selected>選擇數量</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="3">4</option>
-                        <option value="3">5</option>
-                    </select>
-                    <section>$399</section>
-                    <i class="fa-solid fa-xmark fa-lg" style="color: #FFC898;"></i>
-                </div>
-            </div>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select></td>
+                    <td>$390</td>
+                    <td id="cart-cross"><i class="fa-solid fa-x fa-lg" style="color: #000000;"></i></td>
+                </tr>
+            </table>
             <!-- 購物車下半部 -->
             <div class="cart_bottom">
                 <section>合計: $1,779</section>
@@ -189,6 +175,9 @@
             </div>      
         </div>
     </div>
+    <script>
+        
+    </script>
 
      <!-- 登入與註冊 -->
 <dialog  id="infoModal">

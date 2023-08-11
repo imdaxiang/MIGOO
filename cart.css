@@ -55,7 +55,7 @@
     height: 600px;
     margin-bottom: 100px;
     position: relative;
-    margin: 50px auto;
+    margin: 0px auto;
 }
 /* 購物車上半部 */
 .cart_wrapper{
@@ -69,7 +69,7 @@
     /* max-width: 90%; */
     min-width: 80%;
     height: 60px;
-    margin: 50px 0px 0px 0px;
+    
     background-color: #FFC898;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -82,35 +82,22 @@
     margin-top: 10px;
 }
 /* 購物車中間 */
-.cart_center{
-    min-width: 80%;
-    border: 1px solid black;
-   
-}
-.cart_center .cart_center_head{
+table{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px 0px;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
 }
-.cart_center .cart_center_head section{
-    margin: 10px 50px;
+table img{
+    width: 100px;
+    height: 80px;
 }
-.product_list{
-    display: flex;
-    /* justify-content: space-around; */
-    align-items: center;
-    height: 150px;
+th{
+    padding: 10px;
 }
-.product_list img{
-    width: 150px;
-    height: 150px;
-}
-.product_list section{
-    margin-left: 50px;
-}
-.product_list .fa-solid{
-    margin-left: 100px;
+td{
+    padding: 30px;
 }
 /* 購物車下半部 */
 .cart_bottom{

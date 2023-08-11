@@ -247,6 +247,10 @@ html,body{
     color:black;
     text-align: center;
 }
+.new_products_card input{
+    text-decoration: none;
+    color:black;
+}
 .new_products_card p{
     font-weight: bold;
 }
