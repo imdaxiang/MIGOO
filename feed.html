@@ -54,9 +54,56 @@
                     </div>
             <a href="cart.html" ><i class="fa-solid fa-cart-shopping fa-lg" style="color: #252525;"></i></a>
             <button id="user"><i class="fa-solid fa-user fa-xl" style="color: #252525;"></i></button>
+            <button id="phoneuser"><i class="fa-solid fa-user fa-xl" style="color: #252525;"></i></button>
         </div>
      </header>
 
+     <!-- 手機登入註冊 -->
+<dialog id="phone">
+    <div class="phone-loginregi-container" >
+        <div class="phone-loginregi">
+            <div class="loginregi">
+                <section id="phone-login">登入</section>
+                <section id="phone-regi">註冊</section>
+            </div>
+            <div class="phone-container">
+                <button class="phone-cross"><i class="fa-solid fa-xmark fa-2xl" style="color: #fff;"></i></button>
+                <div class="phone-login-box">
+                    <h1>LOGIN</h1>
+                    <input type="text" placeholder="帳號">
+                    <input type="password" placeholder="密碼">
+                    <p>忘記密碼</p>
+                    <section>登入</section>
+                </div>
+                <div class="phone-regi-box">
+                    <h1>REGISTER</h1>
+                    <input type="text" placeholder="帳號">
+                    <input type="password" placeholder="密碼">
+                    <input type="password" placeholder="確認密碼">
+                    <input type="email" placeholder="電子郵件">
+                    <section>註冊</section>
+                </div>
+            </div>
+        </div>
+    </div>
+</dialog>
+<script>
+    // 點user打開
+    let btnn=document.querySelector("#phoneuser");
+    let phone=document.querySelector("#phone");
+    btnn.addEventListener("click", function(){
+        phone.showModal();
+    })
+   $('.phone-cross').click(function(){
+    $('#phone').hide();
+   })
+    
+    // 點叉叉關閉
+    $('.phone-cross').click(function(){
+        $('.phone-loginregi').hide();
+    })
+  
+</script>
      <!-- 貓掌 -->
     <div class="cat-nav">
         <div class="content-container">

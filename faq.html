@@ -54,8 +54,56 @@
                     </div>
             <a href="cart.html" ><i class="fa-solid fa-cart-shopping fa-lg" style="color: #252525;"></i></a>
             <button id="user"><i class="fa-solid fa-user fa-xl" style="color: #252525;"></i></button>
+            <button id="phoneuser"><i class="fa-solid fa-user fa-xl" style="color: #252525;"></i></button>
         </div>
      </header>
+
+     <!-- 手機登入註冊 -->
+<dialog id="phone">
+    <div class="phone-loginregi-container" >
+        <div class="phone-loginregi">
+            <div class="loginregi">
+                <section id="phone-login">登入</section>
+                <section id="phone-regi">註冊</section>
+            </div>
+            <div class="phone-container">
+                <button class="phone-cross"><i class="fa-solid fa-xmark fa-2xl" style="color: #fff;"></i></button>
+                <div class="phone-login-box">
+                    <h1>LOGIN</h1>
+                    <input type="text" placeholder="帳號">
+                    <input type="password" placeholder="密碼">
+                    <p>忘記密碼</p>
+                    <section>登入</section>
+                </div>
+                <div class="phone-regi-box">
+                    <h1>REGISTER</h1>
+                    <input type="text" placeholder="帳號">
+                    <input type="password" placeholder="密碼">
+                    <input type="password" placeholder="確認密碼">
+                    <input type="email" placeholder="電子郵件">
+                    <section>註冊</section>
+                </div>
+            </div>
+        </div>
+    </div>
+</dialog>
+<script>
+    // 點user打開
+    let btnn=document.querySelector("#phoneuser");
+    let phone=document.querySelector("#phone");
+    btnn.addEventListener("click", function(){
+        phone.showModal();
+    })
+   $('.phone-cross').click(function(){
+    $('#phone').hide();
+   })
+    
+    // 點叉叉關閉
+    $('.phone-cross').click(function(){
+        $('.phone-loginregi').hide();
+    })
+  
+</script>
 
      <!-- 貓掌 -->
     <div class="cat-nav">
@@ -116,12 +164,12 @@
 
     <!-- 手機的問題列表 -->
     <div class="phone-faq-container">
-        <div class="phone-alotsbtn">
-            <section>訂單問題</section>
-            <section>付款問題</section>
-            <section>配送問題</section>
-            <section>退貨問題</section>
-        </div>
+        <ul class="phone-alotsbtn">
+            <li class="current2"><section>訂單問題</section></li>
+            <li><section>付款問題</section></li>
+            <li><section>配送問題</section></li>
+            <li><section>退貨問題</section></li>
+        </ul>
     </div>
     <!-- 常見問題列表 -->
     <div class="bigfaq_container">
@@ -133,49 +181,145 @@
                     <section></section>
                 </div>
                 <div class="disppear">
-                    <div class="alotsbtn">
-                        <a href="faq01.html">訂單問題</a>
-                        <a href="faq02.html">付款問題</a>
-                        <a href="">配送問題</a>
-                        <a href="">退貨問題</a>
-                    </div>
+                    <ul class="alotsbtn">
+                        <li class="current">訂單問題</li>
+                        <li>付款問題</li>
+                        <li>配送問題</li>
+                        <li>退貨問題</li>
+                    </ul>
                 </div>
             </div>
 
             <!-- 常見問題 -->
             <div class="faq_container">
-                <div class="faq_order">
-                    <div class="qa" onclick="plus1()">
-                        <div class="question"><section>Q</section>如何獲取訂單狀態？</div>
-                        
-                        <div class="answer" id="answer1" style="display: none;"><section>A</section>您好，登入會員後查看訂單，”處理中”代表商品尚未寄出，<br>待出貨完成狀態會顯示”已確認”，並同時寄發email信件通知，<br>再請留意謝謝!</div>
+                <!-- 內容一 -->
+                <div class="item">
+                    <div class="faq_order">
+                        <div class="qa" onclick="plus1()">
+                            <div class="question"><section>Q</section>如何獲取訂單狀態？</div>
+                            
+                            <div class="answer" id="answer1" style="display: none;"><section>A</section>您好，登入會員後查看訂單，”處理中”代表商品尚未寄出，<br>待出貨完成狀態會顯示”已確認”，並同時寄發email信件通知，<br>再請留意謝謝!</div>
+                        </div>
+                        <a class="plus" id="plus1"  href="javascript:;" onclick="plus1()">+</a>
                     </div>
-                    <a class="plus" id="plus1"  href="javascript:;" onclick="plus1()">+</a>
-                </div>
-                <div class="faq_order">
-                    <div class="qa" onclick="plus2()">
-                        <div class="question"><section>Q</section>如何取消及修改訂單？</div>
-                        
-                        <div class="answer" id="answer2" style="display: none;"><section>A</section>當訂單狀態為”處理中”，可直接與客服聯繫，會有專人協助處理<br>
+                    <div class="faq_order">
+                        <div class="qa" onclick="plus2()">
+                            <div class="question"><section>Q</section>如何取消及修改訂單？</div>
+                            
+                            <div class="answer" id="answer2" style="display: none;"><section>A</section>當訂單狀態為”處理中”，可直接與客服聯繫，會有專人協助處理<br>
+        
+                                如是已付款的訂單，待客服取消後款項會於7-14個工作天內完成退刷，<br>再請您留意本期或下期帳單及相關email通知信件。謝謝您!</div>
+                        </div>
+                        <a class="plus" id="plus2"  href="javascript:;"  onclick="plus2()">+</a>
+                    </div>
+                    <div class="faq_order">
+                        <div class="qa" onclick="plus3()">
+                            <div class="question"><section>Q</section>可以在已成立的訂單中修改商品嗎？</div>
+                            
+                            <div class="answer" id="answer3" style="display: none;"><section>A</section>若訂單已成立將無法再修改或添加更多商品。<br>
     
-                            如是已付款的訂單，待客服取消後款項會於7-14個工作天內完成退刷，<br>再請您留意本期或下期帳單及相關email通知信件。謝謝您!</div>
+    
+                                如有添加商品或是修改的需求，請您先取消該筆訂單，並於取消訂單後重新下單。</div>
+                        </div>
+                        <a class="plus" id="plus3"  href="javascript:;" onclick="plus3()">+</a>
                     </div>
-                    <a class="plus" id="plus2"  href="javascript:;"  onclick="plus2()">+</a>
                 </div>
-                <div class="faq_order">
-                    <div class="qa" onclick="plus3()">
-                        <div class="question"><section>Q</section>可以在已成立的訂單中修改商品嗎？</div>
-                        
-                        <div class="answer" id="answer3" style="display: none;"><section>A</section>若訂單已成立將無法再修改或添加更多商品。<br>
-
-
-                            如有添加商品或是修改的需求，請您先取消該筆訂單，並於取消訂單後重新下單。</div>
+                <!-- 內容二 -->
+                <div class="item">
+                    <div class="faq_pay">
+                        <div class="qa" onclick="plus4()">
+                            <div class="question"><section>Q</section>為何我無法選擇貨到付款？</div>
+                            
+                            <div class="answer" id="answer4" style="display: none;"><section>A</section>貨到付款目前僅供超商取貨使用，宅配暫不適用，不便之處還請見諒 !</div>
+                        </div>
+                        <a class="plus" id="plus4"  href="javascript:;" onclick="plus4()">+</a>
                     </div>
-                    <a class="plus" id="plus3"  href="javascript:;" onclick="plus3()">+</a>
+                    <div class="faq_pay">
+                        <div class="qa" onclick="plus5()">
+                            <div class="question"><section>Q</section>訂單已付款為何顯示付款失敗?</div>
+                            
+                            <div class="answer" id="answer5" style="display: none;"><section>A</section>通常在這種情況下，金流端會有個機制取消該筆的授權，<br>並會向您進行請款動作，目前您的信用卡可能會暫時被扣住，<br>但是後續發卡行就會返還額度。</div>
+                        </div>
+                        <a class="plus" id="plus5"  href="javascript:;" onclick="plus5()">+</a>
+                    </div>
+                    <div class="faq_pay">
+                        <div class="qa" onclick="plus6()">
+                            <div class="question"><section>Q</section>支援的付款方式有哪些呢？</div>
+                            
+                            <div class="answer" id="answer6" style="display: none;"><section>A</section>1. 貨到付款 (限超商取貨)<br> 2.LINE Pay支付<br> 3.信用卡 </div>
+                        </div>
+                        <a class="plus" id="plus6"  href="javascript:;" onclick="plus6()">+</a>
+                    </div>
+                </div>
+                <!-- 內容三 -->
+                <div class="item">
+                    <div class="faq_deliver">
+                        <div class="qa" onclick="plus7()">
+                            <div class="question"><section>Q</section>運費計算及免運門檻？</div>
+                            
+                            <div class="answer" id="answer7" style="display: none;"><section>A</section>宅配&超取運費為 NT$80，免運門檻 NT$999。</div>
+                        </div>
+                        <a class="plus" id="plus7"  href="javascript:;" onclick="plus7()">+</a>
+                    </div>
+                    <div class="faq_deliver">
+                        <div class="qa" onclick="plus8()">
+                            <div class="question"><section>Q</section>我的訂單什麼時候會出貨呢?</div>
+                            
+                            <div class="answer" id="answer8" style="display: none;"><section>A</section>現貨商品約 3 個工作天(不含假日)安排出貨，缺貨及預購商品另計。</div>
+                        </div>
+                        <a class="plus" id="plus8"  href="javascript:;" onclick="plus8()">+</a>
+                    </div>
+                </div>
+                 <!-- 內容四 -->
+                 <div class="item">
+                    <div class="faq_back">
+                        <div class="qa" onclick="plus9()">
+                            <div class="question"><section>Q</section>我收到的商品有缺件／瑕疵問題</div>
+                            
+                            <div class="answer" id="answer9" style="display: none;"><section>A</section>可直接聯繫客服並留下以下資訊，客服會於回覆時間盡快回覆您，<br>並提供訂單編號及問題的描述和一些該商品清晰的圖片、影片</div>
+                        </div>
+                        <a class="plus" id="plus9"  href="javascript:;" onclick="plus9()">+</a>
+                    </div>
+                    <div class="faq_deliver">
+                        <div class="qa" onclick="plus10()">
+                            <div class="question"><section>Q</section>我尚未收到退款?</div>
+                            
+                            <div class="answer" id="answer10" style="display: none;"><section>A</section>請先確認您當初是帳戶退款，還是信用卡刷退<br>【帳戶退款】客服收到退貨後，款項會於7-14個工作天匯至您指定的戶頭<br>【信用卡刷退】客服收到退貨後，款項將會於7-14個工作天內完成退刷。</div>
+                        </div>
+                        <a class="plus" id="plus10"  href="javascript:;" onclick="plus10()">+</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <script>
+        $(function() {
+           
+            $(".alotsbtn li").click(function() {
+                
+                $(this).addClass("current").siblings().removeClass("current");
+                
+                var index = $(this).index();
+                console.log(index);
+                
+                $(".faq_container .item").eq(index).show().siblings().hide();
+            });
+        })
+</script>
+<script>
+    $(function() {
+       
+        $(".phone-alotsbtn li").click(function() {
+            
+            $(this).addClass("current2").siblings().removeClass("current2");
+            
+            var index = $(this).index();
+            console.log(index);
+            
+            $(".faq_container .item").eq(index).show().siblings().hide();
+        });
+    })
+</script>
     <script>
         var isShow = false;
         function plus1() {
@@ -218,6 +362,111 @@
                isShow = false;
                document.getElementById('answer3').style.display='none';
                document.getElementById('plus3').innerText = "+";
+           }
+        }
+        </script>
+        <script>
+            var isShow = false;
+        function plus4() {
+            if(!isShow) {
+                isShow = true;
+               document.getElementById('answer4').style.display='';
+               document.getElementById('plus4').innerText = "+";
+           }
+           else {
+               isShow = false;
+               document.getElementById('answer4').style.display='none';
+               document.getElementById('plus4').innerText = "+";
+           }
+        }
+        </script>
+        <script>
+            var isShow = false;
+        function plus5() {
+            if(!isShow) {
+                isShow = true;
+               document.getElementById('answer5').style.display='';
+               document.getElementById('plus5').innerText = "+";
+           }
+           else {
+               isShow = false;
+               document.getElementById('answer5').style.display='none';
+               document.getElementById('plus5').innerText = "+";
+           }
+        }
+        </script>
+         <script>
+            var isShow = false;
+        function plus6() {
+            if(!isShow) {
+                isShow = true;
+               document.getElementById('answer6').style.display='';
+               document.getElementById('plus6').innerText = "+";
+           }
+           else {
+               isShow = false;
+               document.getElementById('answer6').style.display='none';
+               document.getElementById('plus6').innerText = "+";
+           }
+        }
+        </script>
+        <script>
+            var isShow = false;
+        function plus7() {
+            if(!isShow) {
+                isShow = true;
+               document.getElementById('answer7').style.display='';
+               document.getElementById('plus7').innerText = "+";
+           }
+           else {
+               isShow = false;
+               document.getElementById('answer7').style.display='none';
+               document.getElementById('plus7').innerText = "+";
+           }
+        }
+        </script>
+        <script>
+            var isShow = false;
+        function plus8() {
+            if(!isShow) {
+                isShow = true;
+               document.getElementById('answer8').style.display='';
+               document.getElementById('plus8').innerText = "+";
+           }
+           else {
+               isShow = false;
+               document.getElementById('answer8').style.display='none';
+               document.getElementById('plus8').innerText = "+";
+           }
+        }
+        </script>
+        <script>
+            var isShow = false;
+        function plus9() {
+            if(!isShow) {
+                isShow = true;
+               document.getElementById('answer9').style.display='';
+               document.getElementById('plus9').innerText = "+";
+           }
+           else {
+               isShow = false;
+               document.getElementById('answer9').style.display='none';
+               document.getElementById('plus9').innerText = "+";
+           }
+        }
+        </script>
+         <script>
+            var isShow = false;
+        function plus10() {
+            if(!isShow) {
+                isShow = true;
+               document.getElementById('answer10').style.display='';
+               document.getElementById('plus10').innerText = "+";
+           }
+           else {
+               isShow = false;
+               document.getElementById('answer10').style.display='none';
+               document.getElementById('plus10').innerText = "+";
            }
         }
         </script>

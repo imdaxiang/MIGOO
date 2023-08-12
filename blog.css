@@ -119,10 +119,11 @@ html,body{
     background-color: white;
     border: 1px solid black;
     border-radius: 20px;
-    width: 350px;
+    width: 300px;
+    height: 30px;
 }
-.category section{
-    padding: 10px 20px;
+.category a{
+    padding: 10px;
     cursor: pointer;
 }
  .colored{
@@ -244,7 +245,10 @@ html,body{
 .article-card article{
     font-size: 12px;
 }
-/* 第二排文章 */
+/* 喵喵生活 */
+.catlife{
+    display: none;
+}
 
 /* 頁面順序 */
 .page{

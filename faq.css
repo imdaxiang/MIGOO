@@ -1,3 +1,6 @@
+html,body{
+    background-color: #FFFBF5;
+}
 /* 常見問題標題 */
 .faq-title {
     width: 100%;
@@ -40,10 +43,11 @@
     align-items: center;
 }
 .phone-alotsbtn section{
-    margin: 10px;
     cursor: pointer;
     padding: 5px 10px;
-    border-radius: 10px;
+    border-bottom: 3px solid #AAE3E2;
+    font-size: 12px;
+    margin: 10px;
 }
 .phone-alotsbtn section:hover{
     background-color: #FFC898;
@@ -62,6 +66,7 @@
     }
     
 }
+
 .bigfaq_container{
     max-width: 100%;
     background-color: #FFFBF5;
@@ -85,11 +90,11 @@
     padding: 10px 20px 10px 20px;
 }
 
-.faq_wrapper .alotsbtn a{
+.faq_wrapper .alotsbtn li{
     padding: 10px;
-    text-decoration: none;
+    cursor: pointer;
 }
-.faq_wrapper .alotsbtn a:hover{
+.faq_wrapper .alotsbtn li:hover{
     border-bottom: 3px solid #FFC898;
 }
 .faq-small-wrap .faqtype{
@@ -120,6 +125,21 @@
     justify-content: space-around;
     color: #333;
 }
+.faq_pay{
+    display: flex;
+    justify-content: space-around;
+    color: #333;
+}
+.faq_deliver{
+    display: flex;
+    justify-content: space-around;
+    color: #333;
+}
+.faq_back{
+    display: flex;
+    justify-content: space-around;
+    color: #333;
+}
 .qa{
     min-width: 50%;
     cursor: pointer;
@@ -137,7 +157,7 @@
 .question section{
     font-size: 20px;
     text-align: center;
-    width: 30px;
+    min-width: 30px;
     height: 30px;
     border-radius: 100%;
     background-color: #FCC8D1;
@@ -155,6 +175,7 @@
     text-align: center;
     width: 30px;
     height: 30px;
+    line-height: 30px;
     border-radius: 100%;
     background-color: #AAE3E2;
     margin-right: 10px;
@@ -165,7 +186,7 @@
 }
 
 
-.faq_order .plus{
+ .plus{
     color: #FFC898;
     font-size: 36px;
     margin: 10px;

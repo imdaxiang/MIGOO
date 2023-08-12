@@ -54,8 +54,56 @@
                     </div>
             <a href="cart.html" ><i class="fa-solid fa-cart-shopping fa-lg" style="color: #252525;"></i></a>
             <button id="user"><i class="fa-solid fa-user fa-xl" style="color: #252525;"></i></button>
+            <button id="phoneuser"><i class="fa-solid fa-user fa-xl" style="color: #252525;"></i></button>
         </div>
      </header>
+
+     <!-- 手機登入註冊 -->
+<dialog id="phone">
+    <div class="phone-loginregi-container" >
+        <div class="phone-loginregi">
+            <div class="loginregi">
+                <section id="phone-login">登入</section>
+                <section id="phone-regi">註冊</section>
+            </div>
+            <div class="phone-container">
+                <button class="phone-cross"><i class="fa-solid fa-xmark fa-2xl" style="color: #fff;"></i></button>
+                <div class="phone-login-box">
+                    <h1>LOGIN</h1>
+                    <input type="text" placeholder="帳號">
+                    <input type="password" placeholder="密碼">
+                    <p>忘記密碼</p>
+                    <section>登入</section>
+                </div>
+                <div class="phone-regi-box">
+                    <h1>REGISTER</h1>
+                    <input type="text" placeholder="帳號">
+                    <input type="password" placeholder="密碼">
+                    <input type="password" placeholder="確認密碼">
+                    <input type="email" placeholder="電子郵件">
+                    <section>註冊</section>
+                </div>
+            </div>
+        </div>
+    </div>
+</dialog>
+<script>
+    // 點user打開
+    let btnn=document.querySelector("#phoneuser");
+    let phone=document.querySelector("#phone");
+    btnn.addEventListener("click", function(){
+        phone.showModal();
+    })
+   $('.phone-cross').click(function(){
+    $('#phone').hide();
+   })
+    
+    // 點叉叉關閉
+    $('.phone-cross').click(function(){
+        $('.phone-loginregi').hide();
+    })
+  
+</script>
 
      <!-- 貓掌 -->
     <div class="cat-nav">
@@ -133,16 +181,16 @@
             </div>
             <!-- 購物車中間 -->
             <table>
-                <tr>
+                <tr class="title">
                     <th colspan="2">商品資訊</th>
                     <th>數量</th>
                     <th>小計</th>
                     <th>刪除</th>
                 </tr>
-                <tr>
-                    <td><img src="products/tunasalmon_can.png" alt=""></td>
-                    <td>鮭魚+鮪魚鮮肉主食罐</td>
-                    <td><select name="" id="">
+                <tr class="cart01">
+                    <td><img src="products/climb.png" alt=""></td>
+                    <td>白色絨毛貓咪爬架</td>
+                    <td class="none"><select name="" id="">
                         <option selected>選擇數量</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -150,13 +198,26 @@
                         <option value="4">4</option>
                         <option value="5">5</option>
                     </select></td>
-                    <td>$59</td>
-                    <td id="cart-cross"><i class="fa-solid fa-x fa-lg" style="color: #000000;"></i></td>
+                    <td class="none">$999</td>
+                    <td class="none" id="cart-cross"><i class="fa-solid fa-x fa-lg" style="color: #000000;"></i></td>
+                    <tr class="phoneshow">
+                        <td><span>數量</span><select name="" id="">
+                            <option selected>選擇數量</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select></td>
+                        <td class="price"><span>小計</span>$59</td>
+                        <td id="cart-cross"><span>刪除</span><i class="fa-solid fa-x fa-md" style="color: #000000;"></i></td>
+                    </tr>
                 </tr>
-                <tr>
+                
+                <tr class="cart02">
                     <td><img src="products/crocodile.png" alt=""></td>
                     <td>鱷魚瓦楞紙貓抓板</td>
-                    <td><select name="" id="">
+                    <td class="none"><select name="" id="">
                         <option selected>選擇數量</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -164,9 +225,49 @@
                         <option value="4">4</option>
                         <option value="5">5</option>
                     </select></td>
-                    <td>$390</td>
-                    <td id="cart-cross"><i class="fa-solid fa-x fa-lg" style="color: #000000;"></i></td>
+                    <td class="none">$390</td>
+                    <td class="none" id="cart-cross"><i class="fa-solid fa-x fa-lg" style="color: #000000;"></i></td>
+                    <tr class="phoneshow">
+                        <td><span>數量</span><select name="" id="">
+                            <option selected>選擇數量</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select></td>
+                        <td class="price"><span>小計</span>$59</td>
+                        <td id="cart-cross"><span>刪除</span><i class="fa-solid fa-x fa-md" style="color: #000000;"></i></td>
+                    </tr>
                 </tr>
+
+                <tr class="cart03">
+                    <td><img src="products/box.png" alt=""></td>
+                    <td>白色開放式貓砂盆</td>
+                    <td class="none"><select name="" id="">
+                        <option selected>選擇數量</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select></td>
+                    <td class="none">$390</td>
+                    <td class="none" id="cart-cross"><i class="fa-solid fa-x fa-lg" style="color: #000000;"></i></td>
+                    <tr class="phoneshow">
+                        <td><span>數量</span><select name="" id="">
+                            <option selected>選擇數量</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select></td>
+                        <td class="price"><span>小計</span>$990</td>
+                        <td id="cart-cross"><span>刪除</span><i class="fa-solid fa-x fa-md" style="color: #000000;"></i></td>
+                    </tr>
+                </tr>
+                
             </table>
             <!-- 購物車下半部 -->
             <div class="cart_bottom">
@@ -175,9 +276,11 @@
             </div>      
         </div>
     </div>
-    <script>
-        
-    </script>
+    <!-- <script>
+        $('#cart-cross').click(function(){
+            $('.cart01').hide()
+        })
+    </script> -->
 
      <!-- 登入與註冊 -->
 <dialog  id="infoModal">

@@ -2,11 +2,21 @@
 .step_wrapper{
     display: flex;
     justify-content: center;
+    align-items: center;
+    width: 100%;
     height: 150px;
+    margin-bottom: 50px;
 }
 .step_wrapper p{
     text-align: center;
    
+}
+.step_1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 50px 0px 0px;
 }
 .step_1 section{
     width: 50px;
@@ -17,10 +27,15 @@
     line-height: 50px;
     font-size: 28px;
     font-weight: bold;
-    margin: 50px 50px 0px 50px;
+    
 }
 .step_2{
-    opacity: 0.6;
+    opacity: 0.7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 40px 0px 0px;
 }
 .step_2 section{
     width: 50px;
@@ -29,14 +44,16 @@
     border-radius: 100%;
     text-align: center;
     line-height: 50px;
-   
     font-size: 28px;
     font-weight: bold;
-    margin: 50px 50px 0px 50px;
-    
 }
 .step_3{
-    opacity: 0.6;
+    opacity: 0.7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 20px 0px 0px;
 }
 .step_3 section{
     width: 50px;
@@ -47,29 +64,22 @@
     text-align: center;
     font-size: 28px;
     font-weight: bold;
-    margin: 50px 50px 0px 50px;
 }
 /* 整個購物車div */
 .cart_bigcontainer{
     width:100%;
-    height: 600px;
-    margin-bottom: 100px;
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 0px auto;
 }
 /* 購物車上半部 */
 .cart_wrapper{
-    position: absolute;
-    top: 50%;  
-    left: 50%;
-    transform: translate(-50%, -50%);
     width: 70%;
 }
 .cart_top{
-    /* max-width: 90%; */
     min-width: 80%;
     height: 60px;
-    
     background-color: #FFC898;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -82,23 +92,72 @@
     margin-top: 10px;
 }
 /* 購物車中間 */
+@media screen and (max-width: 768px){
+    .title, .none{
+        display: none;
+    }
+}
+@media screen and (min-width: 767px){
+    .phoneshow span, .price{
+        display: none;
+    }
+    .phoneshow select{
+        display: none;
+    }
+    .phoneshow .price{
+        display: none;
+    }
+    .phoneshow #cart-cross{
+        display: none;
+    }
+    
+}
 table{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
     align-items: center;
     border-right: 1px solid black;
     border-left: 1px solid black;
+    min-width: 90%;
+    padding-top: 30px;
 }
 table img{
     width: 100px;
     height: 80px;
 }
 th{
-    padding: 10px;
+    padding: 0px 10px;
 }
 td{
-    padding: 30px;
+    padding: 10px;
+
 }
+.title{
+    background-color: #FCC8D1;
+    
+}
+.phoneshow{
+    display: flex;
+    /* border-bottom: 1px solid black; */
+}
+.phoneshow td{
+    display: flex;
+    flex-direction: column;
+    margin: 0px 0px 50px 0px;
+}
+.phoneshow span{
+    background-color: #FCC8D1;
+    text-align: center;
+    font-weight: bold;
+    margin: 10px 0px;
+    font-size: 14px;
+    padding: 3px;
+}
+.phoneshow .fa-solid{
+    margin-top: 0px;
+}
+
 /* 購物車下半部 */
 .cart_bottom{
     min-width: 80%;
@@ -110,6 +169,7 @@ td{
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    margin-bottom: 50px;
 }
 .cart_bottom section{
     font-size: 16px;

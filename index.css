@@ -75,7 +75,7 @@ html,body{
 
 
 /* 優惠資訊 */
-@media screen and (max-width: 767px){
+@media screen and (max-width: 768px){
     .discount section{
         font-size: 12px;
     }
@@ -209,6 +209,7 @@ html,body{
     justify-content: center;
     align-items: center;
     margin-top: 50px;
+    position: relative;
 }
 .new_products_row{
     display: flex;
@@ -287,9 +288,7 @@ html,body{
     justify-content: center;
     position: absolute;
     left: 25%;
-    animation-name: rotate;
-    animation-duration: 7s;
-    animation-iteration-count:infinite;
+    
 }
 .recommend section{
     color: #AAE3E2;
@@ -297,11 +296,9 @@ html,body{
     font-size: 24px;
    
 }
-@keyframes rotate {
-    0%{transform:rotate(0deg);}
-    
-    100%{transform:rotate(360deg);}
-  }
+
+
+  
 
 /* 跑馬燈 */
 .marquee{
@@ -395,4 +392,18 @@ html,body{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.subscribe{
+    background-color: #FFC898;
+    text-align: center;
+    padding: 10px 0px;
+}
+.subscribe input{
+    width: 250px;
+}
+.subscribe-email button{
+    margin: 10px;
+    background-color: #FCC8D1;
+    border: 1px solid black;
+    cursor: pointer;
 }

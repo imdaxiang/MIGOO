@@ -38,8 +38,8 @@
 .catlitter-wrap{
     float: right;
     background-color: #FFC898;
-    width: 425px;
-    height: 100px;
+    /* width: 425px;
+    height: 100px; */
     border: 1px solid #000;
     border-right: none;
     border-top-left-radius: 30px;
@@ -57,8 +57,8 @@
     font-size: 14px;
   }
   .catlitter-wrap img{
-    width: 280px;
-    height: 180px;
+    width: 250px;
+    height: 150px;
     margin-top: -90px;
 
   }
