@@ -74,7 +74,9 @@
    
 }
 .product_top_txt select{
-    margin: 5px 0px;  
+    margin: 5px 0px;
+    color: black;
+    background-color: white;
 }
 .product_top_txt input{
     background-color: #FCC8D1;
@@ -82,6 +84,7 @@
     border: 1px solid transparent;
     border-radius: 5px;
     cursor: pointer;
+    
 }
 
 /* 商品資訊中間分隔 */

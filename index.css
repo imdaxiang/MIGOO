@@ -270,7 +270,7 @@ html,body{
     text-decoration: none;
     color:black;
     box-shadow: 3px 3px 0px #eee;
-    /* box-shadow: 7px 7px #eee; */
+    
 }
 .new_products_card:hover input{
     font-weight: bold;
