@@ -387,7 +387,7 @@ input{
   left: -70px;
   z-index: 5;
   /* display: none; */
-  transform: translateY(1000px);
+  transform: translateY(6000px);
   transition:  1.5s;
 }
 .content-container{
