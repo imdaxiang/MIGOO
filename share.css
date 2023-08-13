@@ -42,7 +42,10 @@ header{
 }
 .left-icon #hamburger{
   cursor: pointer;
-  
+}
+.left-icon img{
+  width: 20px;
+  height: 20px;
 }
 .nav-center{
   /* width: 700px; */
@@ -71,14 +74,27 @@ header{
   display: flex;
   align-items: center;
 }
+.search{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
 .right-icon input{
   background-color: #FCC8D1;
   width: 120px;
   height: 0px;
+ 
+  margin-right: 3px;
 }
 .right-icon button{
   background-color: transparent;
   border: none;
+}
+.right-icon img{
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
 }
 .fa-solid{
   margin: 0px 5px 0px 5px;
