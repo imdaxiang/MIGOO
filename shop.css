@@ -95,6 +95,10 @@
   .zhongli .zhongli_info p{
     margin-left: 20px;
   }
+  .zhongli_info a{
+    text-decoration: none;
+    color: black;
+  }
   .zhongli-map img{
     width: 250px;
     height: 280px;
@@ -132,6 +136,10 @@
   }
   .daan .daan_info p{
     margin-left: 20px;
+  }
+  .daan_info a{
+    text-decoration: none;
+    color: black;
   }
   .daan-map img{
     width: 250px;
