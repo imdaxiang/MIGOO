@@ -165,8 +165,14 @@ td{
     font-size: 14px;
     padding: 3px;
 }
+.phoneshow select{
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+}
 .phoneshow .fa-solid{
-    margin-top: 0px;
+    padding-top: 3px;
+    padding-left: 6px;
 }
 
 /* 購物車下半部 */
@@ -200,6 +206,7 @@ td{
    margin: 10px 10px;
    border: 1px solid white;
    box-shadow: 3px 3px white;
+   color: black;
 }
 
 /* 可能也會喜歡... */
@@ -266,15 +273,10 @@ td{
     padding: 5px 0px;
     font-size: 14px;
     box-shadow: 3px 3px 0px #eee;
-    transition-duration: 0.2s;
-    transition-timing-function: ease;
-    transition-delay: 0s;
-    transition-property: all;
+    color: black;
 }
-.oulike span{
-    width: 100px;
-    height: 30px;
-    border-radius: 10px;
-    margin-top: -50px;
-    margin-bottom: 10px;
+.youlike:hover button{
+    font-weight: bold;
+    color: white;
+    background-color: #FFC898;
 }
