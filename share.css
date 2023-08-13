@@ -359,6 +359,7 @@ input{
 
 
 /* 貓掌 */
+
 .cat-nav{
   background-image: url(migoopic/cat-nav.png);
   background-repeat: no-repeat;
@@ -369,8 +370,9 @@ input{
   top: -200px;
   left: -70px;
   z-index: 5;
-  display: none;
-  
+  /* display: none; */
+  transform: translateY(1000px);
+  transition:  1.5s;
 }
 .content-container{
   margin-left: 150px;

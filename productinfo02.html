@@ -285,19 +285,19 @@ hr{
 
     <script>
         $('#hamburger').click(function(){
-            $('.cat-nav').toggle();
-            
+            $('.cat-nav').show();
+            $('.cat-nav').css('transform','translateY(0px)');
         })
+        
 
         $('.fa-xmark').click(function(){
-            $('.cat-nav').hide()
+            $('.cat-nav').hide();
+            $('.cat-nav').css('transform','translateY(1000px)');
         })
 
         $('.sub-reaction').click(function(){
             $('.sub-menu').toggle();
         })
-       	
-        
     </script>
 
     <!-- 麵包屑 -->

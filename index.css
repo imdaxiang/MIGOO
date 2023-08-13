@@ -248,10 +248,7 @@ html,body{
     color:black;
     text-align: center;
 }
-.new_products_card input{
-    text-decoration: none;
-    color:black;
-}
+
 .new_products_card p{
     font-weight: bold;
 }
@@ -264,16 +261,31 @@ html,body{
     width: 100%;
     background-color: #FCC8D1;
     border-radius: 10px;
-    border-color: #FCC8D1;
+    border-color: #eee;
     margin: 10px 0px 30px 0px;
     cursor: pointer;
     width: 100px;
     padding: 5px 0px;
+    z-index: 1;
+    text-decoration: none;
+    color:black;
+    /* box-shadow: 7px 7px #eee; */
 }
 .new_products_card:hover input{
     font-weight: bold;
+    transform: translateX(10px);
 }
-
+.new_products_card span{
+   
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    margin-top: -50px;
+    margin-bottom: 10px;
+}
+.new_products_card:hover span{
+    background-color: #eee;
+}
 /* 推薦 */
 
 .recommend{

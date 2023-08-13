@@ -1,22 +1,31 @@
-
+html,body{
+    background-color: #FFFBF5;
+}
 .step_wrapper{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: first baseline;
     width: 100%;
     height: 150px;
     margin-bottom: 50px;
+    margin-top: 50px;
 }
 .step_wrapper p{
     text-align: center;
    
+}
+.step_wrapper section{
+    width: 50px;
+    height: 0px;
+    border-bottom: 3px dashed #FCC8D1;
+    margin: 10px;
 }
 .step_1{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 30px 50px 0px 0px;
+    /* margin: 30px 50px 0px 0px; */
 }
 .step_1 section{
     width: 50px;
@@ -30,40 +39,41 @@
     
 }
 .step_2{
-    opacity: 0.7;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 30px 40px 0px 0px;
 }
 .step_2 section{
     width: 50px;
     height: 50px;
-    background-color: #AAE3E2;
+    border: 3px solid #AAE3E2;
     border-radius: 100%;
     text-align: center;
     line-height: 50px;
     font-size: 28px;
     font-weight: bold;
+    background-color: white;
 }
 .step_3{
-    opacity: 0.7;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 30px 20px 0px 0px;
+    
 }
 .step_3 section{
     width: 50px;
     height: 50px;
-    background-color: #FFC898;
+    border: 3px solid #FFC898;
     line-height: 50px;
     border-radius: 100%;
     text-align: center;
     font-size: 28px;
     font-weight: bold;
+    background-color: white;
 }
 /* 整個購物車div */
 .cart_bigcontainer{
@@ -121,6 +131,7 @@ table{
     border-left: 1px solid black;
     min-width: 90%;
     padding-top: 30px;
+    background-color: white;
 }
 table img{
     width: 100px;
@@ -187,8 +198,8 @@ td{
    letter-spacing: 3px;
    cursor: pointer;
    margin: 10px 10px;
-   
-   
+   border: 1px solid white;
+   box-shadow: 3px 3px white;
 }
 
 /* 可能也會喜歡... */
@@ -254,9 +265,16 @@ td{
     width: 120px;
     padding: 5px 0px;
     font-size: 14px;
-    box-shadow: 3px 3px 0px #aaa;
+    box-shadow: 3px 3px 0px #eee;
     transition-duration: 0.2s;
     transition-timing-function: ease;
     transition-delay: 0s;
     transition-property: all;
+}
+.oulike span{
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    margin-top: -50px;
+    margin-bottom: 10px;
 }

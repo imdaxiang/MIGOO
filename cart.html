@@ -134,19 +134,19 @@
 
     <script>
         $('#hamburger').click(function(){
-            $('.cat-nav').toggle();
-            
+            $('.cat-nav').show();
+            $('.cat-nav').css('transform','translateY(0px)');
         })
+        
 
         $('.fa-xmark').click(function(){
-            $('.cat-nav').hide()
+            $('.cat-nav').hide();
+            $('.cat-nav').css('transform','translateY(1000px)');
         })
 
         $('.sub-reaction').click(function(){
             $('.sub-menu').toggle();
         })
-       	
-        
     </script>
 
     <!-- 麵包屑 -->
@@ -162,10 +162,12 @@
             <section>1</section>
             <p>購物車</p>
         </div>
+        <section></section>
         <div class="step_2">
             <section>2</section>
             <p>填寫資料</p>
         </div>
+        <section style="border-bottom: 3px dashed #AAE3E2;"></section>
         <div class="step_3">
             <section>3</section>
             <p>訂單確認</p>
@@ -364,25 +366,28 @@
         <div class="youlike youlike01" style="border-left: 1px solid black;">
             <img src="products/cheese.png" alt="">
             <div class="youlike-txt">
-                <h4>幼貓專用飼料</h4>
-                <p>NT$1,199</p>
+                <h4>起司貓抓板</h4>
+                <p>NT$390</p>
                 <button>加入購物車</button>
+                
             </div>
         </div>
         <div class="youlike youlike02">
             <img src="products/elizabeth.png" alt="">
             <div class="youlike-txt">
-                <h4>幼貓專用飼料</h4>
-                <p>NT$1,199</p>
+                <h4>伊莉莎白圈</h4>
+                <p>NT$299</p>
                 <button>加入購物車</button>
+                
             </div>
         </div>
         <div class="youlike youlike03">
             <img src="products/climb.png" alt="">
             <div class="youlike-txt">
-                <h4>幼貓專用飼料</h4>
-                <p>NT$1,199</p>
+                <h4>白色絨毛貓咪爬架</h4>
+                <p>NT$1,299</p>
                 <button>加入購物車</button>
+                
             </div>
         </div>
      </div>

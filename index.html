@@ -108,17 +108,28 @@
 
     <script>
         $('#hamburger').click(function(){
-            $('.cat-nav').toggle();
-           
+            $('.cat-nav').show();
+            $('.cat-nav').css('transform','translateY(0px)');
         })
+        
 
         $('.fa-xmark').click(function(){
-            $('.cat-nav').hide()
+            $('.cat-nav').hide();
+            $('.cat-nav').css('transform','translateY(1000px)');
         })
 
         $('.sub-reaction').click(function(){
             $('.sub-menu').toggle();
         })
+    </script>
+    <script>
+        let hamburger=document.getElementById(' hamburger');
+        let cat_nav=document.getElementsByClassName('cat-nav')[0];
+
+        hamburger.addEventListener('click',()=>{
+        cat_nav.style.transform='translateX(80%)';
+       
+    })
     </script>
    
     <!-- banner -->
@@ -200,6 +211,7 @@
                         <section>NT$59</section>
                     </a>
                     <input type="button" onclick="showalert()" value="加入購物車" />
+                    <span></span>
                 </div>
             </div>
             <div class="col-3 col-md-6">
@@ -212,6 +224,7 @@
                         <section>NT$1,199</section>
                     </a>
                     <input type="button" onclick="showalert()" value="加入購物車" />
+                    <span></span>
                 </div>
             </div>
             <div class="col-3 col-md-6">
@@ -224,6 +237,7 @@
                         <section>NT$1,299</section>
                     </a>
                     <input type="button" onclick="showalert()" value="加入購物車" />
+                    <span></span>
                 </div>
             </div>
            
@@ -237,6 +251,7 @@
                         <section>NT$390</section>
                     </a>
                     <input type="button" onclick="showalert()" value="加入購物車" />
+                    <span></span>
                 </div>
             </div>
         </div>
@@ -252,6 +267,7 @@
                         <section>NT$390</section>
                     </a>
                     <input type="button" onclick="showalert()" value="加入購物車" />
+                    <span></span>
                 </div>
             </div>
             <div class="col-3 col-md-6">
@@ -264,6 +280,7 @@
                         <section>NT$399</section>
                     </a>
                     <input type="button" onclick="showalert()" value="加入購物車" />
+                    <span></span>
                 </div>
             </div>
             <div class="col-3 col-md-6">
@@ -276,6 +293,7 @@
                         <section>NT$990</section>
                     </a>
                     <input type="button" onclick="showalert()" value="加入購物車" />
+                    <span></span>
                 </div>
             </div>
             <div class="col-3 col-md-6">
@@ -288,6 +306,7 @@
                                 <section>NT$299</section>
                             </a>
                             <input type="button" onclick="showalert()" value="加入購物車" />
+                            <span></span>
                         </div>
                     </div>
                 </div>

@@ -133,19 +133,19 @@
 
     <script>
         $('#hamburger').click(function(){
-            $('.cat-nav').toggle();
-            
+            $('.cat-nav').show();
+            $('.cat-nav').css('transform','translateY(0px)');
         })
+        
 
         $('.fa-xmark').click(function(){
-            $('.cat-nav').hide()
+            $('.cat-nav').hide();
+            $('.cat-nav').css('transform','translateY(1000px)');
         })
 
         $('.sub-reaction').click(function(){
             $('.sub-menu').toggle();
         })
-       	
-        
     </script>
 
     <div class="breadcrumbs">
@@ -228,6 +228,7 @@
                             <section>NT$59</section>
                         </a>
                         <input type="button" onclick="showalert()" value="加入購物車" />
+                        <span></span>
                     </div>
                 </div>
                 <div class="col-3 col-md-6">
@@ -240,6 +241,7 @@
                             <section>NT$59</section>
                         </a>
                         <input type="button" onclick="showalert()" value="加入購物車" />
+                        <span></span>
                     </div>
                 </div>
                 <div class="col-3 col-md-6">
@@ -252,6 +254,7 @@
                             <section>NT$59</section>
                         </a>
                         <input type="button" onclick="showalert()" value="加入購物車" />
+                        <span></span>
                     </div>
                 </div>
             
@@ -265,6 +268,7 @@
                             <section>NT$59</section>
                         </a>
                         <input type="button" onclick="showalert()" value="加入購物車" />
+                        <span></span>
                     </div>
                 </div>
                 
@@ -281,6 +285,7 @@
                             <section>NT$1,299</section>
                         </a>
                         <input type="button" onclick="showalert()" value="加入購物車" />
+                        <span></span>
                     </div>
                 </div>
                 <div class="col-3 col-md-6">
@@ -288,11 +293,13 @@
                         <a href="productinfo.html">
                             <div class="img-wrapper">
                                 <img src="products/kitten_feed.png" alt="">
+                                <span></span>
                             </div>
                             <h5>幼貓專用飼料 2.5kg</h5>
                             <section>NT$1,199</section>
                         </a>
                         <input type="button" onclick="showalert()" value="加入購物車" />
+                        <span></span>
                     </div>
                 </div>
                 <div class="col-3 col-md-6">
@@ -305,6 +312,7 @@
                         <section>NT$1,299</section>
                     </a>
                     <input type="button" onclick="showalert()" value="加入購物車" />
+                    <span></span>
                    </div>
                 </div>
                 <div class="col-3 col-md-6">
@@ -317,6 +325,7 @@
                             <section>NT$1,199</section>
                         </a>
                         <input type="button" onclick="showalert()" value="加入購物車" />
+                        <span></span>
                     </div>
                 </div>
             </div>
