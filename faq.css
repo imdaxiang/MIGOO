@@ -93,6 +93,7 @@ html,body{
     border: 3px solid #FFC898;
     border-radius: 10px;
     padding: 10px 20px 10px 20px;
+    box-shadow: -7px 7px #FFC898;
 }
 
 .faq_wrapper .alotsbtn li{
@@ -124,6 +125,7 @@ html,body{
     background-color: white;
     border-radius: 20px;
     overflow: hidden;
+    box-shadow: 7px 7px #FFC898;
 }
 .faq_order{
     display: flex;

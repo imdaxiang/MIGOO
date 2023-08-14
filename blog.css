@@ -230,6 +230,9 @@ html,body{
     overflow: hidden;
     max-width: 230px;
 }
+.article-card:hover .img-wrap{
+    border: 8px solid #AAE3E2;
+}
 .article-card:hover img{
     transform:scale(1.2,1.2);
 }
