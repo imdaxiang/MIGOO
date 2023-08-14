@@ -82,10 +82,11 @@ html,body{
     justify-content: center;
     align-items: center;
     margin: 0px auto;
+    
 }
 /* 購物車上半部 */
 .cart_wrapper{
-    width: 70%;
+    width: 60%;
 }
 .cart_top{
     min-width: 80%;
@@ -139,6 +140,8 @@ table img{
 }
 th{
     padding: 0px 10px;
+    border: 1px solid #FCC8D1;
+    border-radius: 5px;
 }
 td{
     padding: 10px;
@@ -147,7 +150,9 @@ td{
 .title{
     background-color: #FCC8D1;
     
+    
 }
+
 .phoneshow{
     display: flex;
     /* border-bottom: 1px solid black; */
@@ -164,6 +169,8 @@ td{
     margin: 10px 0px;
     font-size: 14px;
     padding: 3px;
+    border: 1px solid #FCC8D1;
+    border-radius: 5px;
 }
 .phoneshow select{
     color: black;
