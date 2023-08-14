@@ -20,9 +20,14 @@
     
 </head>
 <body>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+    AOS.init();
+    </script>
     <!-- 蓋板廣告 -->
-    <div class="ad">
-        <div class="ad-center">
+    <div class="bd">
+        <div class="bd-center">
             <i id="bye" class="fa-solid fa-x fa-xl" style="color: #ffffff;"></i>
             <img src="migoopic/ad.png" alt="">
         </div>
@@ -30,7 +35,7 @@
     </div>
     <script>
         $('#bye').click(function(){
-            $('.ad').hide()
+            $('.bd').hide()
         })
     </script>
     <a href=""><p class="discount-info">天天都是貓砂日! 買4包即享免運唷!</p></a>
@@ -327,19 +332,19 @@
     <!-- 流程 -->
     <div class="step-container">
         <div class="step">
-            <img src="migoopic/step01.png" alt="">
+            <img src="migoopic/step01.png" alt="" data-aos="flip-left" data-aos-duration="1500">
             
             <h3><section style="background-color: #FCC8D1;">1</section>讓貓咪心癢癢的新鮮食材</h3>
             <p>精準計算貓咪所需營養素<br>嚴格審視蛋白質、脂肪及碳水間的熱量，<br>讓貓咪吃得安心又開心。</p>
         </div>
         <div class="step">
-            <img src="migoopic/step02.png" alt="">
+            <img src="migoopic/step02.png" alt="" data-aos="flip-left" data-aos-duration="1500">
             
             <h3><section style="background-color: #AAE3E2;">2</section>以舒肥低溫真空加熱方式烹飪</h3>
             <p>長時間低溫真空加熱的烹調方式，<br>足以將食材安全殺菌並熟透<br>更保留貓咪必要的水溶性營養素。</p>
         </div>
         <div class="step">
-            <img src="migoopic/step03.png" alt="">
+            <img src="migoopic/step03.png" alt="" data-aos="flip-left" data-aos-duration="1500">
             
             <h3><section style="background-color: #FFC898;">3</section>新鮮的烹飪方法鎖住營養及美味</h3>
             <p>不使用任何防腐劑，<br>煮熟後立即冷凍。<br>只需要解凍、加熱即可隨時享用。</p>
