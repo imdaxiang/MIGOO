@@ -220,6 +220,7 @@ html,body{
     cursor: pointer;
     margin: 20px;
     padding: 10px;
+    box-sizing: border-box;
 }
 .article-card img{
     width: 100%;
