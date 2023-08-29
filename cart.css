@@ -121,8 +121,12 @@ html,body{
     .phoneshow #cart-cross{
         display: none;
     }
+    .cart-crosss .fa-solid{
+        display: none;
+    }
     
 }
+
 table{
     display: flex;
     justify-content: space-evenly;
@@ -141,21 +145,19 @@ table img{
 th{
     padding: 0px 10px;
     border: 1px solid #FCC8D1;
+    background-color: #FCC8D1;
     border-radius: 5px;
+    
 }
 td{
     padding: 10px;
 
 }
-.title{
-    background-color: #FCC8D1;
-    
-    
-}
+
 
 .phoneshow{
     display: flex;
-    /* border-bottom: 1px solid black; */
+    
 }
 .phoneshow td{
     display: flex;
@@ -239,7 +241,7 @@ td{
     padding: 20px 0px;
     letter-spacing: 5px;
     color: #FFC898;
-   
+    text-shadow: 0.1em 0.1em 0.2em #fff;
 }
 .youlike-container{
     width: 100%;
