@@ -144,9 +144,9 @@ table img{
 }
 th{
     padding: 0px 10px;
-    border: 1px solid #FCC8D1;
+    /* border: 1px solid #FCC8D1;
     background-color: #FCC8D1;
-    border-radius: 5px;
+    border-radius: 5px; */
     
 }
 td{

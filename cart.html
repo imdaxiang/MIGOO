@@ -182,7 +182,7 @@
                 <h1>購物車明細</h1>
             </div>
             <!-- 購物車中間 -->
-            <div id="app">
+            <div class="cart_center">
                 <table>
                     <tr class="title">
                         <th colspan="2">商品資訊</th>
@@ -194,8 +194,8 @@
                         <td><img :src="item.src" alt=""></td>
                         <td>{{item.title}}</td>
                         <td class="none">
-                            <select name="" id="">
-                                <option selected>1</option>
+                            <select id="quantity" v-model="item.quantity" value="list.count">
+                                <option selected>數量</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -203,8 +203,8 @@
                                 <option value="5">5</option>
                             </select>
                         </td>
-                        <td class="none">${{item.price}}</td>
-                        <td class="none cart-cross"><i class="fa-solid fa-x fa-lg" style="color: #000000;"></i></td>
+                        <td class="none">${{item.price*item.quantity}}</td>
+                        <td class="none cart-cross"><button  @click="removeCart(index)" style="background-color: none;">刪除</button></td>
                         <!-- <tr class="phoneshow" v-for="(item, index) in productList" :key="'phone_' + index">
                             <td><span>數量</span><select name="" id="">
                                 <option selected>選擇數量</option>
@@ -226,12 +226,21 @@
                     </tr>
                 </table>
             </div>
-           
-            <script src="https://unpkg.com/vue@next"></script>
+            
+            <!-- 購物車下半部 -->
+            <div class="cart_bottom">
+                <section>合計: ${{totalPrice}}</section>
+                <button>結帳</button>
+            </div>      
+        </div>
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
             <script>
                 const app = Vue.createApp({
                     data() {
                         return {
+                           
+
                             productList: [
                                 {
                                     src: 'products/climb.png',
@@ -253,80 +262,21 @@
                                 }
                             ]
                         };
-                    }
-                }).mount('#app');
+                    },
+                    computed:{
+                       totalPrice(){
+                        return this.productList.reduce((total, item) =>{
+                            return total + (item.price * item.quantity);
+                        },0);
+                       }
+                    },
+                    methods:{
+                        removeCart(index){
+                            this.productList.splice(index, 1)
+                }
+                    },
+                }).mount('.cart_wrapper');
             </script>
-            <!-- <table>
-                <tr class="title">
-                    <th colspan="2">商品資訊</th>
-                    <th>數量</th>
-                    <th>小計</th>
-                    <th>刪除</th>
-                </tr>
-               
-                
-                <tr class="cart">
-                    <td><img src="products/crocodile.png" alt=""></td>
-                    <td>鱷魚瓦楞紙貓抓板</td>
-                    <td class="none"><select name="" id="">
-                        <option selected>選擇數量</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select></td>
-                    <td class="none">$390</td>
-                    <td class="none" id="cart-cross"><i class="fa-solid fa-x fa-lg" style="color: #000000;"></i></td>
-                    <tr class="phoneshow">
-                        <td><span>數量</span><select name="" id="">
-                            <option selected>選擇數量</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select></td>
-                        <td class="price"><span>小計</span>$59</td>
-                        <td id="cart-cross"><span>刪除</span><i class="fa-solid fa-x fa-md" style="color: #000000;"></i></td>
-                    </tr>
-                </tr>
-
-                <tr class="cart">
-                    <td><img src="products/box.png" alt=""></td>
-                    <td>白色開放式貓砂盆</td>
-                    <td class="none"><select name="" id="">
-                        <option selected>選擇數量</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select></td>
-                    <td class="none">$390</td>
-                    <td class="none" id="cart-cross"><i class="fa-solid fa-x fa-lg" style="color: #000000;"></i></td>
-                    <tr class="phoneshow">
-                        <td><span>數量</span><select name="" id="">
-                            <option selected>選擇數量</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select></td>
-                        <td class="price"><span>小計</span>$990</td>
-                        <td id="cart-cross"><span>刪除</span><i class="fa-solid fa-x fa-md" style="color: #000000;"></i></td>
-                    </tr>
-                </tr>
-                
-            </table> -->
-            <!-- 購物車下半部 -->
-            <div class="cart_bottom">
-                <section>合計: $1,779</section>
-                <button>結帳</button>
-            </div>      
-        </div>
-    </div>
     <!-- <script>
         $('#cart-cross').click(function(){
             $('.cart01').hide()

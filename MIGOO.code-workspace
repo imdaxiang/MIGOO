@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../vueeeee"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "MIGOO"
+	}
+}
