@@ -13,7 +13,7 @@
     <script src="https://kit.fontawesome.com/d0903bd1ce.js" crossorigin="anonymous"></script>
     <script src="jQuery/jquery-3.7.0.js"></script>
 </head>
-<body>
+<body >
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
@@ -163,8 +163,8 @@
    <div class="banner-container">
         <div class="content" data-aos="fade-up" data-aos-duration="1000">
             <section ></section>
-            <h1 >罐罐飼料 系列</h1>
-            <p >SHOP NOW</p>
+            <h1 >各式貓咪用品</h1>
+            <p>SHOP NOW</p>
             
         </div>
     </div>
@@ -215,7 +215,7 @@
 
     <!-- 商品選單 -->
     
-    <div class="allcontainer">
+    <div class="allcontainer" id="app">
         <div class="listcontainer">
             <div class="list-txt">
                 <section></section>
@@ -223,142 +223,292 @@
                 <section></section>
             </div>
             <div class="list">
-                <a href="feed.html"><section>罐罐飼料</section></a>
-                <a href="feed.html"><section>餐食飲具</section></a>
-                <a href="feed.html"><section>睡睡貓窩</section></a>
-                <a href="feed.html"><section>娛樂玩具</section></a>
-                <a href="feed.html"><section>喵咪保健</section></a>
+                <ol>
+                    <li @click="setActiveTab('feed')" :class="{ active: activeTab === 'feed' }">罐罐飼料</li>
+                    <li @click="setActiveTab('food')" :class="{ active: activeTab === 'food' }">餐食飲具</li>
+                    <li @click="setActiveTab('sleep')" :class="{ active: activeTab === 'sleep' }">睡睡貓窩</li>
+                    <li  @click="setActiveTab('toy')" :class="{ active: activeTab === 'toy' }">娛樂玩具</li>
+                    <li @click="setActiveTab('health')" :class="{ active: activeTab === 'health' }">喵咪保健</li>
+                </ol>
             </div>
         </div>
         
         <!-- 商品區 -->
-        <div class="productstainer">
-            <div class="products-row">
-                <div class="col-3 col-md-6">
-                    <div class="card">
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- <div class="productstainer">
-            <div class="products-row">
-                <div class="col-3 col-md-6">
-                    <div class="card">
-                        <a href="productinfo.html">
-                            <div class="img-wrapper">
-                                <img src="products/chicken_can.png" alt="">
-                            </div>
-                            <h5>雞肉無穀主食罐</h5>
-                            <section>NT$59</section>
-                        </a>
-                        <input type="button" onclick="showalert()" value="加入購物車" />
-                        
-                    </div>
-                </div>
-                <div class="col-3 col-md-6">
-                    <div class="card">
-                        <a href="productinfo.html">
-                            <div class="img-wrapper">
-                                <img src="products/tunasalmon_can.png" alt="">
-                            </div>
-                            <h5>鮭魚+鮪魚鮮肉主食罐</h5>
-                            <section>NT$59</section>
-                        </a>
-                        <input type="button" onclick="showalert()" value="加入購物車" />
-                        
-                    </div>
-                </div>
-                <div class="col-3 col-md-6">
-                    <div class="card">
-                        <a href="productinfo.html">
-                            <div class="img-wrapper">
-                                <img src="products/marckerel_can.png" alt="">
-                            </div>
-                            <h5>鯖魚鮮肉主食罐</h5>
-                            <section>NT$59</section>
-                        </a>
-                        <input type="button" onclick="showalert()" value="加入購物車" />
-                        
-                    </div>
-                </div>
-            
-                <div class="col-3 col-md-6">
-                    <div class="card">
-                        <a href="productinfo.html">
-                            <div class="img-wrapper">
-                                <img src="products/chickenbeef_can.png" alt="">
-                            </div>
-                            <h5>雞肉+牛肉無穀主食罐</h5>
-                            <section>NT$59</section>
-                        </a>
-                        <input type="button" onclick="showalert()" value="加入購物車" />
-                        
-                    </div>
-                </div>
-                
-            </div>
         
-            <div class="products-row">
-                <div class="col-3 col-md-6">
-                    <div class="card">
+        <div class="productstainer" >
+            <!-- 罐罐飼料 -->
+            <div class="products-row" v-if="activeTab === 'feed'">
+                <div class="col-3 col-md-6"   v-for="item in feedList" :key="item.title">
+                    <div class="card" >
                         <a href="productinfo.html">
                             <div class="img-wrapper">
-                                <img src="products/adult_feed.png" alt="">
+                                <img :src="item.feedimg" alt="">
                             </div>
-                            <h5>成貓 雞肉+鮭魚2.5kg</h5>
-                            <section>NT$1,299</section>
+                            <h5>{{item.feedName}}</h5>
+                            <section>NT${{item.price}}</section>
                         </a>
-                        <input type="button" onclick="showalert()" value="加入購物車" />
+                        <input type="button" @click="showAlert" value="加入購物車" />
                         
                     </div>
                 </div>
-                <div class="col-3 col-md-6">
-                    <div class="card">
+            </div>
+
+            <!-- 餐食飲具 -->
+            <div class="products-row" v-if="activeTab === 'food'">
+                <div class="col-3 col-md-6"   v-for="item in foodList" :key="item.title">
+                    <div class="card" >
                         <a href="productinfo.html">
                             <div class="img-wrapper">
-                                <img src="products/kitten_feed.png" alt="">
-                                
+                                <img :src="item.foodimg" alt="">
                             </div>
-                            <h5>幼貓專用飼料 2.5kg</h5>
-                            <section>NT$1,199</section>
+                            <h5>{{item.foodName}}</h5>
+                            <section>NT${{item.price}}</section>
                         </a>
-                        <input type="button" onclick="showalert()" value="加入購物車" />
-                        
-                    </div>
-                </div>
-                <div class="col-3 col-md-6">
-                   <div class="card">
-                    <a href="productinfo.html">
-                        <div class="img-wrapper">
-                            <img src="products/weightcontrol_feed.png" alt="">
-                        </div>
-                        <h5>體重控制 雞肉豌豆 2.5kg</h5>
-                        <section>NT$1,299</section>
-                    </a>
-                    <input type="button" onclick="showalert()" value="加入購物車" />
-                    
-                   </div>
-                </div>
-                <div class="col-3 col-md-6">
-                    <div class="card">
-                        <a href="productinfo.html">
-                            <div class="img-wrapper">
-                                <img src="products/kitten_feed.png" alt="">
-                            </div>
-                            <h5>幼貓專用飼料 2.5kg</h5>
-                            <section>NT$1,199</section>
-                        </a>
-                        <input type="button" onclick="showalert()" value="加入購物車" />
+                        <input type="button" @click="showAlert" value="加入購物車" />
                         
                     </div>
                 </div>
             </div>
             
+             <!-- 睡睡貓窩 -->
+             <div class="products-row" v-if="activeTab === 'sleep'">
+                <div class="col-3 col-md-6"   v-for="item in sleepList" :key="item.title">
+                    <div class="card" >
+                        <a href="productinfo.html">
+                            <div class="img-wrapper">
+                                <img :src="item.sleepimg" alt="">
+                            </div>
+                            <h5>{{item.sleepName}}</h5>
+                            <section>NT${{item.price}}</section>
+                        </a>
+                        <input type="button" @click="showAlert" value="加入購物車" />
+                        
+                    </div>
+                </div>
+            </div>
+            <!-- 娛樂玩具 -->
+            <div class="products-row" v-if="activeTab === 'toy'">
+                <div class="col-3 col-md-6"   v-for="item in sleepList" :key="item.title">
+                    <div class="card" >
+                        <a href="productinfo.html">
+                            <div class="img-wrapper">
+                                <img :src="item.sleepimg" alt="">
+                            </div>
+                            <h5>{{item.sleepName}}</h5>
+                            <section>NT${{item.price}}</section>
+                        </a>
+                        <input type="button" @click="showAlert" value="加入購物車" />
+                        
+                    </div>
+                </div>
+            </div>
+            <!-- 喵咪保健 -->
+            <div class="products-row" v-if="activeTab === 'health'">
+                <div class="col-3 col-md-6"   v-for="item in healthList" :key="item.title">
+                    <div class="card" >
+                        <a href="productinfo.html">
+                            <div class="img-wrapper">
+                                <img :src="item.healthimg" alt="">
+                            </div>
+                            <h5>{{item.healthName}}</h5>
+                            <section>NT${{item.price}}</section>
+                        </a>
+                        <input type="button" @click="showAlert" value="加入購物車" />
+                        
+                    </div>
+                </div>
+            </div>
         </div>
         
-    </div> -->
-   
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+         const app = Vue.createApp({
+            data() {
+                return {
+                    activeTab: 'feed',
+                    feedList: [
+                        {
+                            feedimg: 'products/chicken_can.png',
+                            feedName: '雞肉無穀主食罐',
+                            price: '59',
+                        },
+                        {
+                            feedimg: 'products/tunasalmon_can.png',
+                            feedName: '鮭魚+鮪魚鮮肉主食罐',
+                            price: '59',
+                        },
+                        {
+                            feedimg: 'products/marckerel_can.png',
+                            feedName: '鯖魚鮮肉主食罐',
+                            price: '59',
+                        },
+                        {
+                            feedimg: 'products/chickenbeef_can.png',
+                            feedName: '雞肉+牛肉無穀主食罐',
+                            price: '59',
+                        },
+                        {
+                            feedimg: 'products/adult_feed.png',
+                            feedName: '成貓 雞肉+鮭魚2.5kg',
+                            price: '1,299',
+                        },
+                        {
+                            feedimg: 'products/kitten_feed.png',
+                            feedName: '幼貓專用飼料 2.5kg',
+                            price: '1,199',
+                        },
+                        {
+                            feedimg: 'products/weightcontrol_feed.png',
+                            feedName: '體重控制 雞肉豌豆 2.5k',
+                            price: '1,299',
+                        },
+                        {
+                            feedimg: 'products/kitten_feed.png',
+                            feedName: '幼貓專用飼料 2.5kgkg',
+                            price: '1,199',
+                        },
+                    ],
+                    foodList: [
+                        {
+                            foodimg: 'products/waterDispenser.png',
+                            foodName: '智能寵物循環活水機',
+                            price: '3,299',
+                        },
+                        {
+                            foodimg: 'products/spoon.png',
+                            foodName: '肉泥餵食勺',
+                            price: '100',
+                        },
+                        {
+                            foodimg: 'products/foodMachine.png',
+                            foodName: '智能寵物餵食器',
+                            price: '2,499',
+                        },
+                        {
+                            foodimg: 'products/foldingbowl.png',
+                            foodName: '折疊碗',
+                            price: '499',
+                        },
+                        {
+                            foodimg: 'products/legbowl.jpg',
+                            foodName: '陶瓷彩色碗',
+                            price: '499',
+                        },
+                        {
+                            foodimg: 'products/flower.png',
+                            foodName: '智花花陶瓷碗',
+                            price: '590',
+                        },
+                        {
+                            foodimg: 'products/dessert.png',
+                            foodName: '點心盤',
+                            price: '499',
+                        },
+                        {
+                            foodimg: 'products/doubleBowl.png',
+                            foodName: '雙碗小餐桌 ',
+                            price: '699',
+                        },
+                    ],
+                    sleepList: [
+                        {
+                            sleepimg: 'products/island.png',
+                            sleepName: '貓的島 ',
+                            price: '1,699',
+                        },
+                        {
+                            sleepimg: 'products/tent.png',
+                            sleepName: '圓頂寵物帳篷 ',
+                            price: '1,190',
+                        },
+                        {
+                            sleepimg: 'products/cactus.png',
+                            sleepName: '仙人掌睡窩 ',
+                            price: '990',
+                        },
+                        {
+                            sleepimg: 'products/triangle.png',
+                            sleepName: '繽紛寵物帳篷 ',
+                            price: '999',
+                        },
+                        {
+                            sleepimg: 'products/coolpad.png',
+                            sleepName: '寵物涼涼冰墊 (兩款) ',
+                            price: '590',
+                        },
+                        {
+                            sleepimg: 'products/cheese.png',
+                            sleepName: '起司貓抓板 ',
+                            price: '390',
+                        },
+                        {
+                            sleepimg: 'products/orange.jpg',
+                            sleepName: '躲在橘子裡 ',
+                            price: '590',
+                        },
+                        {
+                            sleepimg: 'products/instant.png',
+                            sleepName: '泡泡麵 ',
+                            price: '990',
+                        },
+                    ],
+                    healthList: [
+                        {
+                            healthimg: 'products/immune.png',
+                            healthName: '免疫力提升粉 ',
+                            price: '990',
+                        },
+                        {
+                            healthimg: 'products/lysine.png',
+                            healthName: '純胺基酸 ',
+                            price: '990',
+                        },
+                        {
+                            healthimg: 'products/stressrelief.png',
+                            healthName: '情緒放鬆 ',
+                            price: '990',
+                        },
+                        {
+                            healthimg: 'products/taurine.png',
+                            healthName: '牛磺酸 ',
+                            price: '990',
+                        },
+                        {
+                            healthimg: 'products/urinary.png',
+                            healthName: '泌尿道保健 ',
+                            price: '990',
+                        },
+                        {
+                            healthimg: 'products/stressrelief.png',
+                            healthName: '情緒放鬆 ',
+                            price: '990',
+                        },
+                        {
+                            healthimg: 'products/immune.png',
+                            healthName: '免疫力提升粉 ',
+                            price: '990',
+                        },
+                        {
+                            healthimg: 'products/taurine.png',
+                            healthName: '牛磺酸 ',
+                            price: '990',
+                        },
+                    ],
+                };
+            },
+            methods: {
+                setActiveTab(tab) {
+                    this.activeTab = tab;
+                },
+                showAlert() {
+                    alert("加入購物車!");
+                }
+            }
+        });
+
+        app.mount('#app');
+    </script>
 
     <!-- footer -->
     <footer>

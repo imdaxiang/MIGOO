@@ -159,6 +159,7 @@
 .allcontainer{
     display: flex;
     justify-content: center;
+    align-items: flex-start;
     width: 100%;
     margin: 50px 0px;
     
@@ -169,7 +170,6 @@
     align-items: center;
 }
 .listcontainer{
-    margin-top: 70px;
     margin-right: 50px;
 }
 .list-txt section{
@@ -187,21 +187,31 @@
     background-color: #FFFBF5;
     border: 3px solid #FFC898;
     border-radius: 10px;
-    /* height: 240px; */
     padding: 10px 0px 10px 0px;
+    height: 190px;
 }
-.list a{
-    display: block;
-    padding: 10px;
-    text-align: center;
+.list ol{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
 }
-.list section:hover{
+.list li{
+    list-style: none;
+    margin-left: -35px;
+    margin-bottom: 10px;
+    
+}
+.list li:hover{
     border-bottom: 3px solid #FFC898;
 }
 
 /* 商品區 */
 .col-3 {
-    width: 25%;
+    /* width: 25%; */
+    display: flex;
+    flex-wrap: wrap;
 }
 @media screen and (max-width: 768px){
     .col-md-6 {
@@ -222,16 +232,18 @@
     }
 }
 .productstainer{
-    /* max-width: 1200px; */
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .products-row{
+    max-width: 900px;
+    
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin: 10px;
 }
 
 .card{
@@ -241,7 +253,8 @@
     align-items: center;
     text-decoration: none;
     color:black;
-    margin: 20px 10px;
+    max-width: 150px;
+    margin: 50px 20px;
 }
 .card a{
     text-decoration: none;
