@@ -13,7 +13,7 @@
     <script src="https://kit.fontawesome.com/d0903bd1ce.js" crossorigin="anonymous"></script>
     <script src="jQuery/jquery-3.7.0.js"></script>
 </head>
-<body >
+<body id="app">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
@@ -176,11 +176,13 @@
         <div class="phone-list">
             <p id="phone-category">用品分類<i class="fa-sharp fa-solid fa-chevron-down fa-xs" style="color: #000000;"></i></p>
             <div class="listlist">
-                <a href="feed.html"><section>罐罐飼料</section></a>
-                <a href="feed.html"><section>餐食飲具</section></a>
-                <a href="feed.html"><section>睡睡貓窩</section></a>
-                <a href="feed.html"><section>娛樂玩具</section></a>
-                <a href="feed.html"><section>喵咪保健</section></a>
+                <ol>
+                    <li @click="setActiveTab('feed')" :class="{ active: activeTab === 'feed' }">罐罐飼料</li>
+                    <li @click="setActiveTab('food')" :class="{ active: activeTab === 'food' }">餐食飲具</li>
+                    <li @click="setActiveTab('sleep')" :class="{ active: activeTab === 'sleep' }">睡睡貓窩</li>
+                    <li @click="setActiveTab('toy')" :class="{ active: activeTab === 'toy' }">娛樂玩具</li>
+                    <li @click="setActiveTab('health')" :class="{ active: activeTab === 'health' }">喵咪保健</li>
+                </ol>
             </div>
         </div>
         <div class="sortshow-wrapper">
@@ -215,7 +217,7 @@
 
     <!-- 商品選單 -->
     
-    <div class="allcontainer" id="app">
+    <div class="allcontainer" >
         <div class="listcontainer">
             <div class="list-txt">
                 <section></section>
@@ -227,7 +229,7 @@
                     <li @click="setActiveTab('feed')" :class="{ active: activeTab === 'feed' }">罐罐飼料</li>
                     <li @click="setActiveTab('food')" :class="{ active: activeTab === 'food' }">餐食飲具</li>
                     <li @click="setActiveTab('sleep')" :class="{ active: activeTab === 'sleep' }">睡睡貓窩</li>
-                    <li  @click="setActiveTab('toy')" :class="{ active: activeTab === 'toy' }">娛樂玩具</li>
+                    <li @click="setActiveTab('toy')" :class="{ active: activeTab === 'toy' }">娛樂玩具</li>
                     <li @click="setActiveTab('health')" :class="{ active: activeTab === 'health' }">喵咪保健</li>
                 </ol>
             </div>

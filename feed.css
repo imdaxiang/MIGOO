@@ -98,8 +98,9 @@
     position: absolute;
     z-index: 1;
 }
-.listlist section{
+.listlist li{
     padding: 10px;
+    margin-left: -35px;
 }
 .sort_wrapper{
     display: inline-block;
@@ -135,7 +136,7 @@
 .show section{
     padding: 10px 10px;
 }
-.listlist section:hover{
+.listlist li:hover{
     background-color: #FFC898;
 }
 .sort section:hover{
