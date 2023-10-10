@@ -153,7 +153,10 @@ td{
     padding: 10px;
 
 }
-
+.cart-cross button{
+    background: transparent;
+    border: 1px solid black;
+}
 
 .phoneshow{
     display: flex;
