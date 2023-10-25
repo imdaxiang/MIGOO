@@ -202,7 +202,7 @@
     list-style: none;
     margin-left: -35px;
     margin-bottom: 10px;
-    
+    cursor: pointer;
 }
 .list li:hover{
     border-bottom: 3px solid #FFC898;
